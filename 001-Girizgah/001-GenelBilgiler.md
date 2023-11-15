@@ -90,13 +90,81 @@ Windows Communication Foundation, servis-yönelimli mimariyi temel alarak dağı
 dağıtık mimari modelleri ve teknolojilerini tek çatı altında birleştiren ve içerisinde bir çok hazır bileşen barındıran 
 bir frameworktür. WCF, .Net Framework modülüdür.
 
+## .NET Core Nedir?
+.NET Core, .NET Framework’ün açık kaynak kodlu, platform bağımsız bir yapıya dönüştürülmüş halidir. 
+Açık kaynak kodlu olması sebebiyle GitHub üzerinde oldukça geniş bir topluluk da geliştirilmesine katkı sağlamaktadır.
+
+## .Net Framework ile .Net Core arasındaki farklar nedir?
+Net Framework:
+
+-> Açık kaynak değil.
+
+-> Sadece windows ekosistemini destekler.
+
+-> Önce geliştirildi.	
+
+.Net Core: 					
+
+-> Açık kaynaktır.
+
+-> Bir çok ekosistemi destekler.(windows,linux,mac...)
+
+-> Sonra geliştirildi.
+
 ## C# Nedir?
 Microsoft tarafından .Net çatısı altında geliştirilen, modern programlama dilidir. C# orta seviyeli bir programlama dilidir.
 
 **Not:** Bir programlama dili makine diline yakın ise düşük seviyeli, makine dilinden uzak ve insan diline yakın ise
 yüksek seviyelidir.
 
+## Compiler(Derleme) / Interpreter (Yorumlayıcılar)
 
+### Compiler(Derleme) Nedir?
+Derleyici, yüksek seviye bir programlama dilinde (high-level programming language) yazılmış bir kaynak kodun, başka bir hedef dile 
+veya bilgisayarın/işlemcinin anlayabileceği makine diline tercümesini yapan bir programdır. C# derlenen bir dildir. Yazılan kodların
+derlenmesi ile program çalıştırılabilir hale getirilir. (.exe , .dll uzantılı dosyalar derlenme sonucu oluşan dosyalardır.)
+
+### Interpreter (Yorumlayıcılar) Nedir?
+Kodu satır satır veya bloklar halinde çalıştırıp sırası gelmeyen satırları hiç çalıştırmayan bu satırlardaki hataları hiçbir zaman 
+göremeyen ve kodun bütününe ait iyileştirmeleri yapamayan çeviricilere de yorumlayıcı (interpreter) adı verilmektedir. Hem derleyiciyi hem de
+yorumlayıcıyı birlikte kullanan diller mevcuttur. Java buna örnek olarak verilebilir.
+
+**Not:** Genel kanının tersine bir dilin derleyici veya yorumlayıcı özelliği yoktur. Yani C# dili için sadece derleyicisi bulunan bir dildir 
+demek yanlış olur. Bu durum bütün diller için geçerlidir. Her dil için bir derleyici veya yorumlayıcı tasarlanabilir.
+
+## Build, Rebuild ve Clean Kavramları Nedir?
+Build: Derleme yapar.
+Rebuild: Önceden derlenmiş dosyaları siler ve tekrar derler.
+Clean: Önceden derlenmiş dosyaları siler.
+
+**Not:** Derleme işlemi sonuncada oluşan dosyalar bin klasörü içinde oluşturulur.
+
+## Paket/kütüphane ve Referans arasındaki fark Nedir?
+Paketler/kütüphane, Nuget denilen bir havuzdan gelir. Referanslar ise önceden yazılmış dll dosyalarıdır.
+Elinde fiziksel olarak bir dll dosyası var ise ve bunu projeye eklemen gerekiyor ise referans olarak eklersin.
+Nuget dediğimiz havuzdan veri çekeceksen eğer o çektiğin veriyi paket olarak eklersin.
+
+**Not:** Yazılımın çıktısını kullanacak taraf başka bir yazılımsa, kullanılacak yazılım dll uzantılıdır.
+
+**Not:** Yazılımın çıktısını kullanacak taraf son kullanıcı ise, kullanılacak yazılım exe uzantılıdır.
+
+**Not:** .cs uzantılı dosya c# dosyasıdır.
+
+## Top-Level Statements (C# 9.0) Özelliği Nedir?
+Yazılımcıların, Main foksiyonunun basmakalıp kodlarından sıyrılmasını sağlayan bir özelliktir.
+Top-Level Statements özelliği C# 9.0 ile birlikte gelmiştir.
+Bu özellik sadece Program.cs dosyasındaki main fonksiyonu için uygulanabilir.
+Derleyici kodların main fonksiyonu içerisine yazılan kod olduğunu dosyanın isminden anlar.
+Detaylı bilgi için aşağıdaki video'yu inceleyebilirsiniz.
+
+**Video:** <a href="https://www.youtube.com/watch?v=23AaVL_mTBg&list=PLQVXoXFVVtp3e_urGZcMNAHx2Eo4Rm5Xk&index=29"> Top-Level Statements (C# 9.0) Özelliği </a>
+
+ ## Debug İle Ve Debug Olmadan Proje Nasıl Ayağa kaldırılır?
+ Debugsız modda çalıştırma, uygulamanın ayağa kalkma maliyetini düşürerek, uygulamanın daha hızlı ayağa kalkmasını sağlar.
+ 
+ Debug modda çalıştırma: F5 
+  
+ Debugsız modda çalıştırma: Ctrl + F5
 
 
 
