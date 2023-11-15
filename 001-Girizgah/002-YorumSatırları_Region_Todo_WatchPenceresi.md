@@ -1,33 +1,44 @@
-## Yorum Satırları
+## Yorum Satırları Nedir?
+Yorumlar, programa etki etmeyen ancak kendimizin veya kodu inceleyen bir başkasının nerede ne yapıldığını 
+anlamasını sağlayacak yazılardır. Yorumlar tek satırlık yorumlar ve çok satırlık yorumlar olmak üzere ikiye ayrılır:
+
 1- Tek satır için kullanılan açıklama satırı sembolü: //
 
 ```cs
 // ...
 ```
 
-2- Çok satır için kullanılan açıklama satırı sembolü: / * * /
+2- Birden fazla satır için kullanılan açıklama satırı sembolü: /* */
 
-
-
-Yorum Satırları, Region ve todo Nedir?
+```cs
 /*
-    1- Tek satır için kullanılan açıklama satırı sembolü: //
-    2- Çok satır için kullanılan açıklama satırı sembolü: / * * /
-    3- Region: Kod dosyasını kategorik hale getirmemizi sağlayan bir ön işlemci komutudur.
-
-    Örnek 3.1:
-
-    #region First Title
     ...
-    #endregion
-
-    #region Second Title
     ...
-    #endregion
-
-    4 - TODO: Önemli olan yorumları ve başka bir yazılımcının onca dosya arasından hızlıca bulunması gereken yorumları todo komutu ile 
-    task liste aktarılabilir. VS'da Task List ekranını açmak için gerekli yol: View -> Task List
-
-    Örnek 4.1: 
-    //todo Alperen Bektaşoğlu
+    ...
 */
+```
+
+## Region Nedir?
+Kod dosyasını kategorik hale getirmemizi sağlayan bir ön işlemci komutudur.
+
+```cs
+#region RegionName
+...
+...
+...
+endregion
+```
+
+## Todo Nedir?
+Önemli olan yorumları ve başka bir yazılımcının onca dosya arasından hızlıca bulması gereken yorumları todo komutu ile 
+task liste aktarabiliriz. VS'da Task List ekranını açmak için gerekli yol: View -> Task List
+
+```cs
+//todo ÖnemliYorum
+```
+
+## Watch Penceresi Nedir?
+Debug modda değişkenlerin değerlerini kolayca görmemizi sağlar. Bir değişkeni Watch penceresine eklemek için debug 
+moddayken çalıştırıp değişkenin üzerine sağ tıklayarak add watch butonuna basmanız yeterlidir.
+
+
