@@ -1,3 +1,14 @@
+## Yorum Satırları
+1- Tek satır için kullanılan açıklama satırı sembolü: //
+
+```cs
+// ...
+```
+
+2- Çok satır için kullanılan açıklama satırı sembolü: / * * /
+
+
+
 Yorum Satırları, Region ve todo Nedir?
 /*
     1- Tek satır için kullanılan açıklama satırı sembolü: //
