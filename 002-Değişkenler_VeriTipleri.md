@@ -239,6 +239,51 @@ Custom scope {} ile oluşturulabilir.
 }
 ```
 
+## Enum Veri Tipi
+Sayıların anlamlı şekilde isimlendirilerek kullanılabilmesini sağlayan yapılara Enum denir.
+Enum sayısal değerler tutan bir yapıdır.  Varsayılan olarak enum içerisindeki elemanlar 0 dan başlar. 
+İsterseniz numaralandırmayı kendinde yapabilirsin.
+```cs
+class Program
+    {
+        enum Gunler { Pazartesi, Salı, Carsamba, Persembe, Cuma, Cumartesi, Pazar };
+        enum GecmeDurumu { Basarisiz = 0, Gecer = 45, Orta = 60, Iyi = 70, Pekiyi = 80 };
+        static void Main(string[] args)
+        {
+            // ÖRNEK 1
+            int deger = 1;
+            Gunler secilenGun = (Gunler)deger;
+
+            if (secilenGun == Gunler.Cumartesi || secilenGun == Gunler.Pazar)
+            {
+                Console.WriteLine("Hafta sonu seçtiniz.");
+            }
+            else
+            {
+                Console.WriteLine("Hafta içi seçtiniz.");
+            }
+            Console.WriteLine("-----------------------------------------------");
+            // ÖRNEK 2
+            int alinanNot = 70;
+            GecmeDurumu gd = (GecmeDurumu)alinanNot;
+            Console.WriteLine( "Geçme durumu: " + gd.ToString() );
+        }
+    }
+```
+## Tuple Nedir?
+"Tuple" aynı veya farklı tipte birden fazla değişkeni içerebilen bir veri yapısıdır. Aslında bu tanıma 
+baktığımızda bize “class” tanımını çağrıştırıyor gibi görünebilir. "Tuple" veri yapısı sayesinde yeni bir
+"class" yaratmadan da birden fazla farklı tipteki değişkeni aynı veri yapısı içerisinde tutabiliyoruz.
+```cs
+Tuple<string, string , int> result = Tuple.Create("Alperen", "Bektaşoğlu", 26);
+Console.WriteLine( result.Item1 );
+Console.WriteLine( result.Item2 );
+Console.WriteLine( result.Item3 );
+var (firstName, lastName, age) = result;
+Console.WriteLine(firstName);
+Console.WriteLine(lastName);
+Console.WriteLine(age);
+```
 
 
 
