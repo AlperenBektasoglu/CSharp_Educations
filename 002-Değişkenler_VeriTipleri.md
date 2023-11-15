@@ -270,7 +270,7 @@ class Program
         }
     }
 ```
-## Tuple Nedir?
+## Tuple Veri Yapısı
 "Tuple" aynı veya farklı tipte birden fazla değişkeni içerebilen bir veri yapısıdır. Aslında bu tanıma 
 baktığımızda bize “class” tanımını çağrıştırıyor gibi görünebilir. "Tuple" veri yapısı sayesinde yeni bir
 "class" yaratmadan da birden fazla farklı tipteki değişkeni aynı veri yapısı içerisinde tutabiliyoruz.
