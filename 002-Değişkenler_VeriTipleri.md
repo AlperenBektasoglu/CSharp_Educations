@@ -157,7 +157,7 @@ object x = 15;
 int y = (int)x;
 ```
 
-## Boxing ve Unboxing nedir?
+## Boxing ve Unboxing Nedir?
 Aslında boxing ve unboxing, tip dönüşümlerinin konusudur. Ama yukarıda değinildiği için buarada anlatılmıştır.
 Boxing: Object türündeki bir değişkene herhangi bir türdeki değeri göndermek Boxing olarak nitelendirilmektedir.
 
@@ -171,6 +171,76 @@ daha detaylı anlatılacaktır.
 object a = 13; // Boxing (İnt tipindeki değer, object tipli a değişkenine atanıyor.)
 int b = (int)a; // Unboxing (a object tipli değişkenin içindeki değer, cast işlemi ile int'e dönüştürülüp, int tipli b değişkenine atanıyor.)
 ```
+
+## "var" Anahtar Kelimesi
+var anahtar kelimesi bir tip değildir. Tutulacak değerin türüne uygun bir değişken tanımlayabilmek için kullanılan anahtar kelimedir.
+Farklı diller arasında desteklenmeyen verileri karşılayabilmek amacıyla oluşturulmuştur. "var" anahtar kelimesi kullanıldığı zaman, 
+derleme zamanında değişkenin hangi tip olacağına derleyici karar verir. "var" ile tanımlanan değişkene kodun ilerleyen aşamalarında 
+farklı bir tipte değer verilemez. "var" ile tanımlanan bir değişkene atanan ilk değer program derlendiği anda değişkenin veri türünü 
+belirlemektedir.
+```cs
+//var x1 = "";
+//x1 = 123;     // Hata verir. Çünkü değişenin tipi derleyici tarafından string olarak belirlenmiştir.
+//var x2 = 123;    // Değişenin tipi derleyici tarafından integer olarak belirlenmiştir.
+//x2 = 123;
+```
+
+## "dynamic" Veri Tipi
+"dynamic" tip kullanıldığı zaman tip dönüşümlerinde oluşan hatalar derleme esnasında herhangi bir kontrol 
+yapılmadığı için hata üretilmez. Ancak çalışma zamanında (Runtime) kontrol edilir ve hata varsa  RuntimeBinderException  
+hatasını fırlatır. 'dynamic' ile, derleyici‘ye (compiler), nesnenin tipinin sadece çalışma zamanında bilinebileceğini 
+söylemiş oluyoruz.
+```cs
+// Aşağıdaki örneği derleyebilirsiniz ancak çalışma zamanında hata verir.
+// Object ile tanımlasaydık proje çalışmadan önce daha derleme zamanında bizi uyarırdı.
+dynamic example = "Alperen";
+int example1 = example; // Hata
+```
+
+**Not:** .GetType() metodu ile değişkenin çalışma zamanındaki tipini öğrenilebilir.
+```cs
+dynamic x = 100;
+var y = x.GetType();
+```
+	
+ **Not:** Runtime'da dynemic bir değişkenin tipini değiştirebilirsin.
+ ```cs
+dynamic x = 5;
+Console.WriteLine (x.GetType());
+x = "deneme";
+Console.WriteLine (x.GetType());
+ ```
+
+## "const" Anahtar Kelimesi - Sabitler
+Sabitler değişmeyen değerleri tutmak için oluşturulmuş yapılardır. İlk değer atamasından sonra değer atılamaz.
+const, static bir yapılanmadır.
+```cs
+const double pi = 3.14;
+```
+
+## Readonly Anahtar Kelimesi
+Readonly sadece okunabilir değişkenler kullanılır. const'tan farkı sadece tanımlandığı yerde değil, 
+ayrıca constructor method (ileride class konusunda anlatılacaktır) içerisinde de değerleri atanabilir. 
+Readonly static yapıda değildir.
+
+## Scope Kavramı
+Değişken ve fonksiyonların erişebilirlik sınırlarını belirleyen alandır. {} ile ifade edilir. Aynı isimli değişkenleri 
+farklı scoplarda tanımlayabilirsin. Bir değişken sadece tanımlandığı scope içerisinden erişilebilir ve kullanılabilir. 
+Custom scope {} ile oluşturulabilir.
+```cs
+{
+... 
+   {
+   ...
+      {
+      ...
+      }
+   }
+}
+```
+
+
+
 
 
            
