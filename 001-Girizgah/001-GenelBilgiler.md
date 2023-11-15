@@ -113,6 +113,7 @@ Net Framework:
 
 ## C# Nedir?
 Microsoft tarafından .Net çatısı altında geliştirilen, modern programlama dilidir. C# orta seviyeli bir programlama dilidir.
+C# küçük-büyük harfe duyarlı(Case Sensetive) ve tip güvenliği olan bir dildir.
 
 **Not:** Bir programlama dili makine diline yakın ise düşük seviyeli, makine dilinden uzak ve insan diline yakın ise
 yüksek seviyelidir.
