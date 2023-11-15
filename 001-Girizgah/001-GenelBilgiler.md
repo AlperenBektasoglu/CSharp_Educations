@@ -134,7 +134,9 @@ demek yanlış olur. Bu durum bütün diller için geçerlidir. Her dil için bi
 
 ## Build, Rebuild ve Clean Kavramları Nedir?
 Build: Derleme yapar.
+
 Rebuild: Önceden derlenmiş dosyaları siler ve tekrar derler.
+
 Clean: Önceden derlenmiş dosyaları siler.
 
 **Not:** Derleme işlemi sonuncada oluşan dosyalar bin klasörü içinde oluşturulur.
