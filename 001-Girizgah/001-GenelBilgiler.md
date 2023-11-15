@@ -152,6 +152,23 @@ Nuget dediğimiz havuzdan veri çekeceksen eğer o çektiğin veriyi paket olara
 
 **Not:** .cs uzantılı dosya c# dosyasıdır.
 
+## Proje ve Solition Kavramları Nedir?
+Proje: İçerisinde amaca dair kodsal çalışmaların yapıldığı bir bütündür.
+
+Solition: İçerisinde bir veya birden fazla proje barındırabilien bir evrensel kümedir.
+    
+**Not:** Derleme proje bazlı yada solition bazlı yapılabilir.
+
+## Main Fonsiyonu Nedir?
+Uygulama ile işletim sistemi arasındaki iletişimi sağlayan foksiyondur. Uygulama çalıştığında main fonksiyonu içindeki kodlar yürütülür.
+Her uygulamada, main fonksiyonu sadece 1 tane olmak zorundadır. CLI komutlarında run komutu ile main fonksiyona parametre geçilebilir.
+
+```cs
+dotnet run Alperen Bektaşoğlu  // (1.parametre: Alperen, 2.parametre: Bektaşoğlu)
+```
+
+**Video:** <a href="https://www.youtube.com/watch?v=slhmM7TF2R0&list=PLQVXoXFVVtp3e_urGZcMNAHx2Eo4Rm5Xk&index=28"> Main Fonsiyonu </a>
+
 ## Top-Level Statements (C# 9.0) Özelliği Nedir?
 Yazılımcıların, Main foksiyonunun basmakalıp kodlarından sıyrılmasını sağlayan bir özelliktir.
 Top-Level Statements özelliği C# 9.0 ile birlikte gelmiştir.
