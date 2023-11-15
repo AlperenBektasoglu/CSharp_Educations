@@ -121,8 +121,60 @@ decimal k =  3.14M; // k ile l değişkenlerinin değerleri aynıdır.
 decimal l =  3.14m;
 ```
 
+**Not:** Literal düzenleme c# 7.0 ile birlikte gemiştir. sayıların okunabilmesini kolaylaştırmak için _ kullanılabilir.
+```cs
+int x = 100_000_000;
+```
+
+**Not:** Tüm tiplerine default değerleri vardır. OOP'de class içinde tanımlanan değişkenlere, değişkenin tipine göre 
+default değerler atanır ama main fonksiyonunda default değerler atanmaz. Main fonksiyonu içerisinde oluşturulan değişkenlerin 
+ilk değerlerini manuel atmaya özen gösterilmelidir. Değeri olmayan değişkeni kullamazsınız. Aşağıda tipe göre
+bazı default değerler verilmiştir:
+
+* string: null
+* char = '\0'
+* sayısal ifadeler : 0
+* bool: false
+
+**Not:** default keyword, içerisine verilen türün varsayılan değerini döndürür. C# 7.0 ile syntax'ta kolaylığa gidilmiştir.
+```cs
+bool x = default(bool);
+bool x = default; // C# 7.0 ile default değer ataması bu şekilde de yapılabilmektedir.
+```
+
+## "object" Veri Tipi
+Tüm tipler varsayılan olarak object'ten tipinden türemiştir. Object referans türlü bir değişkendir. Lakin değer 
+türlü verileride karşılayabilir. Object olarak tanımlanan değişken her tipteki veriyi içinde saklayablir. Fakat 
+object tipteki değişkene atanan değer Boxing(Kutulama) işlemine uğrar. Yani,object tipiyle oluşturduğumuz bir string 
+değişken, RAM’e string olarak değilde object olarak kaydedilir. Tanımlanan object değişkeni kullanmak istediğimiz de,
+içinde saklanan verinin tipini elde ederek kullanmalıyız. Bunun içinde Unboxing(Kutudan Çıkarma) 
+işlemi yapılır. Bu işlem sonucunda object içindeki verinin asıl tipini veri ile birlikte almış oluruz.
+                
+**Not:** "object" veri tipi olan bir değişkene hangi değer girilirse girilsin, o değişken bellekte 
+object tipinde tutulur ve veriye ulaşmak için boxing ve unboxing işlemleri uygulanır.
+```cs
+object x = 15; 
+int y = (int)x;
+```
+
+## Boxing ve Unboxing nedir?
+Aslında boxing ve unboxing, tip dönüşümlerinin konusudur. Ama yukarıda değinildiği için buarada anlatılmıştır.
+Boxing: Object türündeki bir değişkene herhangi bir türdeki değeri göndermek Boxing olarak nitelendirilmektedir.
+
+Unboxing: Boxing işleminin tersidir. Object bir değişkenin içerisindeki değer üzerinde türüne özgü işlemler yapabilmek için o object'in
+içerisinde değeri kendi türünde elde etmememiz gerekmektedir. İşte bu işleme Unboxing denir ve cast operatörü kullanılarak
+Unboxing işlemi uygulanır.
+
+**Not:** Boxing ve Unboxing işleminde Cast operatörü kullanılmaktadır. Cast operatörü, Operatörler konu başlığının altında
+daha detaylı anlatılacaktır.
+```cs
+object a = 13; // Boxing (İnt tipindeki değer, object tipli a değişkenine atanıyor.)
+int b = (int)a; // Unboxing (a object tipli değişkenin içindeki değer, cast işlemi ile int'e dönüştürülüp, int tipli b değişkenine atanıyor.)
+```
 
 
+           
+            
 
 
 
