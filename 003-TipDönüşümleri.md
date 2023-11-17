@@ -13,6 +13,7 @@ Buna bilinçsiz tip dönüşümü denir, bunun için herhangi bir özel kod gere
 byte x1 = 5;
 int X2 = x1;
 ```
+
 ## Bilinçli Tip Dönüşümü (Explicit Type Conversion)
 C#’ta büyük kapasiteli bir değişken daha düşük kapasiteli bir değişkene atanabilir.
 Buna bilinçli tip dönüşümü denir. Bilinçli tip dönüşümünde veri kaybı olabilir.
@@ -22,6 +23,12 @@ int y1 = 125;
 // byte y2 = y1; // Hata alınır.
 byte y2 = (byte)y1; // Cast işlemi ile int tipinideki y1 değişkeninin değeri byte tipine dönüştürülerek y2 değişkenine atandı.
 ```
+
+**Not:** Tip dönüşümünde int tipini bool tipine dönüştürürken; 0 false olarak, 0 dışındaki değerler ki bunlara negatif
+sayılarda dahil true olarak dönüşür.
+
+**Not:** ASCII: Bilgisayardaki her bir karakterin sayısal bir karşılığı vardır. Bu sayısal değerlere
+ASCII kaynak kodu denmektedir. char tipinden int tipine dönüşüm yaparken ilgili karakterin ASCII karşılığını elde edersin.
 
  ## Checked/Unchecked Kullanımı
 Checked : Tip dönüşümü yaparken, veri kaybı olduğu zaman hata vermesi için kullanılır.
@@ -44,6 +51,30 @@ unchecked
 }
 ```
 
+## Tip Dönüşümünde Kullanılan Metodlar
+### Convert Sınıfı
+Convert sınıfı bütün tipleri hedef tipe dönüştürebilir.
+```cs
+string x = "123";
+int y;
+y = Convert.ToInt32(x);
+```
+
+### Parse Metodu
+Parse Metodu sadece string tipleri hedef tipe dönüştürürken kullanılır.
+```cs
+int k;
+string l = "123";
+k = int.Parse(l);
+```
+
+### toString() Metodu
+Tipleri string tipine dönüştürmek için kullanılır. ToString() metodu tüm tiplerde tanımlıdır.
+```cs
+int c = 100;
+string p;
+p = c.ToString();
+```
 
             
             
