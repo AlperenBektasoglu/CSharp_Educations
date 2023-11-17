@@ -76,6 +76,7 @@ string p;
 p = c.ToString();
 ```
 
+**Not:** Tip dönüşümlerinde dikkat edilmesi gereken tek bir husus vardır. Dönüşüm yapılacak verinin tipine uygun bir hedef tip belirlenmelidir.
             
             
         
