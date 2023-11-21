@@ -61,3 +61,61 @@ var canBuy =
 Elimizdeki değerin türüne uygun fonsiyonları, metodları ve property'lere erişmemizi ve onları kullanabilmemizi sağlayan operatördür.
 
 
+## "is" Operatörü
+"is" operatörü, çalışma anında işaret edilen değişkenin tipini kontrol etmemizi sağlar.
+"is" operatörü, bool bir değer döndürür.
+```cs
+int exm = 123;
+
+if (exm is string)
+  Console.WriteLine("Değişkenin tipi: string");
+
+if (exm is int)
+  Console.WriteLine("Değişkenin tipi: int");
+```
+
+## "is null" Operatörü
+Bir değişkenin değerinin null olup olmamasını kontrol eden ve sonuç olarak geriye
+bool türünde bir değer döndüren operatördür.
+```cs
+string exm = null;
+Console.WriteLine(exm is null); // Çıktı: true
+```
+
+## "is not null" Operatörü
+Bir değişkenin değerinin null olup olmamasını kontrol eden ve sonuç olarak geriye
+bool türünde bir değer döndüren operatördür. "is null" operatörünün tersi şeklinde çıktı verir.
+```cs
+string exm = null;
+Console.WriteLine(exm is not null); // Çıktı: false
+```
+
+## "as" Operatörü
+Değer atama işleminde, eşitliğin sağ tarafından geçerli bir tip gelmesse null atanmasını sağlar. 
+Değer tipli değişkenler null değeri alamadığından dolayı, bu operatör değer tipli değişkenler 
+için kullanılamazlar.
+```cs
+object exm1 = 123;
+object exm2 = new Program();
+object exm3 = "Alperen";
+
+string s1 = exm1 as string; // s1 değişkenin değeri: null
+string s2 = exm2 as string; // s2 değişkenin değeri: null
+string s3 = exm3 as string; // s3 değişkenin değeri: "Alperen"
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
