@@ -60,6 +60,31 @@ var canBuy =
 ## Member Access Operatörü (.)
 Elimizdeki değerin türüne uygun fonsiyonları, metodları ve property'lere erişmemizi ve onları kullanabilmemizi sağlayan operatördür.
 
+## Cast Operatörü
+Tip dönüşümlerinde kullandığımız bir operatördür. (type) şeklinde kullanılır.
+```cs
+int exm1 = 100;
+string exm2 = (int)exm1;
+```
+
+## "sizeof" Operatörü
+Verilen tipin bellekte kaç byte'lık yer kapladığını geriye dönen operatördür.
+```cs
+Console.WriteLine("int: " + sizeof(int));
+```
+
+## "typeof" Operatörü
+Parametre olarak verilen tipin, tipe ait bilgilerini döndüren operatördür.
+```cs
+Type t = typeof(int); // int tipine ait tüm bilgiler burada t değişkenine atanmıştır.
+```
+
+## "default" Operatörü
+Belirtilen tipin default değerini döndüren operatördür.
+```cs
+Console.WriteLine(default(string));
+int exm = default; // exm değişkenine, tipine göre varsayılan değer atandı.
+```
 
 ## "is" Operatörü
 "is" operatörü, çalışma anında işaret edilen değişkenin tipini kontrol etmemizi sağlar.
@@ -104,6 +129,30 @@ string s2 = exm2 as string; // s2 değişkenin değeri: null
 string s3 = exm3 as string; // s3 değişkenin değeri: "Alperen"
 ```
 
+## Nullable<> Ve Nullable Operatörü (?)
+Değer tipli değişkenler null değeri alamazken referans tipli değişkenler null değeri alabilir. 
+Bu ifadeler, değer tipli değişkenlerin null değer alabilmesi için kullanılır.
+```cs
+Nullable<int> exm = null; // Nullable<> kullanımı ile değişken null değer alabilir hale getirilmiştir.
+int? exm1 = null; // ? Operatürü ile değişken null değer alabilir hale getirilmiştir.
+```
+
+## Null Coalesing Operatörü (??)
+Elimizdeki değişkenin değerlerinin null olma durumuna istinaden farklı bir değeri göndermemizi sağlayan
+operatördür.
+```cs
+string exm = "Alperen";
+Console.WriteLine(exm ?? "Bektaşoğlu"); // Çıktı: Alperen
+exm = null;
+Console.WriteLine(exm ?? "Bektaşoğlu"); // Çıktı: Bektaşoğlu
+```
+
+## Null Coalescing Assignment Operatürü (??=)
+Kısaca örnek üzerinden açıklamak gerekir ise:
+```cs
+int? id = null;
+id ??= 1; // id değişkeni null ise 1 değerini ata, değil ise mevcut değerini koru
+```
 
 
 
