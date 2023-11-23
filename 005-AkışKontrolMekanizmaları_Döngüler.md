@@ -57,6 +57,8 @@ for, while ve do-while olmak üzere üç çeşit döngü yapısı vardır.
 
 **Not:** Döngülerde tek satırlık kodlar için scope kullanılmasına gerek yoktur.
 
+**Not:** foreach yapısı bir döngü değil iterasyondur.
+
 ## for Döngüsü
 for döngüsünde koşul true iken döngü devam eder.
 for döngüsünde koşul verilmediği zaman sonsuz döngü oluşur.
@@ -106,20 +108,39 @@ do
 do {}while(true) // Sonsuz Döngü
 ```
 
+## Break Ve Continue Komutları
+Break komutu: Break komutu döngüyü sonlandırır. Switch-Case yapısında ise, switch koşulunun 
+scope’u({}) dışına çıkmamızı sağlar.
 
+Continue komutu: Döngü içinde bu komutun bulunduğu satırdan sonrası işlenmeden döngünün sonraki değerini işlemek 
+üzere başa dönmesini (sonraki tekrara geçmesini) sağlar.
 
+```cs
+for (int i = 0; i < 20; i++)
+{
+    if (i == 5)
+        continue;
 
+    if (i == 10)
+        break;
 
+    Console.WriteLine(i);
+}
+```
 
+## Foreach Iterasyon Yapısı
+Foreach yapısı döngü değildir. listeler ya da diziler üzerinde işlem yapmak için kullanılır.
+Özellikle eleman sayısının bilinmediği durumlarda büyük kolaylık sağlamaktadır.
 
+**Not:** Foreach yapısı sadece dizi elemanlarını okumak için kullanılır. Dizi elemanları üzerinde 
+              düzenleme işlemlerine izin verilmez. Bu tür engelleme ReadOnly (Sadece okunabilir) olarak bilir.
 
-
-
-
-
-
-
-
+```cs
+string[] isimler = { "Alperen", "Ahmet", "Elif", "Hakan", "Sema" };
+foreach (string eleman in isimler)
+    Console.WriteLine(eleman);
+Console.ReadKey();
+```
 
 
 
