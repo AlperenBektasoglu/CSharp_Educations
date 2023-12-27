@@ -38,13 +38,6 @@ catch (Exception exception)
 ```
 
 ## Yararlı Kaynaklar
-Kaynak: https://www.srdrylmz.com/c-istisnai-durum-yonetimi/
-Kaynak: https://www.srdrylmz.com/c-exception-sinifi-olusturma/
-Kaynak: https://www.srdrylmz.com/c-merkezi-istisnai-durum-yonetimi/
-
-
-## Logical Pattern
-switch expression'da and, or ve not gibi mantıksal operatörler kullanılabilmektedir. Relational pattern ile oldukça uyumludur.
-
-## Not Pattern
-switch expression'da not operatörünün kullanılabildiği bir desendir.
+1. Kaynak: https://www.srdrylmz.com/c-istisnai-durum-yonetimi/
+2. Kaynak: https://www.srdrylmz.com/c-exception-sinifi-olusturma/
+3. Kaynak: https://www.srdrylmz.com/c-merkezi-istisnai-durum-yonetimi/
