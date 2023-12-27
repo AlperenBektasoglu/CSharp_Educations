@@ -60,20 +60,3 @@ Multi-Dimensional Array (Düzenli Diziler / Matris Dizileri) ve Jagged Array (D�
 olduğu dizilerdir.
 
 **Not:** Jagged Array (Düzensiz Diziler): Jagged diziler, her satırının kolon sayısı farklı olan (Aynıda olabilir) dizilerdir diyebiliriz.
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            /*
-
-             */
