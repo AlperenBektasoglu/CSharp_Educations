@@ -44,6 +44,8 @@ Console.WriteLine(++i); // Çıktı: 12, x: 12
 ## Atama Operatörleri
 Atama operatörleri: = , += , -= , *= , /=
 
+**Not:** Anahtar kelimeler (Keywords), derleyici için ön tanimli olan olan kelimelerdir. Operatörler bir keyworddür ama her keyword bir operatör değildir.
+
 ## Ternary Operatörü (?:)
 Koşul işlemlerinde kullanılır. İf yapısı ile aynı işlemi yapar.
 If kullanarak kontrol etmek istediğimiz koşullarda ternary operatorünü kullanarak kod satır sayısından avantaj sağlamış oluruz.
