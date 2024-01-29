@@ -13,7 +13,7 @@ bellek yönetimi, ağ oluşturma, güvenlik, bellek yönetimi ve tür güvenliğ
 2- FCL (Framework Class Library) -> Omurga Sınıf Kütüphanesi
 
 ### 1- Common Language Runtime (CLR, Ortak Dil Çalışma Zamanı)
-Net Framework’ün altında yatan temel yapı taşıdır. .Net dillerinin derlenmesiyle oluşan ara bir dil olan 
+.Net Framework’ün altında yatan temel yapı taşıdır. .Net dillerinin derlenmesiyle oluşan ara bir dil olan 
 Common Intermediate Language (CIL, MSIL ya da kısaca IL. Ortak Ara Dil) Common Language Runtime tarafından 
 çalışma-zamanında yorumlanarak işletim sistemlerinin anlayabileceği dil’e (örneğin; assembly) 
 dönüştürülür. IL kodlarının çalışma-zamanındaki bu dönüşüm/derleme işine 
@@ -70,7 +70,7 @@ yöneten, diller arası hata ayıklamaya izin veren CLR'yi kullanır.
 ve bu nedenle doğrudan işletim sistemi tarafından yürütülür. Bundan dolayı, yönetilen kodun yapamadığı 
 zararlı-güçlü şeyleri yapma becerisine sahiptir.
 
-## .Net Framework modülleri
+## .Net Framework Modülleri
 Aşağıda .Net Framework modüllerinden bazıları tanımlanmıştır. Aşağıdaki .Net Framework modüllerinin de 
 dışında modüller vardır(Entity Framework, LINQ vs). 
 
@@ -92,7 +92,7 @@ bir frameworktür. WCF, .Net Framework modülüdür.
 
 ## .NET Core Nedir?
 .NET Core, .NET Framework’ün açık kaynak kodlu, platform bağımsız bir yapıya dönüştürülmüş halidir. 
-Açık kaynak kodlu olması sebebiyle GitHub üzerinde oldukça geniş bir topluluk da geliştirilmesine katkı sağlamaktadır.
+Açık kaynak kodlu olması sebebiyle GitHub üzerinde oldukça geniş bir topluluk da geliştirmesine katkı sağlamaktadır.
 
 ## .Net Framework ile .Net Core arasındaki farklar nedir?
 Net Framework:
@@ -140,7 +140,7 @@ Rebuild: Önceden derlenmiş dosyaları siler ve tekrar derler.
 
 Clean: Önceden derlenmiş dosyaları siler.
 
-**Not:** Derleme işlemi sonuncada oluşan dosyalar bin klasörü içinde oluşturulur.
+**Not:** Derleme işlemi sonucunda oluşan dosyalar bin klasörü içinde oluşturulur.
 
 ## Paket/kütüphane ve Referans arasındaki fark Nedir?
 Paketler/kütüphane, Nuget denilen bir havuzdan gelir. Referanslar ise önceden yazılmış dll dosyalarıdır.
