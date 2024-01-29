@@ -126,7 +126,7 @@ decimal l =  3.14m;
 int x = 100_000_000;
 ```
 
-**Not:** Tüm tiplerine default değerleri vardır. OOP'de class içinde tanımlanan değişkenlere, değişkenin tipine göre 
+**Not:** Tüm tiplerin default değerleri vardır. OOP'de class içinde tanımlanan değişkenlere, değişkenin tipine göre 
 default değerler atanır ama main fonksiyonunda default değerler atanmaz. Main fonksiyonu içerisinde oluşturulan değişkenlerin 
 ilk değerlerini manuel atmaya özen gösterilmelidir. Değeri olmayan değişkeni kullamazsınız. Aşağıda tipe göre
 bazı default değerler verilmiştir:
@@ -136,14 +136,14 @@ bazı default değerler verilmiştir:
 * sayısal ifadeler : 0
 * bool: false
 
-**Not:** default keyword, içerisine verilen türün varsayılan değerini döndürür. C# 7.0 ile syntax'ta kolaylığa gidilmiştir.
+**Not:** default keyword'ü, içerisine verilen tipin varsayılan değerini döndürür. C# 7.0 ile syntax'ta kolaylığa gidilmiştir.
 ```cs
 bool x = default(bool);
 bool x = default; // C# 7.0 ile default değer ataması bu şekilde de yapılabilmektedir.
 ```
 
 ## "object" Veri Tipi
-Tüm tipler varsayılan olarak object'ten tipinden türemiştir. Object referans türlü bir değişkendir. Lakin değer 
+Tüm tipler varsayılan olarak object tipinden türemiştir. Object referans tiptir. Lakin değer 
 türlü verileride karşılayabilir. Object olarak tanımlanan değişken her tipteki veriyi içinde saklayablir. Fakat 
 object tipteki değişkene atanan değer Boxing(Kutulama) işlemine uğrar. Yani,object tipiyle oluşturduğumuz bir string 
 değişken, RAM’e string olarak değilde object olarak kaydedilir. Tanımlanan object değişkeni kullanmak istediğimiz de,
@@ -158,7 +158,7 @@ int y = (int)x;
 ```
 
 ## Boxing ve Unboxing Nedir?
-Aslında boxing ve unboxing, tip dönüşümlerinin konusudur. Ama yukarıda değinildiği için buarada anlatılmıştır.
+Aslında boxing ve unboxing, tip dönüşümlerinin konusudur. Ama yukarıda değinildiği için burada anlatılmıştır.
 Boxing: Object türündeki bir değişkene herhangi bir türdeki değeri göndermek Boxing olarak nitelendirilmektedir.
 
 Unboxing: Boxing işleminin tersidir. Object bir değişkenin içerisindeki değer üzerinde türüne özgü işlemler yapabilmek için o object'in
@@ -186,9 +186,9 @@ belirlemektedir.
 ```
 
 ## "dynamic" Veri Tipi
-"dynamic" tip kullanıldığı zaman tip dönüşümlerinde oluşan hatalar derleme esnasında herhangi bir kontrol 
-yapılmadığı için hata üretilmez. Ancak çalışma zamanında (Runtime) kontrol edilir ve hata varsa  RuntimeBinderException  
-hatasını fırlatır. 'dynamic' ile, derleyici‘ye (compiler), nesnenin tipinin sadece çalışma zamanında bilinebileceğini 
+"dynamic" tip kullanıldığı zaman, tip dönüşümlerinde oluşan hatalar derleme esnasında kontrol 
+edilmediği için hata oluşmaz. Ancak çalışma zamanında (Runtime) kontrol edilir ve hata varsa  RuntimeBinderException  
+hatasını fırlatır. 'dynamic' ile, derleyici‘ye (compiler), değişkenin tipinin sadece çalışma zamanında bilinebileceğini 
 söylemiş oluyoruz.
 ```cs
 // Aşağıdaki örneği derleyebilirsiniz ancak çalışma zamanında hata verir.
@@ -219,7 +219,7 @@ const double pi = 3.14;
 ```
 
 ## Readonly Anahtar Kelimesi
-Readonly sadece okunabilir değişkenler kullanılır. const'tan farkı sadece tanımlandığı yerde değil, 
+Readonly sadece okunabilir değişkenler için kullanılır. const'tan farkı sadece tanımlandığı yerde değil, 
 ayrıca constructor method (ileride class konusunda anlatılacaktır) içerisinde de değerleri atanabilir. 
 Readonly static yapıda değildir.
 
