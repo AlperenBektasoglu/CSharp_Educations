@@ -46,8 +46,6 @@ string[] example1 = { "Bir", "İki", "Üç" };
 string[] example2 = new string[] { "Bir", "İki", "Üç" };
 string[] example3 = new string[3] { "Bir", "İki", "Üç" };
 ```
-
-           
 **Not:** Bir dizi elemanına erişirken üst dizi indeksinden daha yukarıda bir değer verilirse program hata verir.
 Örneğin yukarıdaki dizi de "example3[4] = 100;" ifadesi yazıldığında program taşma hatası verir.
               
@@ -58,7 +56,13 @@ bir dizinin boyutu girildikten sonra dizi boyutu tekrar değiştirilemez.
 ```cs
 int[] example1 = new int[10];  // example1 dizisine ulaşılabilir.
 int[] example2; // example2 dizisine ulaşılamaz.
-```    
+```
+
+**Not:** Dizi olarak tanımlanan değişkenler Array sınıfından türetilmiştir.
+```cs
+Array arr1 = new int[3];
+```
+
 **Not:** Foreach mekanizması sadece dizi elemanlarını okuma için kullanılır. Dizi elemanları üzerinde düzenleme 
  işlemlerine izin verilmez. Bu tür engelleme ReadOnly (Sadece okunabilir) olarak bilir.
              
