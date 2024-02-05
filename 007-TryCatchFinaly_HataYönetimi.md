@@ -1,5 +1,6 @@
 ## Hata Yönetimi İle İlgili Genel Bilgiler
-Hatalar çeşidi sayısı üçtür: Yazım Hataları(Syntax Error), Çalışma Zamanı Hataları (Run Time Error) ve Mantıksal Hatalar (Logical Error)
+Hatalar çeşidi sayısı üçtür: Yazım Hataları(Syntax Error), Çalışma Zamanı Hataları (Run Time Error) ve Mantıksal Hatalar (Logical Error).
+Aşağıda try-catch yapısının özellikleri anlatılmıştır. 
 
 1. Yazım hataları (Syntax errors) derleme zamanında alınır. Gelişmiş ide'lerde derleme sürecinden öncede syntax hataları tespit edilebilir.
 2. Try catch ile yakalanan hatalar çalışma zamanı (run time) hatalarıdır.
