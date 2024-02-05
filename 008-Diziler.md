@@ -58,7 +58,7 @@ int[] example1 = new int[10];  // example1 dizisine ulaşılabilir.
 int[] example2; // example2 dizisine ulaşılamaz.
 ```
 
-**Not:** Dizi olarak tanımlanan değişkenler Array sınıfından türetilmiştir.
+**Not:** Dizi olarak tanımlanan değişkenler Array sınıfından türetilmektedirler.
 ```cs
 Array arr1 = new int[3];
 ```
