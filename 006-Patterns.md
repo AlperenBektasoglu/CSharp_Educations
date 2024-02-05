@@ -6,7 +6,8 @@ is operatörü ile belirlenen türün dönüşümü sağlanabilir.
 object x = "Alperen";
 if(x is string){} // is operatörü
 
-if(x is string xx){} // Type Pattern - Burada oluşturulan xx simli değişkene if'in dışından da erişilebilir ama kullanırken hata alınır.
+if(x is string xx){}
+// Type Pattern - Burada oluşturulan xx isimli değişkene if'in dışından da erişilebilir ama kullanırken hata alınır.
 // xx değişkeninin değeri: Alperen
 ```
 
