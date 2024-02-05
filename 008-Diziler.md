@@ -56,7 +56,113 @@ int[] example2; // example2 dizisine ulaşılamaz.
 **Not:** Yukarıdaki anlatımda tek boyutlu dizi örnekleri verildi. Tabi çok boyutlu diziler de var. Çok boyutlu diziler, 
 Multi-Dimensional Array (Düzenli Diziler / Matris Dizileri) ve Jagged Array (Düzensiz Diziler) olmak üzere ikiye ayrılır.
 
-**Not:** Multi-Dimensional Array (Düzenli Diziler / Matris Dizileri): Bütün satırların aynı kolon sayısına sahip 
-olduğu dizilerdir.
+ ## Multi-Dimensional Array (Düzenli Diziler / Matris Dizileri)
 
-**Not:** Jagged Array (Düzensiz Diziler): Jagged diziler, her satırının kolon sayısı farklı olan (Aynıda olabilir) dizilerdir diyebiliriz.
+ Multi-Dimensional Array (Düzenli Diziler / Matris Dizileri): Bütün satırların aynı kolon sayısına sahip 
+olduğu dizilerdir.
+ 
+**İki boyutlu düzenli dizi örneği:**
+
+```cs
+int[,] arr3 = new int[3, 2]; // 3 satır, 2 sütun
+int[,] arr4 = { { 1, 2 }, { 3, 4 }, { 5, 6 } }; // 3 satır, 2 sütun
+```
+
+**Üç boyutlu düzenli dizi örneği:**
+
+```cs
+int[,,] Dizi_3D = new int[2, 3, 4] // 2 Satır // 3 Kolon // Her kolonda 4 değer
+{
+     { // satır 1
+         { // Kolon 1
+           1, // Değer 1
+           2, // Değer 2
+           3, // Değer 3
+           4  // Değer 4
+         },
+         { 4, 6, 7 ,8} , // Kolon 2
+         { 9, 10, 11 ,12} // Kolon 3
+     },
+     { // satır 2
+         { 12, 11, 10, 9 }, // Kolon 1
+         { 8, 7, 6, 5 }, // Kolon 2
+         { 4, 3, 2, 1 } // Kolon 3
+     },
+};
+```
+
+## Jagged Array (Düzensiz Diziler)
+
+Jagged diziler, her satırının kolon sayısı farklı olan (Aynıda olabilir) dizilerdir diyebiliriz.
+tanımlamada dikkat etmemiz gereken olay dizinin boyutu verilirken sadece satırının boyutunun verildiğidir. 
+Çünkü sütun değerleri her satır için değişecektir.
+
+```cs
+// 1. Tanımalama Örneği:
+
+int[][] jaggedArray = new int[3][];
+             
+jaggedArray[0] = new int[] { 1, 3, 5, 7, 9 };
+jaggedArray[1] = new int[] { 0, 2, 4, 6 };
+jaggedArray[2] = new int[] { 11, 22 };
+
+// 2. Tanımalama Örneği:
+
+int[][] jaggedArray2 = new int[][]
+{
+new int[] { 1, 3, 5, 7, 9 },
+new int[] { 0, 2, 4, 6 },
+new int[] { 11, 22 }
+};
+
+// 3. Tanımalama Örneği:
+
+int[][] jaggedArray3 =
+{
+new int[] { 1, 3, 5, 7, 9 },
+new int[] { 0, 2, 4, 6 },
+new int[] { 11, 22 }
+};
+```
+
+## Params Anahtar Kelimesi
+
+C#'ta params anahtar kelimesi, değişken sayıda argüman(parametre) alan bir parametreyi belirtmek için kullanılan anahtar kelimedir. Yalnızca bir params anahtar sözcüğüne izin verilir ve bir fonksiyon bildiriminde params anahtar sözcüğünden sonra hiçbir ek parametreye izin verilmez.
+
+```cs
+public void ShowForInt(params int[] val) // Params Paramater  
+{
+  for (int i = 0; i < val.Length; i++)
+  {
+      Console.WriteLine(val[i]);
+  }
+}
+
+public void ShowForObject(params object[] items) // Params Paramater  
+{
+  for (int i = 0; i < items.Length; i++)
+  {
+      Console.WriteLine(items[i]);
+  }
+}
+
+static void Main(string[] args){
+      Program program = new Program(); // Creating Object  
+       program.ShowForInt(2, 4, 6, 8, 10, 12, 14); // Değişken uzunluktaki argümanları iletme
+       Console.WriteLine("\n------------------------------------------");
+       program.ShowForObject("Ramakrishnan Ayyer", "Ramesh", 101, 20.50, "Peter", 'A');
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
