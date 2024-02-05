@@ -30,6 +30,7 @@ değişkenin if dışında kullanılırken hata almamasını sağlar.
 ```cs
 object x = "Alperen";
 if(x is var xx){}
+// xx değişkeninin değeri if içinde de, if dışında da "Alperen" dir.
 ```
 **Not:** Normal var derleme zamanında değişkenin tipini belirler. Var pattern ise run time da değişkenin tipini belirler.
 
