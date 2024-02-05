@@ -1,4 +1,4 @@
-C# Sql Transaction Nedir?
+## C# Sql Transaction Nedir?
 
 bir grup işlemin arka arkaya gerçekleşiyor olmasına rağmen, seri işlemler halinde ele alınması gerektiğinde kullanılır. 
 Transaction bloğu içerisindeki işlemlerin tamamı gerçekleşinceye kadar hepsi gerçekleşmemiş varsayılır. 
@@ -12,7 +12,7 @@ Para aktarımı bu iki işlem başarılı olursa tamamlanır.
 Eğer, işlem 1 başarılı olur, ancak işlem 2 başarısız olur ise, Hesap2’ye para gitmediği gibi Hesap1 de boşuna para kaybetmiş olacaktır. 
 Bunun gibi problemleri yönetebilmek için transaction yapısı kullanılır.
 
-Örnek - 1
+## Sql Transaction Kullanımı
 
 ```cs
 string baglantiAdresi = "Server=127.0.0.1;Database=Test;User Id=sa;Password=123456;";// Bu alanı kendi bağlantı bilgileriniz ile güncelleyin ... 
@@ -46,6 +46,68 @@ using (SqlConnection baglanti = new SqlConnection(baglantiAdresi))
     {
         //İşlem başarılı da olsa hatalı da olsa sonuç olarak SQL bağlantımızı kapatıyoruz
         baglanti.Close();
+    }
+}
+```
+
+## Entity Framework Transaction Kullanımı
+
+Entity Framework, .NET tabanlı bir ORM (Object-Relational Mapping) aracıdır. Veritabanına erişim sağlamak için ve gerekli “Sorgulama”, “Kaydetme”, “Güncelleme” ve “Silme” gibi işlemleri kolayca yapmamızı sağlayan bir kütüphanedir. 
+Entity Framework, bir ya da birden fazla veritabanı işleminin (örneğin, ekleme, silme, güncelleme gibi ) tek bir tarnsaction(mantıksal işlem) ile yapılmasını sağlayan yapısı mevcuttur. 
+Aşağıdaki örneği inceleyebilirsiniz.
+
+### Isolation Nedir?
+
+Transation’lar birbirinden izole edilmiştir. Yani bir transaction’in başka bir transaction’dan etkilenmesi engellenmiştir. Bu, bir transaction’ın sonuçlarının diğer transaction’lar üzerinde etkili olmasını önler.
+Entitiy Framework, farklı izolasyon seviyelerini desteklemektedir. Bunlar; ReadUncommitted, ReadCommitted, RepeatableRead, ve Serializable. Bunlar transaction’lar arasındaki izolasyon seviyelerini belirtir.
+Aşağıdaki örnekte kullanımı mevcuttur.
+
+**1- ReadUncommitted:** Diğer transaction’lar tarafından hala işlemi bitmemiş verileri de okumamıza izin veren bir izolasyon seviyesidir.
+
+**2- ReadCommitted:** Bir transaction tarafından bir veri üzerinde işlem yapılacaksa, bu verinin başka transactionlar tarafından yapılan işlemlerinin bitmiş ve onaylanmış olması gerekmektedir. 
+Yoksa işlemi yapacak transaction diğer transaction’ların işlerini bitirmesini bekleyecektir.
+
+**3- RepetableRead:** Bir transaction sırasında diğer transaction’lar tarafından yapılan değişiklikleri görmesine ve aynı sorguyu tekrarladığında aynı sonuçları getirmesine izin verir. 
+Yani veri üzerinde işlem yapan bütün transaction’ların işlerini bitirmesini bekler. Bu seviye ReadCommitted’ten daha fazla izolasyon sağlar.
+
+**4- Serializable:** Veritabanında en yüksek izolasyon düzeyini sağlar. Bu seviye, bir transaction sırasında diğer transaction’lar tarafından yapılan değişiklikleri görmesini, aynı sorguyu 
+tekrarladığında aynı sonuçları görmesini ve yeni satırların eklenmesini önlemesini sağlar. SERIALIZABLE seviyesi, diğer işlemlerin tamamını tamamlamasını bekler ve bu süre boyunca 
+ilgili verileri kilitleyerek diğer işlemlerin müdahalesini önler.
+
+```cs
+// DbContext oluştur
+using (var dbContext = new SampleDbContext())
+{
+    // Transaction başlat
+    using (var transaction = dbContext.Database.BeginTransaction(System.Data.IsolationLevel.ReadCommitted))
+    {
+        try
+        {
+            // İşlemleri buraya ekleyin
+            // Örneğin, yeni bir öğe eklemek:
+            var newEntity = new SampleEntity { Name = "New Entity" };
+            dbContext.SampleEntities.Add(newEntity);
+            dbContext.SaveChanges();
+
+            // Diğer bir işlemi gerçekleştir
+            // Örneğin, var olan bir öğeyi güncellemek:
+            var existingEntity = dbContext.SampleEntities.Find(1);
+            if (existingEntity != null)
+            {
+                existingEntity.Name = "Updated Entity";
+                dbContext.SaveChanges();
+            }
+
+            // Başarılıysa commit
+            transaction.Commit();
+            Console.WriteLine("Transaction başarıyla tamamlandı.");
+        }
+        catch (Exception ex)
+        {
+            // Hata durumunda rollback
+            Console.WriteLine("Transaction başarısız: " + ex.Message);
+            transaction.Rollback();
+        }
     }
 }
 ```
