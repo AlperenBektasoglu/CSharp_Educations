@@ -5,6 +5,7 @@
 * Dizi içine her türlü değer koyulabilir(referans/değer tip). 
 * Dizi içindeki bütün elemanlar aynı tipte olmak zorundadır.
 * Dizi boyutu sabittir ve kodlarken belirtilmesi gerekir.
+* Diziler tanımlandığında kullansakta kullanmasakta bellekte belirtilen eleman sayısı kadar alan tahsis edilir.
 * Bütün dizilerin birinci elemanı 0. indeksten başlar.
 
 ```cs
