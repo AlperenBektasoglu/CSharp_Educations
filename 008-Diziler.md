@@ -32,6 +32,14 @@ example3[5] = 30; //6. Sıradaki elemana 30 değeri atanıyor.
 Console.Write(example3[5]); // Çıktı: 30
 ```
 
+**Dizi tanımlama varyasyonları:**
+```cs
+int[] arr1 = {1,2,3};
+int[] arr1 = new int[] {1,2,3};
+int[] arr1 = new int[3] {1,2,3};
+int[] arr1 = new[] {1,2,3};
+```
+
 Dizilere başlangıç değerleri de atanabilir. Atama için { } işaretçileri kullanılır.
 ```cs
 string[] example1 = { "Bir", "İki", "Üç" };
