@@ -7,6 +7,7 @@ object x = "Alperen";
 if(x is string){} // is operatörü
 
 if(x is string xx){} // Type Pattern - Burada oluşturulan xx simli değişkene if'in dışından da erişilebilir ama kullanırken hata alınır.
+// xx değişkeninin değeri: Alperen
 ```
 
 farklı bir kullanım örneği:
