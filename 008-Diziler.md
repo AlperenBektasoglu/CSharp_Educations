@@ -212,6 +212,21 @@ int[,,] arr3 = new int[2,3,4];
 Array arr4 = Array.CreateInstance(typeof(int), 2, 3, 4);
 ```
 
+## Index ve Range Veri Tipi
+Bu tipler c# 8.0 ile gelmiştir.
+Index, dizi ve koleksiyon yapılarındaki index kavramının tip olarak belirlenmiş halidir. Temdelde index değerini bir tür ile
+tutmakla beraber ^ operatörüyle birlikte daha fazla anlam ifade etmekte ve dizinin index değerlerini tersine ifadece edecek
+şekilde sorumluluk yüklenektedir.
+
+```cs
+int[] sayilar = {10, 20, 30, 40, 50, 60, 70, 80, 90};
+
+Index index1 = 3;
+Index index2 = ^3; // ^ operatörü ile tersine index durumları kullanılırken index değerlerinin 0 dan değil 1 den başladığına dikkat ediniz.
+
+Console.WriteLine(sayilar[index1]); // Çıktı: 40
+Console.WriteLine(sayilar[index2]); // Çıktı: 70
+```
 
 
 
