@@ -166,11 +166,27 @@ static void Main(string[] args){
 Dizi olarak tanımlanan değişkenler Array sınıfından türetilmektedirler.
 Dolayısı ile dizilerde Array sınıfından gelen belirli metodlar ve özellikler mevcuttur.
 ```cs
+// Tanımlama 1
 int[] arr1 = new int[5]; // Bu şekildeki tanımlamada indexer operatörü([]) kullanılır.
+
+// Tanımlama 2
 Array arr2 = new int[3]; // Bu şekildeki tanımlamada indexer operatörü([]) kullanılamaz. Veri ekleme, görüntüleme vs gibi işlemler fonksiyonlar ile yapılır.
 ```
 
-**Not:** 
+**Not:** Algoritmik yaklaşımlarda tanımlama 1 de ki kullanım tercih edilirken, daha çok dizi hakkında bilgi edinilmesi geren durumlarda tanımlama 2 deki
+kullanım tercih edilir.
+
+Aşağıda Array sınıfı kullanılarak tanımlanan dizide veri ekleme ve görüntüleme örneğini görebilirsiniz.
+
+```cs
+Array arr1 = new int[3];
+// arr1[0] = 30; // Hatalı kullanım çünkü bu şekildeki tanımlamada indexer operatörü([]) kullanılamaz.
+arr1.SetValue(30,0); // 1. parametre: değer, 2. parametre: index
+arr1.SetValue(60,1);
+Console.WriteLine(arr1.GetValue(0)); // Çıktı: 30
+Console.WriteLine(arr1.GetValue(1)); // Çıktı: 60
+```
+
 
 
 
