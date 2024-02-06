@@ -188,16 +188,12 @@ Console.WriteLine(arr1.GetValue(1)); // Çıktı: 60
 ```
 
 ### Array Sınıfı Metodları
-1- Clear Metodu: Dizinin içindeki tüm elemanlara, dizinin türüne uygun default değerleri atayan fonksiyondur. (Array.Clear(...))
-
-2- Copy Metodu: Elimizdeki bir dizinin verilerini başka bir diziye kopyalamamızı sağlayan fonksiyondur. (Array.Copy(...))
-
-3- IndexOf Metodu: Dizinin içinde bir eleman var olup olmadığını sorgulayabildiğimiz fonksiyondur. Arama neticesinde ilgili değer
+1. Clear Metodu: Dizinin içindeki tüm elemanlara, dizinin türüne uygun default değerleri atayan fonksiyondur. (Array.Clear(...))
+2. Copy Metodu: Elimizdeki bir dizinin verilerini başka bir diziye kopyalamamızı sağlayan fonksiyondur. (Array.Copy(...))
+3. IndexOf Metodu: Dizinin içinde bir eleman var olup olmadığını sorgulayabildiğimiz fonksiyondur. Arama neticesinde ilgili değer
 varsa int olarak o değerin index numarasını döndürecektir. Yoksa -1 değerini döndürür. (Array.IndexOf(...))
-
-4- Reverse Metodu: Elimizdeki dizinin elemanlarını tersine sıralayan fonksiyondur. (Array.Reverse(...))
-
-5- Sort Metodu: Diziler üzerinden sıralama işlemi yapar. Eğer string bir dizi ise alfabetik olarak olarak A'dan Z'ye sıralar. 
+4. Reverse Metodu: Elimizdeki dizinin elemanlarını tersine sıralayan fonksiyondur. (Array.Reverse(...))
+5. Sort Metodu: Diziler üzerinden sıralama işlemi yapar. Eğer string bir dizi ise alfabetik olarak olarak A'dan Z'ye sıralar. 
 Eğer numeric bir dizi ise dizi elemanlarını küçükten büyüğe sıralar. (Array.Sort(...))
 
 ### Array Sınıfı Özellikleri
