@@ -105,6 +105,8 @@ Daha fazla boyutlu dizi oluşturulabilir.
 ```cs
 int[,,,,] Dizi_ND = new int[2, 3, 4, 5, 6];
 ```
+**Not:** Bir dizinin toplam eleman sayısı, tüm boyutların çarpılması ile bulunur. Yukarıdaki örnekte
+dizinin eleman sayısı: 2x3x4x5x6
 
 ## Jagged Array (Düzensiz Diziler)
 
