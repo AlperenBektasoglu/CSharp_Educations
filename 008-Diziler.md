@@ -58,11 +58,6 @@ int[] example1 = new int[10];  // example1 dizisine ulaşılabilir.
 int[] example2; // example2 dizisine ulaşılamaz.
 ```
 
-**Not:** Dizi olarak tanımlanan değişkenler Array sınıfından türetilmektedirler.
-```cs
-Array arr1 = new int[3];
-```
-
 **Not:** Foreach mekanizması sadece dizi elemanlarını okuma için kullanılır. Dizi elemanları üzerinde düzenleme 
  işlemlerine izin verilmez. Bu tür engelleme ReadOnly (Sadece okunabilir) olarak bilir.
              
@@ -166,6 +161,16 @@ static void Main(string[] args){
        program.ShowForObject("Ramakrishnan Ayyer", "Ramesh", 101, 20.50, "Peter", 'A');
 }
 ```
+
+## Array Sınıfı
+Dizi olarak tanımlanan değişkenler Array sınıfından türetilmektedirler.
+Dolayısı ile dizilerde Array sınıfından gelen belirli metodlar ve özellikler mevcuttur.
+```cs
+int[] arr1 = new int[5]; // Bu şekildeki tanımlamada indexer operatörü([]) kullanılır.
+Array arr2 = new int[3]; // Bu şekildeki tanımlamada indexer operatörü([]) kullanılamaz. Veri ekleme, görüntüleme vs gibi işlemler fonksiyonlar ile yapılır.
+```
+
+**Not:** 
 
 
 
