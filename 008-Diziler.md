@@ -180,12 +180,45 @@ Aşağıda Array sınıfı kullanılarak tanımlanan dizide veri ekleme ve gör�
 
 ```cs
 Array arr1 = new int[3];
-// arr1[0] = 30; // Hatalı kullanım çünkü bu şekildeki tanımlamada indexer operatörü([]) kullanılamaz.
+// arr1[0] = 30; // Hatalı kullanım çünkü "Array arr1" şekildeki tanımlamada indexer operatörü([]) kullanılamaz.
 arr1.SetValue(30,0); // 1. parametre: değer, 2. parametre: index
 arr1.SetValue(60,1);
 Console.WriteLine(arr1.GetValue(0)); // Çıktı: 30
 Console.WriteLine(arr1.GetValue(1)); // Çıktı: 60
 ```
+
+### Array Sınıfı Metodları
+1- Clear Metodu: Dizinin içindeki tüm elemanlara, dizinin türüne uygun default değerleri atayan fonksiyondur. (Array.Clear(...))
+
+2- Copy Metodu: Elimizdeki bir dizinin verilerini başka bir diziye kopyalamamızı sağlayan fonksiyondur. (Array.Copy(...))
+
+3- IndexOf Metodu: Dizinin içinde bir eleman var olup olmadığını sorgulayabildiğimiz fonksiyondur. Arama neticesinde ilgili değer
+varsa int olarak o değerin index numarasını döndürecektir. Yoksa -1 değerini döndürür. (Array.IndexOf(...))
+
+4- Reverse Metodu: Elimizdeki dizinin elemanlarını tersine sıralayan fonksiyondur. (Array.Reverse(...))
+
+5- Sort Metodu: Diziler üzerinden sıralama işlemi yapar. Eğer string bir dizi ise alfabetik olarak olarak A'dan Z'ye sıralar. 
+Eğer numeric bir dizi ise dizi elemanlarını küçükten büyüğe sıralar. (Array.Sort(...))
+
+### Array Sınıfı Özellikleri
+1. IsReadOnly (arr1.IsReadOnly)
+2. IsFixedSize (arr1.IsFixedSize)
+3. Length (arr1.Length)
+4. Rank: Dizinin derecesini(boyut) verir (arr1.Rank)
+
+Normal dizi tanımlaması yapılırken arka planda Array sınıfının CreateInstance metodu kullanılmaktadır. Bizler bu metodu kullanarak
+fonksiyonel diziler oluşturabilmekteyiz.
+
+```cs
+int[] arr1 = new int[3];
+Array arr2 = Array.CreateInstance(typeof(int), 3);
+int[,,] arr3 = new int[2,3,4];
+Array arr4 = Array.CreateInstance(typeof(int), 2, 3, 4);
+```
+
+
+
+
 
 
 
