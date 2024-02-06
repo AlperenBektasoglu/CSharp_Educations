@@ -74,6 +74,8 @@ olduğu dizilerdir.
 ```cs
 int[,] arr3 = new int[3, 2]; // 3 satır, 2 sütun
 int[,] arr4 = { { 1, 2 }, { 3, 4 }, { 5, 6 } }; // 3 satır, 2 sütun
+
+arr[0,0] = 100; // 0. satır 0. sütün daki alana 100 değeri koyuldu.
 ```
 
 **Üç boyutlu düzenli dizi örneği:**
@@ -97,6 +99,11 @@ int[,,] Dizi_3D = new int[2, 3, 4] // 2 Satır // 3 Kolon // Her kolonda 4 değe
          { 4, 3, 2, 1 } // Kolon 3
      },
 };
+```
+
+Daha fazla boyutlu dizi oluşturulabilir.
+```cs
+int[,,,,] Dizi_ND = new int[2, 3, 4, 5, 6];
 ```
 
 ## Jagged Array (Düzensiz Diziler)
