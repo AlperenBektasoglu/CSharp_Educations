@@ -135,7 +135,8 @@ new int[] { 11, 22 }
 
 ## Params Anahtar Kelimesi
 
-C#'ta params anahtar kelimesi, değişken sayıda argüman(parametre) alan bir parametreyi belirtmek için kullanılan anahtar kelimedir. Yalnızca bir params anahtar sözcüğüne izin verilir ve bir fonksiyon bildiriminde params anahtar sözcüğünden sonra hiçbir ek parametreye izin verilmez.
+C#'ta params anahtar kelimesi, değişken sayıda argüman(parametre) alan bir parametreyi belirtmek için kullanılan anahtar kelimedir. 
+Yalnızca bir params anahtar sözcüğüne izin verilir ve bir fonksiyon bildiriminde params anahtar sözcüğünden sonra hiçbir ek parametreye izin verilmez.
 
 ```cs
 public void ShowForInt(params int[] val) // Params Paramater  
@@ -224,8 +225,8 @@ int[] sayilar = {10, 20, 30, 40, 50, 60, 70, 80, 90};
 Index index1 = 3;
 Index index2 = ^3; // ^ operatörü ile tersine index durumları kullanılırken index değerlerinin 0 dan değil 1 den başladığına dikkat ediniz.
 
-Console.WriteLine(sayilar[index1]); // Çıktı: 40
-Console.WriteLine(sayilar[index2]); // Çıktı: 70
+Console.WriteLine(sayilar[index1]); // Çıktı: 40 // 10-20-30-40
+Console.WriteLine(sayilar[index2]); // Çıktı: 70 // 90-80-70
 ```
 
 
