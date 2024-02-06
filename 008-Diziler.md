@@ -229,6 +229,20 @@ Console.WriteLine(sayilar[index1]); // Çıktı: 40 // 10-20-30-40
 Console.WriteLine(sayilar[index2]); // Çıktı: 70 // 90-80-70
 ```
 
+Range, veri kümelerinde hangi değerler ile çalışacağımızı belirleyebilmek için index üzerinden
+aralık vermemizi ve bunu .. operatörü ile gerçekleştirmemizi sağlayan yapıdır.
+
+Kullanım: [Index No] .. [Sıra No]
+
+```cs
+int[] sayilar = {10, 20, 30, 40, 50, 60, 70, 80, 90};
+Range range1 = 2..4; // 30, 40
+Range range2 = 2..^1; // 30, 40, 50, 60, 70, 80 // Sıra numrasına(1) göre sondan sayarken bir soldaki değeri alacak şekilde çalışır.
+Range range3 = ^5..^1; // 40, 50, 60, 70, 80
+Range range4 = ..; // Tüm diziye karşılık gelir
+
+int[] yeniSayilar = sayilar[range1];
+```
 
 
 
