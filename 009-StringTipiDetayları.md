@@ -6,6 +6,8 @@ String referans tiplidir. Aslında özüne baktığında string bir char dizisid
 string metin = "Alperen";
 Console.WriteLine( metin[1] ); // Çıktı: l
 ```
+**Not:** String ifadelerde her bir karakter baştan sona otomatik indexlenmektedir. Dolayısıyla indexer operatörü
+kullanılabilr. Bununla birlikte yapısal olarak string olduğundan dolayı Array referansına atılamaz. Array ile karşılanamaz.
 
 **Not:** String null ve empty değerlerini de değer olarak alabilmektedir.
 1. Bir değişken eğer ki null ise bu durum ilgili değişkenin bellekte herhangi bir alanı tahsis etmediği anlamına gelir.
@@ -40,4 +42,6 @@ Console.WriteLine( string.IsNullOrWhiteSpace(var2) ); // Çıktı: true
 Console.WriteLine( string.IsNullOrWhiteSpace(var3) ); // Çıktı: true
 Console.WriteLine( string.IsNullOrWhiteSpace(var4) ); // Çıktı: true
 ```
+
+
 
