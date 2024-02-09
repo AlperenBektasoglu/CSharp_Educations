@@ -140,7 +140,7 @@ for (int i = 0; i < 20; i++)
 **Not:** Return anahtar kelimesi metod içerisinde kullanılır. ve metodu sonlandırmaya yarar. Geriye değer döndürme özelliğide vardır. Returnler döngüyü değil metodu sonlandırır.
 
 ## Foreach Iterasyon Yapısı
-Foreach yapısı döngü değildir. listeler ya da diziler üzerinde işlem yapmak için kullanılır.
+Foreach yapısı döngü değildir. listeler, koleksiyonlar ya da diziler üzerinde işlem yapmak için kullanılır.
 Özellikle eleman sayısının bilinmediği durumlarda büyük kolaylık sağlamaktadır.
 
 **Not:** Foreach yapısı sadece dizi elemanlarını okumak için kullanılır. Dizi elemanları üzerinde 
