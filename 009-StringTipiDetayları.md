@@ -43,5 +43,66 @@ Console.WriteLine( string.IsNullOrWhiteSpace(var3) ); // Çıktı: true
 Console.WriteLine( string.IsNullOrWhiteSpace(var4) ); // Çıktı: true
 ```
 
+### String Birleştirme
+String birleştirme 3 şekilde yapılabilir:
+1. "+" oeratörü ile string birleştirme
+2. string.Format metodu ile string birleştirme
+3. String interpolasyon operatürü ($) ile string birleştirme
+
+```cs
+var name = "Alperen";
+var old = 27;
+// 1.Yöntem
+Console.WriteLine("Merhaba " + name + ", yaşın: " + old);
+// 2.Yöntem
+Console.WriteLine(string.Format("Merhaba {0}, yaşın: {1}", name, old);
+// 3.Yöntem
+Console.WriteLine($"Merhaba {name}, yaşın: {old}");
+```
+
+**Not:** String interpolation operatürü ($) ile string birleştirme yaparken metnin içerisinde {} kullanmak istersen,
+{{ }} şu şekilde kullanabilirsin.
+
+### Escape(Kaçış) Karakterleri
+Eylem olarak algılanan karakterler,”\”(backward slash) simgesinden sonra kullanılırsa, ilgili karakterin eylem olarak değilde, normal olarak yorumlanmasını sağlar.
+Aşağıdaki tabloda kaçış karakterlerinin bazıları listelenmiştir.
+
+Kaçış Karakteri	Karakterin Açıklaması:
+* \0	Null sonlandırma karakteridir.Genel olarak dosya veya veri kanalının bitişini belirtmek için kullanılır.
+* \a	Bip sesini çıkartan karakterdir
+* \b	BackSpace – Geri – Önceki karakteri silme
+* \t	Tab
+* \r	Satır başı (Carriage Return)
+* \n	Bir alt satıra iner
+* \v	Dikey Tab
+* \f	Sayfa ilerleme
+* \”	Çift tırnak
+* \’	Tek tırnak
+* \\	Backslash
+
+### Verbatim Operatörü (@)
+1. Bir değişken yada metod vs gibi yapılanma isimlerinde keywordlerin kullanımına izin verir.
+```cs
+int @int = 100;
+```
+
+2. Escape karkaterlerinin kullanılması icap eden durumlarda @ operatörü kullanarak eylemsel karakterleri kendileriyle ezebilecek özellik kazandırabiliriz.
+```cs
+string metin1 = "hava \"güzel\"";
+string metin1 = @"hava \ ""güzel""";
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
