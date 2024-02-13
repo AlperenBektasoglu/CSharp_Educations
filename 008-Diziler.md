@@ -277,6 +277,21 @@ ArraySegment<int> segment2 = segment.Slice(4,7);
 ArraySegment<int> segment3 = segment.Slice(2,5);
 ```
 
+## Span Nedir?
+ArraySegment sadece string ve dizilerde temsiliyet yapabiliyorken, Span bellek üzerinde olan herhangi bir yeri temsil edebilir. Span ile 
+referans edilen alana hertürlü müdahale edilebilirken, ReadOnlySpan ile bu verisle operasyonlar engellenebilir ve sadece okunabilir bir 
+davranış sergilenebilir.
+
+```cs
+int[] numbers = {10, 20, 30, 40, 50, 60, 70 80};
+Span<int> span1 = new Span<int>(numbers);
+Span<int> span2 = numbers;
+Span<int> span3 = new Span<int>(numbers, 3, 5);
+Span<int> span4 = numbers.AsSpan();
+ReadOnlySpan<int> span5 = numbers.AsSpan();
+```
+
+
 
 
 
