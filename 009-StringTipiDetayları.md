@@ -92,6 +92,76 @@ string metin1 = "hava \"güzel\"";
 string metin1 = @"hava \ ""güzel""";
 ```
 
+3. c# ta string ifadeleri birleştirme operatörü kullanmadan alt alta yazamassınız. Yazabilmek için @ operatörü kullanabilirsiniz.
+```cs
+string metin = @"birinci satır
+                 ikinci satır
+                 üçüncü satır";
+```
+
+**Not:** String interpolasyonu ile verbatim operatörü birlikte kullanılabilir.
+```cs
+string metin = @$"birinci satır {param1}
+                 ikinci satır {param2}
+                 üçüncü satır {param3}";
+```
+
+### Önemli String Fonksiyonları
+1. Contains
+2. StartWith
+3. EndWith
+4. Equals
+5. Compare
+6. CompareTo
+7. IndexOf
+8. Insert
+9. Remove
+10. Replace
+11. Split
+12. Substring
+13. ToLower
+14. ToUpper
+15. Trim / TrimEnd / TrimStart
+
+## StringSegment Sınıfı Nedir?
+StringSegment, ArraySegment'in string değerler için muadilidir. Metinsel değerlerdeki birçok analitik operasyonlardan bizleri kurtarmakta ve
+Substring vs gibi fonksiyonlar yerine string değerde hedef kesit üzerinde işlem yapmamızı sağlayan bir türdür. Özetle String ifadeler üzerinde 
+bellek üzerindeki alanı referans alarak işlemler yapmamızı sağlar. StringSegment, Microsoft.Extensions.Primitives paketinin altında tanımlanmıştır.
+
+```cs
+StringSegment segment = new StringSegment(text);
+StringSegment segment = new StringSegment(text, 2, 5);
+```
+
+## StringBuilder Sınıfı Nedir?
++ operatörü ile stringler birleştirilirken arka tarafta fazladan diziler oluşturulur. StringBuilder, string birleştirme operasyonlarında
++ operatörüne nazaran yüksek maliyeti abzorbe edebilmek için arkaplanda StringSegment algoritmasını kullanan ve bu algoritma ile bizlere
+ilgili değerleri olabilecek en az maliyetle birleştirip döndüren bir sınıftır.
+
+```cs
+StringBuilder builder = new StringBuilder();
+builder.Append("Alperen");
+builder.Append(" ");
+builder.Append("Bektaşoğlu");
+Console.WriteLine( builder.ToString() ); // Çıktı: Alperen Bektaşoğlu
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
