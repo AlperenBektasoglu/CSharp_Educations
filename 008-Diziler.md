@@ -256,6 +256,26 @@ Range range4 = ..; // Tüm diziye karşılık gelir
 int[] yeniSayilar = sayilar[range1];
 ```
 
+## ArraySegment Sınıfı Nedir?
+Bir dizinin bütününden ziyade belirli bir kısmına ihtiyaç dahlinde ilgili diziyi kopyalamak yerine(ki oldukça maliyetli bir operasyondur)
+bağımsız bir referans ile erişmemizi ve böylece salt bir şekilde temsil etmemizi sağlayan bir yapıdır.
+
+```cs
+int[] numbers = {10, 20, 30, 40, 50, 60, 70 80};
+ArraySegment<int> segment1 = new ArraySegment<int>(numbers);
+ArraySegment<int> segment2 = new ArraySegment<int>(numbers, 2, 5);
+segment1[0] = 123; // numbers = {123, 20, 30, 40, 50, 60, 70 80}
+```
+
+Bir dizi üzerinde birden fazla parçada çalışacaksan eğer her bir parçayı ayrı bir ArraySegment olarak Slice metoduyla tanımlayabiliriz.
+
+```cs
+int[] numbers = {10, 20, 30, 40, 50, 60, 70 80};
+ArraySegment<int> segment = new ArraySegment<int>(numbers);
+ArraySegment<int> segment1 = segment.Slice(0,3);
+ArraySegment<int> segment2 = segment.Slice(4,7);
+ArraySegment<int> segment3 = segment.Slice(2,5);
+```
 
 
 
