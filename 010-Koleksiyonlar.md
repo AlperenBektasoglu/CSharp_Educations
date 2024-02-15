@@ -20,3 +20,24 @@ sayısındaki artışa bağlı olarak boxing ve unboxing işlemleri artacaktır 
 1. System.Collections.Generic: List, Stack, Queue, LinkedList, HashSet, SortedSet, Dictionary, SortedDictionary, SortedList ...
 2. System.Collections: ArrayList, Stack, Queue, Hashtable, BitArray, SortedList  ...
 3. System.Collections.Concurrent: BlockingCollection, ConcurrentBag, ConcurrentStack, ConcurrentQueue, ConcurrentDictionary, Partitioner ...
+
+### Koleksiyon Tipleri Nelerdir?
+.Net Platformu 3 koleksiyon tipini desteklemektedir. 
+1. Genel Amaçlı Koleksiyonlar: Her tipten veriyi saklamak için kullanılabilirler.
+* ArrayList
+* Dictionary
+* HashTable
+* Queue
+* SortedList
+* Stack
+
+2. Özel Amaçlı Koleksiyonlar: Belirli bir veri tipi veya çalışma şekli için optimize edilmişlerdir.
+* CollectionsUtil
+* ListDictionary: Anahtar-Değer çiftlerini bir bağlı liste içinde saklar. Küçük veri kümeleri için tercih edilir.
+* HybridDictionary: Belirli bir büyüklüğü geçene kadar Anahtar-Değer çiftlerini ListDictionary koleksiyonunda tutmaktadır, 
+                    geçtikten sonra otomatik olarak bir Hashtable koleksiyonuna geçiş yapar.
+* NameValueCollection: Anahtar-Değer çiftlerinin her ikisininde string tipinde olduğu durumlarda tercih edilebilir.
+* StringCollection: Karakter katarlarını saklamak için optimize edilmiş bir koleksiyondur.
+* StringDictionary: Anahtar-Değer çiftlerinin her ikisininde string tipinde olduğu bir hash tablodur. 
+                    Anahtar-Değer çiftleri küçük harflere çevrilerek saklanır.
+
