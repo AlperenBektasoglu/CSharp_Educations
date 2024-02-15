@@ -41,3 +41,35 @@ sayısındaki artışa bağlı olarak boxing ve unboxing işlemleri artacaktır 
 * StringDictionary: Anahtar-Değer çiftlerinin her ikisininde string tipinde olduğu bir hash tablodur. 
                     Anahtar-Değer çiftleri küçük harflere çevrilerek saklanır.
 
+Aşağıda en çok kullanılan koleksiyon yapıları anlatılmıştır:
+
+### ArrayList Kullanımı
+ArrayList sınırları dinamik olarak değişebilen diziler olarak tanımlanır. 
+Farklı veri tipindeki öğeleri ArrayList’e ekleyebiliriz. Eklenen her veri object tipindedir.
+Dolayısı ile her veri için boxing ve unboxing işlemleri uygulanır. Dizilerden çok daha performanslı çalışır.
+ArrayList’e eklenen her bir elemana indeks numarasıyla erişe bilmekteyiz. ArrayList’in başlangıç kapasitesi 4’tür. 
+Mevcut kapasite yeterli gelmediğinde, arkaplanda kapasite 2 katına çıkarılmaktadır.
+
+````cs
+ArrayList liste1 = new ArrayList();
+liste1.Add(5);
+liste1.Add("Alperen");
+liste1.Add(10);
+liste1.Add(new Exception());
+
+Console.WriteLine(liste1[1]); // 1. indisteki elemanı döndürür.
+
+liste1.Remove("Alperen"); // Remove() metoduna parametre olarak girilen ifade koleksiyon içerisinden silinir.
+liste1.Clear(); // Clear() metodu koleksiyon içerisindeki tüm öğeleri silmektedir.
+int elemanSayisi = liste1.Count; // Koleksiyon içerisinde yer alan elemanların sayısını döndürmektedir.
+int kapasite = liste1.Capacity; // Koleksiyonun kapasitesinin döndürmektedir.
+bool varmi = liste1.Contains(456); // Koleksiyon içerisinde parametre olarak girilen öğeyi arar. Öğe bulunursa TRUE, bulanamazsa FALSE döndürür.
+liste1.Sort(); // Metodu: Koleksiyon içerisindeki öğeleri artan sırada sıralamaktadır. Sıralama işlemi için öğelerin karşılaştırılabilir olması gerekmektedir.
+
+string[] dizi = new string[20];
+liste1.CopyTo(dizi, 2); // CopyTo(dizi,i) metodu, koleksiyon içerisindeki tüm öğeleri, diziye i.indeksten başlayarak kopyalayacaktır.           
+
+// Daha fazla Metot ve Özellik için: https://www.srdrylmz.com/c-arraylist-sinifi/
+```
+
+
