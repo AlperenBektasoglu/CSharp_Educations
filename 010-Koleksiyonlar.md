@@ -196,7 +196,7 @@ Console.WriteLine(ceviriListesi["CoMpUtEr"]);
 ```
 
 ## BitArray Kullanımı
- BitArray, isminden de anlaşılacağı üzere bir bit dizisidir ve yalnızca True–False değerlerini içermektedir. Bitleri saklamak haricinde 
+BitArray, isminden de anlaşılacağı üzere bir bit dizisidir ve yalnızca True–False değerlerini içermektedir. Bitleri saklamak haricinde 
 And,Or, Xor gibi mantıksal işlemleri de gerçekleştirebilmektedir. BitArray diğer koleksiyon sınıfları gibi dinamik bir yapıya sahiptir. Yani boyutu 
 dinamik olarak artmaktadır. Ayrıca standart diziler gibi BitArray’ler de indekslenebilir.
 
@@ -219,7 +219,7 @@ Eleman ekleme ve çıkarma işlemlerinde Boxing-Unboxing gerçekleşir.
 * Peek(): Stack’in tepe noktasındaki öğeyi döndürmektedir, Pop() metodunda farklı olarak öğeyi Stack’ten çıkarmaz/silmez. 
         Stack boşken Peek() metodu çağrılırsa hata fırlatır.
 
-**Not:** Generic Stack ile Stack içerisine sadece belirtilen veri tipindeki öğeler eklenebilir.
+**Not:** Generic stack ile stack içerisine sadece belirtilen veri tipindeki öğeler eklenebilir.
          Eleman ekleme ve çıkarma işlemlerinde Boxing-Unboxing gerçekleşmez.
 
 Stack(Yığın) Koleksiyonu Metotları ve Özellikleri: https://www.srdrylmz.com/c-stack-sinifi/
@@ -236,8 +236,32 @@ string site_2 = yigin_2.Pop();  // site_2 = www.google.com
 string site_3 = yigin_2.Pop();  // Stack boşaldığı için hata fırlatır.
 ```
 
-## 
+## Queue(Kuyruk) Kullanımı
+Queue (Kuyruk), ilk giren ilk çıkar işleyişine sahip bir koleksiyondur(FIFO). Queue (Kuyruk) diğer koleksiyon 
+sınıfları gibi dinamik bir yapıya sahiptir. Yani eleman eklendikçe boyutu dinamik olarak artmaktadır. Queue sınıfının
+Enqueue() ve Dequeue() olmak üzere 2 temel metodu bulunmaktadır. Eleman çıkarma işleminin kuyruğun başından, eleman ekleme 
+işleminin de kuyruğun sonundan yapılmaktadır. Queue içerisine veri tipi fark etmeksizin her türlü öğe eklenebilir.
+Eleman ekleme ve çıkarma işlemlerinde Boxing-Unboxing gerçekleşir. 
 
+ Enqueue(): Kuyruğun sonuna bir eleman ekler.
+ Dequeue(): Kuyruğun başındaki elemanı çıkarır.
+ Peek(): Kuyruğun başındaki öğeyi döndürmektedir, Dequeue() metodunda farklı olarak öğeyi kuyruktan çıkarmaz/silmez. 
+
+ Queue (Kuyruk) Koleksiyonu Metotları ve Özellikleri: https://www.srdrylmz.com/c-queue-sinifi/
+
+ **Not:** Generic queue ile queue içerisine sadece belirtilen veri tipindeki öğeler eklenebilir.
+         Eleman ekleme ve çıkarma işlemlerinde Boxing-Unboxing gerçekleşmez.
+
+```cs
+Queue<string> kuyruk = new Queue<string>();
+kuyruk.Enqueue("Alperen Bektaşoğlu");
+kuyruk.Enqueue("Tarkan Tayşi");
+kuyruk.Enqueue("Cemal Çiftçi");
+
+string kuyruktanCikarilan = kuyruk.Dequeue(); 
+```
+
+ 
 
 
 
