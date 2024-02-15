@@ -107,7 +107,23 @@ Arac.Add("25 ABC 789", "Mercedes-Benz");
 
 foreach (DictionaryEntry oge in Arac) // DictionaryEntry sınıfı ile koleksiyonda ki Anahtar-Değer çiftlerine ulaşabiliriz.
     Console.WriteLine("Anahtar:{0} - Değer:{1}", oge.Key, oge.Value);
+
+string plaka = "41 ABC 123";
+string model = "Audi";
+Console.WriteLine(Arac[plaka]);
+bool keyVarMı = Arac.ContainsKey(plaka); // ContainsKey() metodu key değerinin koleksiyonda olup olmadığına bakar.
+bool valueVarMı = Arac.ContainsValue(model); // ContainsValue() metodu value değerinin koleksiyonda olup olmadığına bakar.
+Console.WriteLine("Eleman sayısı: " + Arac.Count); // Count Özelliği
+Arac.Remove("56 ABC 456"); // Remove Metodu
+Arac.Clear(); // Clear Metodu
+
+// Keys Özelliği: Anahtarları (Keys) içeren bir koleksiyon döndürmektedir.
+ICollection Koleksiyon_1 = Arac.Keys;
+
+// Values Özelliği: Değerleri (Values) içeren bir koleksiyon döndürmektedir.
+ICollection Koleksiyon_2 = Arac.Values;
 ```
+
 
 
 
