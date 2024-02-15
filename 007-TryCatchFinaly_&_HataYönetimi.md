@@ -39,7 +39,34 @@ catch (Exception exception)
 }
 ```
 
-## Yararlı Kaynaklar
+Yararlı Kaynaklar:
 1. Kaynak: https://www.srdrylmz.com/c-istisnai-durum-yonetimi/
 2. Kaynak: https://www.srdrylmz.com/c-exception-sinifi-olusturma/
 3. Kaynak: https://www.srdrylmz.com/c-merkezi-istisnai-durum-yonetimi/
+
+## Throw Kullanımı
+Throw deyimi, program çalışması esnasında özel bir durum geçişi için hata fırlatmaya yarar. 
+System.Exception dan türetilmiş bir sınıf geriye döner.
+
+```cs
+class CustomException : Exception
+    {
+        public CustomException() : base("Exception için hata mesajıdır!") { }
+    }
+
+class Program
+{
+    static void Main(string[] args)
+    {
+       if(1 == 1)
+           throw new CustomException();
+    }
+}
+```
+
+Yararlı Kaynaklar:
+1. Kaynak: https://www.srdrylmz.com/c-istisnai-durum-yonetimi/
+2. Kaynak: https://www.srdrylmz.com/c-exception-sinifi-olusturma/
+3. Kaynak: https://www.srdrylmz.com/c-merkezi-istisnai-durum-yonetimi/
+
+
