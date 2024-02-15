@@ -89,8 +89,8 @@ liste1.Sort();
 
 ## Hashtable Kullanımı
 Bir koleksiyondaki elemanlara bir anahtar değer ile erişmek isteyebiliriz. Bu durumu System.Collections isim alanında bulunan Hashtable sınıfı kullanarak çözebiliriz. 
-Hashtable sınıfında koleksiyonlar, bir anahtar (key) ve değer (value) ikilisi olarak saklanır. Verdiğimiz ‘Key’ değeri unique olmak ve null olmamak zorundadır. 
-Bir Hashtable koleksiyonu oluşturup,  Anahtar-Değer çifti eklemek istediğimizde arkaplanda gerçekleşen işlemler;
+Hashtable sınıfında koleksiyonlar, bir anahtar (key) ve değer (value) ikilisi olarak saklanır. Verdiğimiz ‘Key’ değeri unique olmak ve null olmamak zorundadır. Büyük-küçük 
+harf duyarlılığına sahiptir. Bir Hashtable koleksiyonu oluşturup,  Anahtar-Değer çifti eklemek istediğimizde arkaplanda gerçekleşen işlemler;
 1. Öncellikle depolama işlemi için kullanılacak bir hash tablosu oluşturulur.
 2. Anahtar kullanılarak hash kod denilen benzersiz bir değer üretilir (Hashing). Bu değer anahtar ile ilişkili verilerin, hash tablosunda saklanacağı indeksi belirtecektir.
 3. Anahtar ile ilişkili veriler, hash tablosunda Hash kodunun belirttiği indekse eklenir.
@@ -163,7 +163,7 @@ Console.WriteLine(Ogrenci[158]);
 Verileri Key Value olarak tutar. Tutulan veriler sıralı olarak saklanır. 
 Her eklenen elemandan sora yeniden sıralanır. Verdiğimiz ‘Key’ değeri unique olmak ve null olmamak zorundadır.
 Sıralama işlemini, Anahtar(Key) değerlerine göre yapar. Sıralamayı küçükten büyüğe yapar. SortedList generic yada
-nongeneric şekilde oluşturulabilir.
+nongeneric şekilde oluşturulabilir. Büyük-küçük harf duyarlılığına sahiptir.
 
 SortedList Koleksiyonu Metotları ve Özellikleri:  https://www.muratoner.net/csharp/csharp-sortedlist-kullanimi-ve-ornekleri
               
@@ -178,6 +178,65 @@ SiraliKoleksiyon_1.Add(54, "Sakarya");
 SiraliKoleksiyon_1.Add(25, "Erzurum");
 ```
 
+## CollectionsUtil Sınıfı Kullanımı
+SortedList ve HashTable koleksiyonları büyük-küçük harf duyarlılığına sahiptir. Örnek vermek gerekirse; 
+“Serdar” Anahtarına sahip bir öğe koleksiyona eklendikten sonra, “SerdaR” Anahtarına sahip
+farklı bir öğe daha koleksiyona eklenebilir. Koleksiyon büyük-küçük harf duyarlılığına sahip olduğu için iki Anahtarı 
+da farklı birer girdi olarak kabul edecektir. CollectionsUtil koleksiyonu ise büyük-küçük harf duyarlılığına sahip değildir.
+Bu yüzden “Serdar” Anahtarına sahip bir öğe koleksiyona eklendikten sonra “SerdaR” Anahtarına sahip farklı bir 
+öğe daha koleksiyona eklenmek istenildiğinde istisna fırlatacaktır.
+
+```cs
+SortedList ceviriListesi = CollectionsUtil.CreateCaseInsensitiveSortedList();
+ceviriListesi.Add("Computer", "Bilgisayar");
+// Büyük-Küçük Harf duyarlılığı olmadığı için 3 satırda aynı çıktıyı verecektir.
+Console.WriteLine(ceviriListesi["COMPUTER"]);
+Console.WriteLine(ceviriListesi["computer"]);
+Console.WriteLine(ceviriListesi["CoMpUtEr"]);
+```
+
+## BitArray Kullanımı
+ BitArray, isminden de anlaşılacağı üzere bir bit dizisidir ve yalnızca True–False değerlerini içermektedir. Bitleri saklamak haricinde 
+And,Or, Xor gibi mantıksal işlemleri de gerçekleştirebilmektedir. BitArray diğer koleksiyon sınıfları gibi dinamik bir yapıya sahiptir. Yani boyutu 
+dinamik olarak artmaktadır. Ayrıca standart diziler gibi BitArray’ler de indekslenebilir.
+
+BitArray Koleksiyonu Metotları ve Özellikleri: https://www.srdrylmz.com/c-bitarray-sinifi/
+
+```cs
+byte[] sayilar = { 18, 56, 21 };
+BitArray bitDizisi = new BitArray(sayilar);    // Koleksiyondaki Bit Sayısı:24
+```
+
+## Stack(Yığın) Kullanımı
+Son Giren İlk Çıkar (LIFO) prensibi ile çalışan veri yapısı şekinde bilinirler. Stack tıpkı diğer koleksiyon 
+sınıfları gibi dinamik bir yapıya sahiptir. Yani eleman eklendikçe boyutu dinamik olarak artmaktadır.
+Stack sınıfının Pop() ve Push() olmak üzere 2 temel metodu bulunmaktadır. Ekleme ve çıkarma işleminin yalnızca 
+stack’in tepe noktasından yapılmaktadır. Stack içerisine veri tipi fark etmeksizin her türlü öğe eklenebilir.
+Eleman ekleme ve çıkarma işlemlerinde Boxing-Unboxing gerçekleşir. 
+
+* Pop(): Stack’in en üstündeki nesneyi çıkarır.
+* Push(): Stack’in en üstüne bir nesne ekler.
+* Peek(): Stack’in tepe noktasındaki öğeyi döndürmektedir, Pop() metodunda farklı olarak öğeyi Stack’ten çıkarmaz/silmez. 
+        Stack boşken Peek() metodu çağrılırsa hata fırlatır.
+
+**Not:** Generic Stack ile Stack içerisine sadece belirtilen veri tipindeki öğeler eklenebilir.
+         Eleman ekleme ve çıkarma işlemlerinde Boxing-Unboxing gerçekleşmez.
+
+Stack(Yığın) Koleksiyonu Metotları ve Özellikleri: https://www.srdrylmz.com/c-stack-sinifi/
+
+```cs
+Stack<int> yigin_1 = new Stack<int>();
+Stack yigin_2 = new Stack();
+
+yigin_2.Push("www.google.com");
+yigin_2.Push("www.alperenbektasoglu.com");
+
+string site_1 = yigin_2.Pop();  // site_1 = www.alperenbektasoglu.com
+string site_2 = yigin_2.Pop();  // site_2 = www.google.com
+string site_3 = yigin_2.Pop();  // Stack boşaldığı için hata fırlatır.
+```
+
+## 
 
 
 
