@@ -261,7 +261,13 @@ kuyruk.Enqueue("Cemal Çiftçi");
 string kuyruktanCikarilan = kuyruk.Dequeue(); 
 ```
 
-
+## C#’ta IEnumerable ve IEnumerator Interfaceleri Nedir? ve Nasıl Kullanılır?
+1. Kaynak: https://www.gencayyildiz.com/blog/cta-ienumerable-ve-ienumerator-interfaceleri-nedir-ve-nasil-kullanilir/
+2. Kaynak: https://www.srdrylmz.com/c-numaralandirici/
+3. Kaynak: https://www.srdrylmz.com/icomparable-ve-icomparer-arayuzleri/
+            
+IEnumerable; ICollection ve IList'i kapsar. ICollection'da IList'i kapsar.
+IEnumerable > ICollection > IList
  
 
 
