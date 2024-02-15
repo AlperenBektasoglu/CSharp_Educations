@@ -261,6 +261,7 @@ kuyruk.Enqueue("Cemal Çiftçi");
 string kuyruktanCikarilan = kuyruk.Dequeue(); 
 ```
 
+
  
 
 
