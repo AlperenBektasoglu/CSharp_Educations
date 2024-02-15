@@ -72,7 +72,7 @@ liste1.CopyTo(dizi, 2); // CopyTo(dizi,i) metodu, koleksiyon içerisindeki tüm 
 // Daha fazla Metot ve Özellik için: https://www.srdrylmz.com/c-arraylist-sinifi/
 ```
 
-## Generic List Kullanımı
+## GenericList Kullanımı
 Generic List, sınırları dinamik olarak değişebilen diziler olarak tanımlanır. 
 Aynı veri tipindeki öğeleri Generic List’e ekleyebiliriz. Bu yönü ile ArrayListlerden ayrılırlar. 
 ArrayList ile aynı metodlara sahiptir.
@@ -123,6 +123,63 @@ ICollection Koleksiyon_1 = Arac.Keys;
 // Values Özelliği: Değerleri (Values) içeren bir koleksiyon döndürmektedir.
 ICollection Koleksiyon_2 = Arac.Values;
 ```
+
+## Dictionary Kullanımı
+Standart dizilere eklenen elemanlar, belleğe sıralı bir şekilde yerleştirilmektedir. Sıfırdan başlanarak her bir elemana birer 
+indeks değeri verilip, elemanlara o indeksler aracılığıyla erişmemiz sağlanmaktaydı. Koleksiyon sınıflarından biri olan ArrayList 
+içinde aynı durum söz konusu.  ArrayList’e eklenen her bir elemana indeks numarasıyla erişe bilmekteyiz.
+Dictionary koleksiyonunda ise veriler Anahtar(Key) ve Değer(Value) yapısı ile tutulur. Koleksiyon içerisinde yer alan Anahtarlar 
+birbirinden farklı olmalıdır. Dictionary sınıfından bir nesne oluştururken, anahtar ve değerin veri tiplerini belirtmemiz gerekmektedir.
+
+Dictionary Koleksiyonu Metotları ve Özellikleri: https://www.srdrylmz.com/c-dictionary-sinifi/
+
+### Hashtable ile Dictionary Arasındaki Farklar Nelerdir?
+Hashtable:
+* Generic değildir.
+* System.Collections namesapce'i içindedir.
+* Hashtable'da, aynı türdeki veya farklı türdeki anahtar/değer çiftlerini saklayabilirsiniz.
+* Hashtable'da, anahtarın ve değerin türünü belirtmeye gerek yoktur.
+* Boxing ve Unboxing olayları nedeniyle veri alımı Dicitionary'ye göre daha yavaştır.
+* Hashtable'da, verilen Hashtable'da bulunmayan bir anahtara erişmeye çalışırsanız, o zaman boş değerler verecektir.
+* Depolanan değerlerin sırasını korumaz.
+
+Dicitionary:
+* Generictir.
+* System.Collections.Generic namesapce'i içindedir.
+* Dicitionary'de, aynı türden anahtar/değer çiftlerini saklayabilirsiniz.
+* Dicitionary'de, anahtarın ve değerin türünü belirtmelisiniz.
+* Boxing ve Unboxing olayları olmadığı için veri alımı Hashtable'dan daha hızlıdır.
+* Dicitionary'de, verilen bir anahtara erişmeye çalışırsanız ve o anahtar dictionary'de yok ise, hata verecektir.
+* Her zaman saklanan değerlerin sırasını korur.
+
+```CS
+Dictionary<int, string> Ogrenci = new Dictionary<int, string>();
+Ogrenci.Add(134, "Tolga Demirer");
+Ogrenci.Add(158, "Ümit Özkan");
+Console.WriteLine(Ogrenci[158]);
+```
+
+## SortedList Kullanımı
+Verileri Key Value olarak tutar. Tutulan veriler sıralı olarak saklanır. 
+Her eklenen elemandan sora yeniden sıralanır. Verdiğimiz ‘Key’ değeri unique olmak ve null olmamak zorundadır.
+Sıralama işlemini, Anahtar(Key) değerlerine göre yapar. Sıralamayı küçükten büyüğe yapar. SortedList generic yada
+nongeneric şekilde oluşturulabilir.
+
+SortedList Koleksiyonu Metotları ve Özellikleri:  https://www.muratoner.net/csharp/csharp-sortedlist-kullanimi-ve-ornekleri
+              
+**Not:** Hastable sınıfında olduğu gibi SortedList sınıfında da Anahtar-Değer çiftlerini bir DictionaryEntry yapısında tutabiliriz.
+
+```cs
+SortedList SiraliKoleksiyon_1 = new SortedList(); // Non-Generic
+SortedList<int, string> SiraliKoleksiyon_2 = new SortedList<int, string>(); // Generic
+
+SiraliKoleksiyon_1.Add(41, "Kocaeli");
+SiraliKoleksiyon_1.Add(54, "Sakarya");
+SiraliKoleksiyon_1.Add(25, "Erzurum");
+```
+
+
+
 
 
 
