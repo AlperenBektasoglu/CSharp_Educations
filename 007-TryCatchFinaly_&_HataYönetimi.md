@@ -1,3 +1,5 @@
+# Hata Yönetimi
+
 ## Hata Yönetimi İle İlgili Genel Bilgiler
 Hatalar çeşidi sayısı üçtür: Yazım Hataları(Syntax Error), Çalışma Zamanı Hataları (Run Time Error) ve Mantıksal Hatalar (Logical Error).
 Aşağıda try-catch yapısının özellikleri anlatılmıştır. 
