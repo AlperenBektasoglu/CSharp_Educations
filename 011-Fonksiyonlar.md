@@ -11,6 +11,10 @@ imza ve gövdeden oluşur. Aşağıda metot İmzasınının yapısı mevcuttur.
 
 **Not:** Main de bir fonksiyondur ve her programda en az ve en fazla 1 tane olmak zorundadır.
 **Not:** Return komutu ile değer döndürülebilir. Değer döndürmeyen fonksiyonların geri dönüş değeri void tir.
+**Not:** Metotlarda static ifadesinin kullanılması ile sınıftan nesne üretmeden o metodun kullanımı sağlanmış olur. Static
+ifadesi konulmaz ise o metodu kullanabilmek için metodun bulunduğu sınıftan nesne üretilmek zorundadır.
+**Not:** Metotlarda static ifadesinin kullanılması ile sınıftan nesne üretmeden o metodun kullanımı sağlanmış olur. Static
+ifadesi konulmaz ise o metodu kullanabilmek için metodun bulunduğu sınıftan nesne üretilmek zorundadır.
 
 ```cs
 class Program
@@ -24,6 +28,40 @@ static void Main(string[] args)
     Console.WriteLine(Topla(2,5));
 }
 ```
+## Erişim Belirleyicileri (Access Modifiers)
+Erişimin sınırlarını belirlemek için kullanılır.         
+1. Private: Sadece tanımlandığı sınıf içerisinden erişilebilir.
+2. Public: Her yerden erişilebilir.
+3. Protected: Sadece tanımlandığı sınıfta ya da o sınıfı miras alan sınıflardan erişilebilir. Dikkat edilmesi gereken nokta
+   sadece türetilmiş sınıflar erişebilir, torun sınıflar erişemez.
+4. Internal: Sadece bulunduğu projede erişilebilir.(Aynı assembly içerisinden erişilebilir.)
+5. Protected-Internal: Bir nesne protected internal olarak tanımlandığında aynı protected gibi kendi bulunduğu 
+   sınıf üzerinde ve bu sınıfı miras alan sınıflar üzerinden çağrılabilir. Artı olarak 
+   aynı proje (assembly/dll) üzerinden de çağırılabilir.
+
+**Not:** Bir sınıfın erişim belirleyicisi yazılmaz ise default erişim belirleyicisi Internal dır.
+**Not:** Sınıfın içindeki bir değişkenin yada metodun erişim belirleyicisi yazılmaz ise default erişim belirleyicisi Private dır.
+
+## Metotlarda Optional Parameters(İsteğe Bağlı Parametreler)
+Metod parametrelerine = operatörü ile bir dğer atanır ise o parametre varsayılan değeri atanmış olur.
+Haliyle opsiyonel parametre olarak kullanılabilir. Opsiyonel parametreler parametre sırasında en sağ tarafa
+yazılırlar.
+
+```cs
+class Program
+{
+public int Topla(int x, int y = 10) {
+    return x + y;
+}
+
+static void Main(string[] args)
+{
+    Console.WriteLine(Topla(2);
+}
+```
+
+
+
 
 
 
