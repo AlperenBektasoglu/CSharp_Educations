@@ -4,37 +4,17 @@ ENG: Repository for C# education documentations. This documentation is in Turkis
 TR: C# eğitim dökümanları reposudur. Bu dökümanlar Türkçedir.
 
 -----------------------------------------
-            #region Goto Komutu
-            /* 
-               C# goto deyimi koşulsuz olarak belirtilen etikete atlar. Etiket tanımlaması
-               goto kullanımından öncede yapılabilir sonrada.
-            */
+            #region Anonim Metodlar (Anonymous Methods) -- delegeler konusundan sonra anlat
+            /*
+                Delegenin temsil ettiği bir metodun tanımlanmadan, örneklenme (instantiation) sırasında isimsiz bir şekilde delegeye bağlanması 
+                şeklinde açıklanabilir.
 
-            int sayı;
-            baslangıc: // Etiket
-            Console.Write("Notunuzu Giriniz: ");
-            sayı = Convert.ToInt32(Console.ReadLine());
+                http://kodyazilari.blogspot.com/2011/04/c-anonim-metotlar-anonymous-methods.html
+                https://www.tutorialsteacher.com/csharp/csharp-anonymous-method
+             */
 
-            if (sayı >= 0 && sayı < 50)
-                Console.WriteLine("Kötü");
-
-            if (sayı >= 50 && sayı < 60)
-                Console.WriteLine("Geçer");
-
-            if (sayı >= 60 && sayı < 70)
-                Console.WriteLine("Orta");
-
-            if (sayı >= 70 && sayı < 85)
-                Console.WriteLine("İyi");
-
-            if (sayı >= 85 && sayı <= 100)
-                Console.WriteLine("Pekiyi");
-
-            if ((sayı < 0 || sayı > 100))
-            {
-                Console.WriteLine("Yanlış Sayı Birimi Girdiniz.");
-                goto baslangıc;
-            }
-            Console.ReadKey();
-            Console.WriteLine("--------------------------------------");
+            #region  Extension Metot Kullanımı -- oopden sonra anlat
+            /*
+                https://www.hikmetokumus.com/makale/24/csharp-ile-extension-metod-kullanimi
+             */
             #endregion
