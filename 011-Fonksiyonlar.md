@@ -13,8 +13,9 @@ imza ve gövdeden oluşur. Aşağıda metot İmzasınının yapısı mevcuttur.
 **Not:** Return komutu ile değer döndürülebilir. Değer döndürmeyen fonksiyonların geri dönüş değeri void tir.
 **Not:** Metotlarda static ifadesinin kullanılması ile sınıftan nesne üretmeden o metodun kullanımı sağlanmış olur. Static
 ifadesi konulmaz ise o metodu kullanabilmek için metodun bulunduğu sınıftan nesne üretilmek zorundadır.
-**Not:** Metotlarda static ifadesinin kullanılması ile sınıftan nesne üretmeden o metodun kullanımı sağlanmış olur. Static
-ifadesi konulmaz ise o metodu kullanabilmek için metodun bulunduğu sınıftan nesne üretilmek zorundadır.
+**Not:** Başka bir sınıftaki metodu kullanabilmek için o sınıftan nesne üretmek gerekir. Metotlarda static ifadesinin kullanılması ile 
+sınıftan nesne üretmeden o metodun kullanımı sağlanmış olur. Static ifadesi konulmaz ise o metodu kullanabilmek için metodun 
+bulunduğu sınıftan nesne üretilmek zorundadır.
 
 ```cs
 class Program
@@ -79,7 +80,56 @@ class Program
 }
 ```
 
+## Değişken Sayıda Parametre Alan Metotlar (Params Anahtar Kelimesi)
+C#'ta params anahtar kelimesi, değişken sayıda argüman(parametre) alan bir parametreyi belirtmek için kullanılan anahtar kelimedir.
+Yalnızca bir params anahtar sözcüğüne izin verilir ve bir fonksiyon bildiriminde params anahtar sözcüğünden sonra hiçbir ek parametreye 
+izin verilmez.
 
+Link: https://www.srdrylmz.com/c-degisken-sayida-parametre-alan-metotlar/
+ 
+```cs
+class Program
+{
+   public void ShowForInt(params int[] val) // Params Paramater  
+   {
+        for (int i = 0; i < val.Length; i++)
+        {
+            Console.WriteLine(val[i]);
+        }
+    }
+    
+    public void ShowForObject(params object[] items) // Params Paramater  
+    {
+        for (int i = 0; i < items.Length; i++)
+        {
+            Console.WriteLine(items[i]);
+        }
+    }
+    
+    static void Main(string[] args)
+    {
+        ShowForInt(2, 4, 6, 8, 10, 12, 14); // Değişken uzunluktaki argümanları iletme
+        Console.WriteLine("\n------------------------------------------");
+        ShowForObject("Ramakrishnan Ayyer", "Ramesh", 101, 20.50, "Peter", 'A'); // Değişken uzunluktaki argümanları iletme
+    }
+}
+```
+
+##  Local Functions (Lokal Fonksiyonlar)
+Metodlar struct, abstract class, interface, record ve class içerisinde tanımlanamabilir. C# 7.0 ile gelen bu özellik ile metod içerisinde
+metod tanımlanabilir. Bu tanımlanan metoda lokal fonksiyon denir. Lokal fonksiyonlar sadece tanımlandığı metod içerisinde erişilebilir.
+Lokal fonksiyonlarda erişim belirleyicisi yazılmaz. lokal fonksiyon tanımlandığı fonksiyonun adından farklı bir isimde olmak zorundadır.
+
+```cs
+public static int X(){
+  Y();
+  void Y(){...}
+  Y();
+  return 0;
+}
+```
+**Not:"" Ana fonksiyonun içerisindeki değişkenlere lokal fonksiyondan erişilmesini istemiyorsan lokal fonksiyonu static ile işaretleyebilirsin ve
+ihtiyacın olan parametreleri lokal fonksiyona parametre olarak geçebilirsin.
 
 
 
