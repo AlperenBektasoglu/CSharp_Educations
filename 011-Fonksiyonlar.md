@@ -144,7 +144,83 @@ public void X(int a=1){
 }
 ```
 
+## "In" Anahtar Kelimesi
+"in"   anahtar kelimesi, bir parametrenin metot içerisinde değiştirilemez olduğunu tanımlar.
+```cs
+public static int Add(in int number1, in int number2)
+{
+  number1 = 5; // Hata verir çünkü number1 değişkeninin değeri in komutu ile değiştirilemez olduğu belirtilmiştir.
+  return number1 + number2;
+}
+```
 
+## "ref" Anahtar Kelimesi
+ref anahtar kelimesi referanstan gelmektedir. Referanslar = operatörüyle iletişime geçebilmektedir. 
+Ref anahtar kelimesi, değer türlü değişkenlerde referans operasyonları yapabilmemizi sağlar.
+```cs
+int x = 10;
+ref int y = ref x;
+
+x *= 4;
+y -= 10;
+
+Console.WriteLine(x); // Çıktı: 40
+Console.WriteLine(y); // Çıktı: 40
+```
+
+```cs
+void Y(ref int a){}
+
+int x = 10;
+Y(ref x); // Parametre olarak x in referansını vermiş olduk.
+```
+
+### Ref Returns Özelliği
+Ref returns özelliği ile metodlardan referans döndürülebilir.
+```cs
+ref int Y(ref int a){
+  a = 200;
+  return ref a;
+}
+
+int x = 10;
+int y = Y(ref x);
+
+Console.WriteLine(x); // Çıktı: 200
+Console.WriteLine(y); // Çıktı: 200
+
+// Bu örnekte x ile y değişkeninin bellekte işaretledikleri alan aynıdır.
+```
+
+## Out Anahtar Kelimesi
+Out anahtar kelimesi metodların parametreleri üzerinden dışarıya değer göndermemizi sağlar.
+Out parametre barındıran metod kullanılırken, out parametrelerden gelecek değerleri karşılayacak değişkenler tanımlanmalıdır.
+Bir metod out parametreler barındırıyorsa o parametrelere metod içerisinde değer atanması gerekmektedir. Aksi taktirde derleyici hata verir.
+```cs
+int x = 0 , y = 0;
+string z;
+
+Metod(out x, y,out z);
+
+int Metod(out int a, int b, out string c){
+  a = 20;
+  c= "Alperen";
+  return 0;
+}
+```
+Farklı kullanım olarak:
+```cs
+int Metod(out int a, int b, out string c){
+  a = 20;
+  c= "Alperen";
+  return 0;
+}
+
+Metod(out int x, 10, out int z);
+
+Console.WriteLine(x); // Çıktı: 20
+Console.WriteLine(z); // Çıktı: "Alperen"
+```
 
 ## C# Hazır Sınıflar Ve Fonksiyonlar
 1. Math sınıfı, bir çok matamatiksel işlemleri rahatlıkla yapabilmemizi sağlar. İçerisinde matematiksel bir çok özellik ve metod barındırır.
