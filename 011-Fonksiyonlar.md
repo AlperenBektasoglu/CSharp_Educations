@@ -131,6 +131,18 @@ public static int X(){
 **Not:"" Ana fonksiyonun içerisindeki değişkenlere lokal fonksiyondan erişilmesini istemiyorsan lokal fonksiyonu static ile işaretleyebilirsin ve
 ihtiyacın olan parametreleri lokal fonksiyona parametre olarak geçebilirsin.
 
+## Recursive Fonksiyonlar
+Kendi içerisinde kendini çağıran fonksiyonlardır. Öngörülemeyen, derinliği tahmin edilemeyen durumlarda tercih edilmektedir.
+```cs
+public void X(int a=1){
+    Console.WriteLine("Merhaba");
+    if( a < 3)
+      X(++a);
+    Console.WriteLine("Dünya");
+  
+    // Output: Merhaba Merhaba Merhaba Dünya Dünya Dünya
+}
+```
 
 
 
