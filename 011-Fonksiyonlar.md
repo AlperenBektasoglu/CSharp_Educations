@@ -19,13 +19,14 @@ ifadesi konulmaz ise o metodu kullanabilmek için metodun bulunduğu sınıftan 
 ```cs
 class Program
 {
-public int Topla(int x, int y) {
-    return x + y;
-}
-
-static void Main(string[] args)
-{
-    Console.WriteLine(Topla(2,5));
+    public int Topla(int x, int y) {
+        return x + y;
+    }
+    
+    static void Main(string[] args)
+    {
+        Console.WriteLine(Topla(2,5));
+    }
 }
 ```
 ## Erişim Belirleyicileri (Access Modifiers)
@@ -50,16 +51,33 @@ yazılırlar.
 ```cs
 class Program
 {
-public int Topla(int x, int y = 10) {
-    return x + y;
-}
-
-static void Main(string[] args)
-{
-    Console.WriteLine(Topla(2);
+    public int Topla(int x, int y = 10) {
+        return x + y;
+    }
+    
+    static void Main(string[] args)
+    {
+        Console.WriteLine(Topla(2);
+    }
 }
 ```
 
+## Metotlarda Non Trailing Named Arguments Özelliği
+Bu özellik ile metoda geçilen parametreler sırayla verilme zorunluluğu ortadan kaldırılmıştır.
+
+```cs
+class Program
+{
+  public int Topla(int x, int y,  int z = 10) {
+      return x + y;
+  }
+  
+  static void Main(string[] args)
+  {
+      Console.WriteLine(Topla( z: 20, x: 10, y:200 ));
+  }
+}
+```
 
 
 
