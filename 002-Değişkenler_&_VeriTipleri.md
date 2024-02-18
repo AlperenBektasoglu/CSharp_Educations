@@ -1,3 +1,4 @@
+# Değişkenler Ve Veri Tipleri
 
 ## Değişken Nedir?
 Yazılımlar veri tutmaz. Yazılım için işlenecek veriyi RAM'de tutabilmek için değişkenler kullanılır.
