@@ -1,5 +1,4 @@
-
-## String Tipinin Detayları
+# String Tipinin Detayları
 
 String referans tiplidir. Aslında özüne baktığında string bir char dizisidir.
 ```cs
