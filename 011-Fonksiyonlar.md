@@ -1,5 +1,31 @@
 # Fonksiyonlar
-C# da fonksiyon kullanmak, size oluşturduğunuz kod bloğunu programın herhangi bir yerinde tekrar tekrar çalıştırma imkanı verir.
+Fonksiyonlar programlamanın en küçük iş yapan parçacıklarıdır. C# da fonksiyon kullanmak, size oluşturduğunuz kod bloğunu 
+programın herhangi bir yerinde tekrar tekrar çalıştırma imkanı verir. Metodlar sınıf elemanlarıdır. Dolayısı ile sınıfların içerisinde
+tanımlanırlar. C# ın ileriki versiyonlarında metodlar başka yerlerde de(interface, fonksiyon içi vs.) tanımlanabilmektedir. Metodlar,
+imza ve gövdeden oluşur. Aşağıda metot İmzasınının yapısı mevcuttur.
+
+[Erişim Belirleyicisi] [Geri Dönüş Değeri] [Metod Adı] ([Parametreler])
+{
+  // Burası metod gövdesidir. Kodlar buraya yazılır.
+}
+
+**Not:** Main de bir fonksiyondur ve her programda en az ve en fazla 1 tane olmak zorundadır.
+**Not:** Return komutu ile değer döndürülebilir. Değer döndürmeyen fonksiyonların geri dönüş değeri void tir.
+
+```cs
+class Program
+{
+public int Topla(int x, int y) {
+    return x + y;
+}
+
+static void Main(string[] args)
+{
+    Console.WriteLine(Topla(2,5));
+}
+```
+
+
 
 
 ## C# Hazır Sınıflar Ve Fonksiyonlar
