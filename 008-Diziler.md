@@ -1,5 +1,4 @@
-
-## Diziler (Arrays)
+# Diziler (Arrays)
 * Diziler, koleksiyonların temelini teşkil ederler ve koleksiyonların gelişmelerine katkıda bulunmaktadırlar.
 * Diziler referans tiplidir. Özlerinde classdır.
 * Dizi içine her türlü değer koyulabilir(referans/değer tip). 
