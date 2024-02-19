@@ -17,10 +17,13 @@ Sınıf yapısının özellikleri:
 heap alanında ise sadece nesneler tutulur. Geliştirme sürecinde belleğin heap alanına doğrudan müdahale
 edemediğimz için heapteki nesneyi stackte oluşturduğumuz bir referans ile işaretleyerek ulaşır ve kullanırız.
 
+**Not:** Eğerki bir değişken sınıf içerisinde field olarak tanımlanıyorsa tpine göre default değeri verilir.
+Yok eğer sınıfta değil metot vs. içerisinde tanımlanıyorsa default değer verilmez.
+
 ```cs
 class Example1{
-  private int userId; // Field
-  int userOld;   
+  private int userId; // Field // Default değeri = 0
+  int userOld; 
   public string userName;
 }
 
