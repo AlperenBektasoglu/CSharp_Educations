@@ -112,7 +112,9 @@ class Example1{
 
   // 5. Inıt - Only Property
   // Nesnenin sadece ilk yaratılış anında propertlerine değer atanmaktadır. Devamında değiştirilemezler.
+  // init, get anahtar kelimesi olmaksızın kullanılamaz. Ayrıca yapısı gereği bu semantikte set bloğuda kullanılamaz.
   public int MyProperty4 { get; init; };
+  public int MyProperty4 { get; init; } = 10;
 }
 ```
 
@@ -177,7 +179,6 @@ class Program
 ```
 
 
-![Alternatif Metin](Assets/Screenshot1.png)
 
 
 
