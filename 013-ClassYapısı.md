@@ -24,6 +24,9 @@ Yok eğer sınıfta değil metot vs. içerisinde tanımlanıyorsa default değer
 
 **Not:** Oluşturulan referanslar bir nesneyi işaretlemiyorsa null değerini alır.
 
+** Not:** Referans etmeden nesne oluşturabilmekteyiz. Referansız nesnelere ulaşılamaz.
+          Bellekte yer kaplamaması için bir süre sonra garbage collector tarafından otomatik olarak silinir.
+
 ```cs
 class Example1{
   private int userId; // Field // Default değeri = 0
@@ -140,6 +143,7 @@ new operatörü nesne üretilirken kullanılmaktadır.
 Example1 example1 = new Example1();
 Example1 example1 = new (); //  Target-Typed New Expression
 ```
+
 
 
 
