@@ -27,18 +27,23 @@ edemediğimz için heapteki nesneyi stackte oluşturduğumuz bir referans ile i�
 Property'lerin iki çalışma şekli vardır:
 ```cs
 class Example1{
-  private int userId;
+  private int userId; // Field
   int userOld;   
   public string userName;
   protected string userSurname;
 
+  public void metod1() // Metod
+  {
+      Console.WriteLine("Metod1 e hosgeldiniz...");
+  }
+
   // 1. olarak aşağıdaki şekilde tanımlandığında aslında Myproperty adında ve int tipinde bir değişken vardır.
   // Aşağıdaki property o değişkene kontrollü erişim sağlar.
-  public int MyProperty { get; set; } // Bu işlemin adı AutoPropert dir.
+  public int MyProperty { get; set; } // Bu işlemin adı AutoPropert dir. // Property
 
   // 2. olarak class içinde private bir field oluşturulur ve tanımlanan property o field'a kontrollü erişim sağlar.
   private string userLocation;
-  public string userLocationProp
+  public string userLocation // Property
   {
       get { return userLocation; }
       set { userLocation = value; }
