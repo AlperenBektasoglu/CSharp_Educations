@@ -114,6 +114,9 @@ class Example1{
 **Not:** Property olmadan da propertylerin sağladığı imkanı metodlarla da oluşturabilmekteyiz ama propertyleri kullanarak
 kod kalabalığının önüne geçmiş oluruz.
 
+**Not:** Sınıfa ve sınıfın elemanlarına açıklama satırı nasıl eklemek için, eklenecek öğenin üstüne gelip "///" yazıp tab tuşuna
+basmanız terlidir.
+
 ## Encapsulation Nedir?
 Bir nesne içerisindeki dataların dışarıya kontrollü bir şekilde açılması ve kontrollü bir şekilde veri almasıdır.
 
