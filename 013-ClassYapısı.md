@@ -49,12 +49,18 @@ class Program
               ya da her ikiniside aynı anda kullanabilirsiniz. Propertler özünde bir metottur.
               Yazılımcılar nesnelerin içerisindeki field'lara direkt erişilmesini istemez. Propertyler ile
               fieldları dışarı kontrollü bir şekilde açabiliriz. İçerisinde get ve set blokları vardır.
+              Property hangi tipten bir field'ı temsil ediyorsa o tipten olmalıdır.
+
+**Not:** Propertler genellikle temsil ettikleri fieldların isimlerinin baş harfi büyük olacak şekilde isimlendirilirler.
                                  
 **Not:** Field tanımlamadan da property oluşturulabilir. Bu durumda property aynı zamanda field gibi davranır.
 
+**Not:** Propertylerde set bloğu tanımlanmazsa sadece okunabilir(readonly) bilakis get bloğu tanımlanmazsa sadece
+yazılabilir(writeonly) olacaktır.
+
 **Not:** Bu üç tanım classlar içinde ileride anlatılacak struct yapılar içinde mevcuttur.
 
-Property'lerin iki çalışma şekli vardır:
+Property imza çeşitleri:
 ```cs
 class Example1{
   private int userId; // Field
@@ -67,17 +73,36 @@ class Example1{
       Console.WriteLine("Metod1 e hosgeldiniz...");
   }
 
-  // 1. olarak aşağıdaki şekilde tanımlandığında aslında Myproperty adında ve int tipinde bir değişken vardır.
-  // Aşağıdaki property o değişkene kontrollü erişim sağlar.
-  public int MyProperty { get; set; } // Bu işlemin adı AutoPropert dir. // Property
-
-  // 2. olarak class içinde private bir field oluşturulur ve tanımlanan property o field'a kontrollü erişim sağlar.
-  private string userLocation;
-  public string userLocation // Property
-  {
-      get { return userLocation; }
-      set { userLocation = value; }
+  // 1. Full Property
+  // Sınıf içinde private bir field oluşturulur ve tanımlanan property o field'a kontrollü erişim sağlar.
+  int sayı1;
+  public int MyProperty1 {
+      get{
+        return sayı1;
+      }
+      set{
+        sayı1 = value;
+      }
   }
+
+  // 2. Prop Property (AutoPropert)
+  public int MyProperty2 { get; set; } // Prop propertler compile edildiklerinde arka tarafta kendi field'larını oluştururlar. Dolayısıyla field tanımlamaya gerek yoktur.
+
+  // 2.1 AutoProperty Initializer
+  // Bu özellik ile AutoProperty'ye ilk değer atanabilir.
+  public int MyProperty3 { get; set; } = 10;
+
+  // 3. Ref Readonly Returns
+  // Bir sınıf içerisindeki field'ı referansıyla döndürmemizi sağlayan, bununla birlikte değişkenin değerini read only yapan özelliktir.
+  string isim = "Alperen Bektaşoğlu";
+  public ref readonly string Isim => ref isim;
+
+  // 4. Expression - Bodied Property
+  // Tanımlanan propertyler de Lambda Expression kullanmamızı sağlayan söz dizimidir. Expression - Bodied Propertyler readonly dir.
+  public string Cinsiyet => "Erkek"; // Get bloğu sonucu Erkek değeri döner.
+
+  // 5. Inıt - Only Property
+  // Nesnenin sadece ilk yaratılış anında propertlerine değer atanmaktadır. Devamında değiştirilemezler.
 }
 ```
 **Not:** Property olmadan da propertylerin sağladığı imkanı metodlarla da oluşturabilmekteyiz ama propertyleri kullanarak
