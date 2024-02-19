@@ -185,9 +185,39 @@ yapısının kullanılabilir olmasını sağlıyordu. Eğer ki bir objenin tamam
 daha fazlasına ihtiyacımız olacak. İşte bu ihtiyaca istinaden Records türü geliştirilmiştir. Yani özetle
 records içindeki bütün propertler Inıt-Only Propert dir. Record, bir objenin topyekün olarak sabit/değişmez olarak
 kalmasını sağlamaktadır. Recordlar hafif sınıflardır. Sınıflara nazaran objeden ziyade içerisinde bulunan dataları
-sabitleyerek, nesneden ziyade verilerin öne çıkmasını sağlarlar.
+sabitleyerek, nesneden ziyade verilerin öne çıkmasını sağlarlar. Özetle recordlar değiştirilemez nesneler oluşturmamızı 
+sağlamaktadır.
 
 ![Alternatif Metin](Assets/Screenshot4.png)
+
+**Not:** Record bildiğiniz sınıf fıtratında bir yapılanma olduğundan dolayı içerisine her türlü sınıf elemanı 
+tanımlanabilmektedir. Haliyle tanımlanan propertylerin hepsinin init ile işaretlenmesi Record'ın esas amacına eşlik edecektir.
+
+```cs
+class record Example1{
+   public string Name {get; init;}
+   public string Author {get; init;}
+   public int PageNumber {get; init;}
+}
+```
+
+**Not:** Recordlarda ki property leri değiştirerek yeni bir record oluşturmak için With Expression yapısı kullanılabilir.
+
+```cs
+
+Example1 example1 = new example1{
+  Name = "Ateşten Gömlek",
+  Author = "Halide Edip Adıvar"
+  PageNumber = 200
+}
+
+Example1 example2 = example1 with {Author = "Alperen Bektaşoğlu"}
+Example1 example3 = example1 with {Author = "Alperen Bektaşoğlu", PageNumber = 500}
+```
+
+
+
+
 
 
 
