@@ -178,6 +178,20 @@ class Program
 }
 ```
 
+## Redords Nedir?
+C# 9.0 ile gelen Inıt-Only Properties özelliği, nesne üretim esnasının dışında değişmez değerler
+oluşturulması için constructor ve auto propert initializers yapısının yanında object initializer 
+yapısının kullanılabilir olmasını sağlıyordu. Eğer ki bir objenin tamamını değişmez yapmak isyorsak ozaman 
+daha fazlasına ihtiyacımız olacak. İşte bu ihtiyaca istinaden Records türü geliştirilmiştir. Yani özetle
+records içindeki bütün propertler Inıt-Only Propert dir. Record, bir objenin topyekün olarak sabit/değişmez olarak
+kalmasını sağlamaktadır. Recordlar hafif sınıflardır. Sınıflara nazaran objeden ziyade içerisinde bulunan dataları
+sabitleyerek, nesneden ziyade verilerin öne çıkmasını sağlarlar.
+
+![Alternatif Metin](Assets/Screenshot4.png)
+
+
+
+
 
 
 
