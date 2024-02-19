@@ -46,7 +46,9 @@ class Program
 * Metod : Bir class yada struct içinde tanımlanan fonksiyonlardır.
 * Property :  Oluşturulan private field 'lara kontrollü bir şekilde erişim sağlanmak için 
               Property tanımlanmaktadır. Property tanımı ile bu alanları get edebilir, set edebilir 
-              ya da her ikiniside aynı anda kullanabilirsiniz.
+              ya da her ikiniside aynı anda kullanabilirsiniz. Propertler özünde bir metottur.
+              Yazılımcılar nesnelerin içerisindeki field'lara direkt erişilmesini istemez. Propertyler ile
+              fieldları dışarı kontrollü bir şekilde açabiliriz. İçerisinde get ve set blokları vardır.
                                  
 **Not:** Field tanımlamadan da property oluşturulabilir. Bu durumda property aynı zamanda field gibi davranır.
 
@@ -81,6 +83,8 @@ class Example1{
 **Not:** Property olmadan da propertylerin sağladığı imkanı metodlarla da oluşturabilmekteyiz ama propertyleri kullanarak
 kod kalabalığının önüne geçmiş oluruz.
 
+## Encapsulation Nedir?
+Bir nesne içerisindeki dataların dışarıya kontrollü bir şekilde açılması ve kontrollü bir şekilde veri almasıdır. 
 
 
 
