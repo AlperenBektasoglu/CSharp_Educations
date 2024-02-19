@@ -103,6 +103,7 @@ class Example1{
 
   // 5. Inıt - Only Property
   // Nesnenin sadece ilk yaratılış anında propertlerine değer atanmaktadır. Devamında değiştirilemezler.
+  public int MyProperty4 { get; init; };
 }
 ```
 
