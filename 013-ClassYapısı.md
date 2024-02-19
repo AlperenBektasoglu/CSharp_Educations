@@ -20,6 +20,8 @@ edemediğimz için heapteki nesneyi stackte oluşturduğumuz bir referans ile i�
 **Not:** Eğerki bir değişken sınıf içerisinde field olarak tanımlanıyorsa tpine göre default değeri verilir.
 Yok eğer sınıfta değil metot vs. içerisinde tanımlanıyorsa default değer verilmez.
 
+**Not:** Sınıf içerisindeki sınıf, ana sınıfın elemanı değildir.
+
 ```cs
 class Example1{
   private int userId; // Field // Default değeri = 0
