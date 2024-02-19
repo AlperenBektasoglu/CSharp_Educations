@@ -115,10 +115,19 @@ class Example1{
 kod kalabalığının önüne geçmiş oluruz.
 
 **Not:** Sınıfa ve sınıfın elemanlarına açıklama satırı nasıl eklemek için, eklenecek öğenin üstüne gelip "///" yazıp tab tuşuna
-basmanız terlidir.
+basmanız yeterlidir.
 
 ## Encapsulation Nedir?
 Bir nesne içerisindeki dataların dışarıya kontrollü bir şekilde açılması ve kontrollü bir şekilde veri almasıdır.
+
+## This Anahtar Kelimesi
+1. Sınıfın nesnesini temsil eder.
+2. Aynı isimde field ile metod parametrelerini ayırmak için kullanılır 1. maddedeki çalışma prensibi üzerinden.
+3. Bir yapıcı metoddan başka bir yapıcı metodu çağırmak için kullanılır.
+
+
+
+
 
 
 
