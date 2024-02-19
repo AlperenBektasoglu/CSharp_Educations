@@ -7,7 +7,8 @@ nesneler oluşuncaya kadar fiziksel olarak bellekte yer almazlar.
 Sınıf yapısının özellikleri:  
 * Sınıflar bir referans tipidir.
 * Sınıflar; namespace içerisinde, namespace dışarısında ve class içerisinde oluşturulabilirler.
-  Fonksiyonlar vs gibi yapıların içerisinde tanımlanamazlar. 
+  Fonksiyonlar vs gibi yapıların içerisinde tanımlanamazlar.
+* Bir sınıf tanımlamasında, tanımlanan yerde aynı isimde birden fazla sınıf tanımlanamaz.
 * Sınıflarda erişim belirleyicisi yazılır. Yazılmamış ise varsayılan olarak Internal'dır.
 * Sınıf üyeleri için erişim belirleyicisi belirtilmediğinde varsayılan olarak Private olur.
 * Sınıflar içerilerinde metod, property veya field barındabilirler.
@@ -15,6 +16,27 @@ Sınıf yapısının özellikleri:
 **Not:** Belleğin stack alanında değer türlü değişkenler ve referanslar tutulur. Belleğin 
 heap alanında ise sadece nesneler tutulur. Geliştirme sürecinde belleğin heap alanına doğrudan müdahale
 edemediğimz için heapteki nesneyi stackte oluşturduğumuz bir referans ile işaretleyerek ulaşır ve kullanırız.
+
+```cs
+class Example1{
+  private int userId; // Field
+  int userOld;   
+  public string userName;
+}
+
+class Program
+{
+    static void Main(string[] args){
+      new Example1(); // Heap te nesne oluşturur ama stack ta referans numarası oluşturmaz.
+      Example1 o1 = new Example1();   // Heap bellekte nesne oluşturur ve stack bellekte "o1" adı ile referans numarası oluşturur.
+      Example1 o2 = new Example1();   // o2 ve o3 referanslarının heap bellekte gösterdiği nesne aynıdır.
+      Example1 o3 = o2;
+
+      Example1 example1 = new Example1();
+      example1.userOld = 100; // Sınıf üyelerine . operatörü üzerinden erişip kullanabilirsiniz.
+    }
+}
+```
 
 ## Field,Metod,Property Tanımı
 * Field : Bir class yada struct içinde tanımlanan her tipten değişkendir.
