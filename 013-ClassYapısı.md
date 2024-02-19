@@ -5,6 +5,9 @@ nasıl inşa edileceğini tanımlayan bir kılavuzdur diyebiliriz. Sınıf soyut
 nesneler oluşuncaya kadar fiziksel olarak bellekte yer almazlar.
 
 Sınıf yapısının özellikleri:  
+* Sınıflar bir referans tipidir.
+* Sınıflar; namespace içerisinde, namespace dışarısında ve class içerisinde oluşturulabilirler.
+  Fonksiyonlar vs gibi yapıların içerisinde tanımlanamazlar. 
 * Sınıflarda erişim belirleyicisi yazılır. Yazılmamış ise varsayılan olarak Internal'dır.
 * Sınıf üyeleri için erişim belirleyicisi belirtilmediğinde varsayılan olarak Private olur.
 * Sınıflar içerilerinde metod, property veya field barındabilirler.
