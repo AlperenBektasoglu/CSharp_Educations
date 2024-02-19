@@ -105,6 +105,9 @@ class Example1{
   // Nesnenin sadece ilk yaratılış anında propertlerine değer atanmaktadır. Devamında değiştirilemezler.
 }
 ```
+
+![Alternatif Metin](../)
+
 **Not:** Property olmadan da propertylerin sağladığı imkanı metodlarla da oluşturabilmekteyiz ama propertyleri kullanarak
 kod kalabalığının önüne geçmiş oluruz.
 
