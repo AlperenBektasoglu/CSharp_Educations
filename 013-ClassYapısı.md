@@ -22,6 +22,8 @@ Yok eğer sınıfta değil metot vs. içerisinde tanımlanıyorsa default değer
 
 **Not:** Sınıf içerisindeki sınıf, ana sınıfın elemanı değildir.
 
+**Not:** Oluşturulan referanslar bir nesneyi işaretlemiyorsa null değerini alır.
+
 ```cs
 class Example1{
   private int userId; // Field // Default değeri = 0
@@ -39,6 +41,8 @@ class Program
 
       Example1 example1 = new Example1();
       example1.userOld = 100; // Sınıf üyelerine . operatörü üzerinden erişip kullanabilirsiniz.
+
+      Example1 example2; // example2 = null
     }
 }
 ```
@@ -126,6 +130,16 @@ This anahtar kelimesinin kullanım amaçları:
 2. Aynı isimde field ile metod parametrelerini ayırmak için kullanılır 1. maddedeki çalışma prensibi üzerinden.
 3. Bir yapıcı metoddan başka bir yapıcı metodu çağırmak için kullanılır.
 
+## New Operatörü
+new operatörü nesne üretilirken kullanılmaktadır.
+
+**Not:** Nesne üretilirken kullanılan new ifadedesinde ki parantezler yapıcı metodu çağırır.
+
+**Not:** C#9.0 da gelen Target-Typed New Expressions özelliği ile aşağıdaki şekilde tanımlamakta mümkündür.
+```cs
+Example1 example1 = new Example1();
+Example1 example1 = new (); //  Target-Typed New Expression
+```
 
 
 
