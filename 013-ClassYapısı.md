@@ -4,5 +4,7 @@ nasıl inşa edileceğini tanımlayan bir kılavuzdur diyebiliriz. Sınıf soyut
 nesneler oluşuncaya kadar fiziksel olarak bellekte yer almazlar.
 
 Class yapısının özellikleri: 
-* Classlarada erişim belirleyicisi yazılır. Yazılmamış ise varsayılan olarak Internal'dır.
-* sınıf üyeleri için erişim belirleyicisi belirtilmediğinde varsayılan olarak Private olur.
+* Sınıflarda erişim belirleyicisi yazılır. Yazılmamış ise varsayılan olarak Internal'dır.
+* Sınıf üyeleri için erişim belirleyicisi belirtilmediğinde varsayılan olarak Private olur.
+* Sınıflar içerilerinde metod, property veya field barındabilirler.
+* 
