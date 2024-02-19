@@ -122,7 +122,7 @@ Bir nesne içerisindeki dataların dışarıya kontrollü bir şekilde açılmas
 
 ## This Anahtar Kelimesi
 This anahtar kelimesinin kullanım amaçları:
-1. Sınıfın nesnesini temsil eder.
+1. Sınıfın nesnesini temsil eder. İlgili sınıf yapılanmasının o anki nesnesine karşılık gelir.
 2. Aynı isimde field ile metod parametrelerini ayırmak için kullanılır 1. maddedeki çalışma prensibi üzerinden.
 3. Bir yapıcı metoddan başka bir yapıcı metodu çağırmak için kullanılır.
 
