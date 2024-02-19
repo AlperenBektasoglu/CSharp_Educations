@@ -144,6 +144,36 @@ Example1 example1 = new Example1();
 Example1 example1 = new (); //  Target-Typed New Expression
 ```
 
+## Nesne Kopyalama Davranışları | Shallow Copy | Deep Copy
+Shallow Copy: Var olan bir nesnenin, değerin, referansın kopyalanmasıdır. Shallow copy sonucunda eldeki değer
+çoğaltılmaz. Sadece birden fazla referans ile işaretlenmiş olur. Referans tipli değişkenlerin default davranışı bu şekildedir.
+
+```cs
+Example1 o1 = new Example1(); // o1 ile o2 nin heap te referans ettiği nesne aynıdır.
+Example1 o2 = o1;
+```
+
+Deep Copy: Var olan bir nesne deep copy ile kopyalanıyorsa eğer, ilgili nesne miktarı çoğalır. Aynı özelliklere ve
+değere sahip olan bellekte farklı bir nesne daha oluşur. Değer tipli değişkenlerin default davranışı bu şekildedir.
+
+```cs
+class Example1{
+  public Example1 Clone(){
+    this.MemberwiseClone(); // Bir sınıfın içerisinde o sınıftan üretilmiş olan o anki nesneyi klonlamamamızı sağlayan fonksiyondur.
+  }
+}
+
+class Program
+{
+    static void Main(string[] args){
+      Example1 o1 = new Example1();
+      Example1 o2 = o1; // Shallow Copy
+      Example1 o3 = o1.Clone(); // Deep Copy
+    }
+}
+```
+
+
 
 
 
