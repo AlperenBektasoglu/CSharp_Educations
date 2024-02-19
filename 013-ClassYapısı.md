@@ -84,7 +84,8 @@ class Example1{
 kod kalabalığının önüne geçmiş oluruz.
 
 ## Encapsulation Nedir?
-Bir nesne içerisindeki dataların dışarıya kontrollü bir şekilde açılması ve kontrollü bir şekilde veri almasıdır. 
+Bir nesne içerisindeki dataların dışarıya kontrollü bir şekilde açılması ve kontrollü bir şekilde veri almasıdır.
+
 
 
 
