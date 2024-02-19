@@ -126,6 +126,7 @@ basmanız yeterlidir.
 
 ## Encapsulation Nedir?
 Bir nesne içerisindeki dataların dışarıya kontrollü bir şekilde açılması ve kontrollü bir şekilde veri almasıdır.
+Biz bu işlemi property'ler aracılığı ile gerçekleştirmekteyiz.
 
 ## This Anahtar Kelimesi
 This anahtar kelimesinin kullanım amaçları:
