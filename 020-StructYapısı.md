@@ -38,16 +38,7 @@ Kaynak: https://www.gencayyildiz.com/blog/cta-struct-yapilari-ve-kullanim-duruml
 * Struct ve class birbirinin yerlerine kullanılabilir. İkisi de benzer işleri yapar. 
   Hız gerekli ise structlar, bellek gerekli ise classlar kullanılabilir.
   
-## Field,Metod,Property Tanımı
-* Field : Bir class yada struct içinde tanımlanan her tipten değişkendir.
-* Metod : Bir class yada struct içinde tanımlanan fonksiyonlardır.
-* Property :  Oluşturulan private field 'lara kontrollü bir şekilde erişim sağlanmak için 
-              Property tanımlanmaktadır. Property tanımı ile bu alanları get edebilir, set edebilir 
-              ya da her ikiniside aynı anda kullanabilirsiniz.
-                                 
-**Not:** Field tanımlamadan da property oluşturulabilir. Bu durumda property aynı zamanda field gibi davranır.
 
-**Not:** Bu üç tanım classlar içinde structlar içinde mevcuttur.
 
 ```cs
 struct Urun
