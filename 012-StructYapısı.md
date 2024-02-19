@@ -1,4 +1,4 @@
-# Struct
+# Struct Yapısı
 
 Aralarında mantıksal ilişkiler bulunan farklı veya ayni türden bilgileri bir arada tutarak gruplamak 
 ve daha kolay kullanmak için struct yapıları kullanılır. OOP'da class yapılarına benzerdir.
