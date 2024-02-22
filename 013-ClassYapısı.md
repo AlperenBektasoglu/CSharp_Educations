@@ -7,11 +7,12 @@ nesneler oluşuncaya kadar fiziksel olarak bellekte yer almazlar.
 Sınıf yapısının özellikleri:  
 * Sınıflar bir referans tipidir.
 * Sınıflar; namespace içerisinde, namespace dışarısında ve class içerisinde oluşturulabilirler.
-  Fonksiyonlar vs gibi yapıların içerisinde tanımlanamazlar.
-* Bir sınıf tanımlamasında, tanımlanan yerde aynı isimde birden fazla sınıf tanımlanamaz.
+  Fonksiyonlar vs gibi yapıların içerisinde tanımlanamazlar. Bununla birlikte sınıf tanımlamasında,
+  tanımlanan yerde aynı isimde birden fazla sınıf tanımlanamaz.
 * Sınıflarda erişim belirleyicisi yazılır. Yazılmamış ise varsayılan olarak Internal'dır.
-* Sınıf üyeleri için erişim belirleyicisi belirtilmediğinde varsayılan olarak Private olur.
-* Sınıflar içerilerinde metod, property veya field barındabilirler.
+* Sınıf üyeleri için de erişim belirleyicisi yazılır. Sınıf üyeleri için erişim belirleyicisi belirtilmediğinde
+  varsayılan olarak Private olur.
+* Sınıf içerisinde metod, property veya field oluşturulabilir.
 
 **Not:** Belleğin stack alanında değer türlü değişkenler ve referanslar tutulur. Belleğin 
 heap alanında ise sadece nesneler tutulur. Geliştirme sürecinde belleğin heap alanına doğrudan müdahale
