@@ -141,8 +141,8 @@ bu noktada propertyler'i kullanmak işimizi kolaylaştırmaktadır.
 ## This Anahtar Kelimesi
 This anahtar kelimesinin kullanım amaçları:
 1. Sınıfın nesnesini temsil eder. İlgili sınıf yapılanmasının o anki nesnesine karşılık gelir.
-2. Aynı isimde field ile metod parametrelerini ayırmak için kullanılır 1. maddedeki çalışma prensibi üzerinden.
-3. Bir yapıcı metoddan başka bir yapıcı metodu çağırmak için kullanılır.
+2. 1. maddedeki çalışma prensibi üzerinden, aynı isimde ki field ve metod parametrelerini ayırmak için kullanılır.
+3. Bir yapıcı metoddan aynı sının içerisindeki başka bir yapıcı metodu çağırmak için kullanılır.
 
 ## New Operatörü
 new operatörü nesne üretilirken kullanılmaktadır.
