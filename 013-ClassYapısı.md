@@ -126,8 +126,9 @@ kod kalabalığının önüne geçmiş oluruz.
 basmanız yeterlidir.
 
 ## Encapsulation Nedir?
-Bir nesne içerisindeki dataların dışarıya kontrollü bir şekilde açılması ve kontrollü bir şekilde veri almasıdır.
-Biz bu işlemi property'ler aracılığı ile gerçekleştirmekteyiz.
+Bir nesne içerisindeki fieldların dışarıya kontrollü bir şekilde açılması ve dışarıdan kontrollü bir şekilde field'a veri almasıdır.
+Biz bu işlemi property'ler aracılığı ile gerçekleştirmekteyiz. Tabi metodlar kullanılarakta bu işlem gerçekleştirilebilir ama
+bu noktada propertyler'i kullanmak işimizi kolaylaştırmaktadır.
 
 ## This Anahtar Kelimesi
 This anahtar kelimesinin kullanım amaçları:
