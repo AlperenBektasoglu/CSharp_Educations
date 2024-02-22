@@ -18,7 +18,7 @@ Sınıf yapısının özellikleri:
 heap alanında ise sadece nesneler tutulur. Geliştirme sürecinde belleğin heap alanına doğrudan müdahale
 edemediğimz için heapteki nesneyi stackte oluşturduğumuz bir referans ile işaretleyerek ulaşır ve kullanırız.
 
-**Not:** Eğerki bir değişken sınıf içerisinde field olarak tanımlanıyorsa tpine göre default değeri verilir.
+**Not:** Eğerki bir değişken sınıf içerisinde field olarak tanımlanıyorsa tipine göre default değeri verilir.
 Yok eğer sınıfta değil metot vs. içerisinde tanımlanıyorsa default değer verilmez.
 
 **Not:** Sınıf içerisindeki sınıf, ana sınıfın elemanı değildir.
