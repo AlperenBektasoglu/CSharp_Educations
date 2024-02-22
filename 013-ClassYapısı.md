@@ -52,7 +52,7 @@ class Program
 }
 ```
 
-## Field,Metod,Property Tanımı
+## Field, Metod, Property Tanımı
 * Field : Bir class yada struct içinde tanımlanan her tipten değişkendir.
 * Metod : Bir class yada struct içinde tanımlanan fonksiyonlardır.
 * Property :  Yazılımcılar nesnelerin içerisindeki field'lara direkt erişilmesini istemez. Propertyler ile
@@ -68,7 +68,7 @@ yazılabilir(writeonly) olacaktır.
 
 **Not:** Sınıflar için yapılan bu üç tanım, ileride anlatılacak olan record ve struct yapıları içinde geçerlidir.
 
-Property imza çeşitleri:
+### Property İmza Çeşitleri
 ```cs
 class Example1{
   private int userId; // Field
