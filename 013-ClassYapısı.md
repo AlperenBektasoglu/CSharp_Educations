@@ -13,6 +13,7 @@ Sınıf yapısının özellikleri:
 * Sınıf üyeleri için de erişim belirleyicisi yazılır. Sınıf üyeleri için erişim belirleyicisi belirtilmediğinde
   varsayılan olarak Private olur.
 * Sınıf içerisinde metod, property veya field oluşturulabilir.
+* Sınıf üyelerine . operatörü üzerinden erişilir.
 
 **Not:** Belleğin stack alanında değer türlü değişkenler ve referanslar tutulur. Belleğin 
 heap alanında ise sadece nesneler tutulur. Geliştirme sürecinde belleğin heap alanına doğrudan müdahale
