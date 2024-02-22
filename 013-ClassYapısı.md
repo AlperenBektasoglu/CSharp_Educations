@@ -118,7 +118,6 @@ class Example1{
 ```
 
 ![Alternatif Metin](Assets/Screenshot1.png)
-![Alternatif Metin](Assets/Screenshot3.png)
 
 **Not:** Property olmadan da propertylerin sağladığı imkanı metodlarla da oluşturabilmekteyiz ama propertyleri kullanarak
 kod kalabalığının önüne geçmiş oluruz.
