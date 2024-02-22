@@ -55,12 +55,9 @@ class Program
 ## Field,Metod,Property Tanımı
 * Field : Bir class yada struct içinde tanımlanan her tipten değişkendir.
 * Metod : Bir class yada struct içinde tanımlanan fonksiyonlardır.
-* Property :  Oluşturulan private field 'lara kontrollü bir şekilde erişim sağlanmak için 
-              Property tanımlanmaktadır. Property tanımı ile bu alanları get edebilir, set edebilir 
-              ya da her ikiniside aynı anda kullanabilirsiniz. Propertler özünde bir metottur.
-              Yazılımcılar nesnelerin içerisindeki field'lara direkt erişilmesini istemez. Propertyler ile
+* Property :  Yazılımcılar nesnelerin içerisindeki field'lara direkt erişilmesini istemez. Propertyler ile
               fieldları dışarı kontrollü bir şekilde açabiliriz. İçerisinde get ve set blokları vardır.
-              Property hangi tipten bir field'ı temsil ediyorsa o tipten olmalıdır.
+              Property hangi tipten bir field'ı temsil ediyorsa o tipten olmalıdır. Propertler özünde bir metottur.              
 
 **Not:** Propertler genellikle temsil ettikleri fieldların isimlerinin baş harfi büyük olacak şekilde isimlendirilirler.
                                  
