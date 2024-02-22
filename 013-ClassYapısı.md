@@ -21,7 +21,7 @@ edemediğimz için heapteki nesneyi stackte oluşturduğumuz bir referans ile i�
 **Not:** Eğerki bir değişken sınıf içerisinde field olarak tanımlanıyorsa tipine göre default değeri verilir.
 Yok eğer sınıfta değil metot vs. içerisinde tanımlanıyorsa default değer verilmez.
 
-**Not:** Sınıf içerisindeki sınıf, ana sınıfın elemanı değildir.
+**Not:** Sınıf içerisindeki tanımlanan bir sınıf, ana sınıfın elemanı değildir.
 
 **Not:** Oluşturulan referanslar bir nesneyi işaretlemiyorsa null değerini alır.
 
