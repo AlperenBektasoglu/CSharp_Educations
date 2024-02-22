@@ -66,7 +66,7 @@ class Program
 **Not:** Propertylerde set bloğu tanımlanmazsa sadece okunabilir(readonly) bilakis get bloğu tanımlanmazsa sadece
 yazılabilir(writeonly) olacaktır.
 
-**Not:** Bu üç tanım classlar içinde ileride anlatılacak struct yapılar içinde mevcuttur.
+**Not:** Sınıflar için yapılan bu üç tanım, ileride anlatılacak olan record ve struct yapıları içinde geçerlidir.
 
 Property imza çeşitleri:
 ```cs
