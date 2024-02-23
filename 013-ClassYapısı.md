@@ -205,18 +205,20 @@ public record Example1{
 **Not:** Recordlarda ki property leri değiştirerek yeni bir record oluşturmak için With Expression yapısı kullanılabilir.
 
 ```cs
-
-Example1 example1 = new example1{
-  Name = "Ateşten Gömlek",
-  Author = "Halide Edip Adıvar"
-  PageNumber = 200
+class Program
+{
+    static void Main(string[] args){
+      Example1 example1 = new example1{
+        Name = "Ateşten Gömlek",
+        Author = "Halide Edip Adıvar"
+        PageNumber = 200
+      }
+      
+      Example1 example2 = example1 with {Author = "Alperen Bektaşoğlu"};
+      Example1 example3 = example1 with {Author = "Alperen Bektaşoğlu", PageNumber = 500};
+    }
 }
-
-Example1 example2 = example1 with {Author = "Alperen Bektaşoğlu"}
-Example1 example3 = example1 with {Author = "Alperen Bektaşoğlu", PageNumber = 500}
 ```
-
-
 
 ## This Anahtar Kelimesi
 This anahtar kelimesinin kullanım amaçları:
