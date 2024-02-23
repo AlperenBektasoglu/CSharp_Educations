@@ -160,6 +160,7 @@ Example1 o2 = o1;
 
 Deep Copy: Var olan bir nesne deep copy ile kopyalanıyorsa eğer, ilgili nesne miktarı çoğalır. Aynı özelliklere ve
 değere sahip olan bellekte farklı bir nesne daha oluşur. Değer tipli değişkenlerin default davranışı bu şekildedir.
+Aşağıda bir sınıftan nasıl deep copy yapılabileceği ile ilgili bir örnek mevcuttur.
 
 ```cs
 class Example1{
