@@ -189,7 +189,7 @@ kalmasını sağlamaktadır. Recordlar hafif sınıflardır. Sınıflara nazaran
 sabitleyerek, verilerin öne çıkmasını sağlarlar. Özetle recordlar değiştirilemez nesneler oluşturmamızı 
 sağlamaktadır. 
 
-![Alternatif Metin](Assets/Screenshot4.png)
+![Alternatif Metin](Assets/Screenshot2.png)
 
 **Not:** Record bildiğiniz sınıf fıtratında bir yapılanma olduğundan dolayı içerisine her türlü sınıf elemanı 
 tanımlanabilmektedir. Haliyle tanımlanan propertylerin hepsinin init ile işaretlenmesi Record'ın esas amacına eşlik edecektir.
