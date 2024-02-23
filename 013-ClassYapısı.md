@@ -195,7 +195,7 @@ sağlamaktadır.
 tanımlanabilmektedir. Haliyle tanımlanan propertylerin hepsinin init ile işaretlenmesi Record'ın esas amacına eşlik edecektir.
 
 ```cs
-class record Example1{
+record Example1{
    public string Name {get; init;}
    public string Author {get; init;}
    public int PageNumber {get; init;}
