@@ -483,11 +483,11 @@ namespace EducationWorkspace
 ```
 
 ## Nested Class (İç İçe Sınıflar)
-Sınıf içerisinde sınıflar tanımlayabiliriz. Bu tarz sınıflara Nested/Inner(iç içe/yuvalanmış/Dahili) Class denir.
-İç içe sınıflar, sınıfların mantıksal olarak gruplanmasını sağlar. Ortak iş yapan sınıfların bir arada bulunmasını sağlayabiliriz.
-kapsanan sınıfların erişim belirleyicileri public olmalıdır.
-Main fonksiyonda kapsayan sınıf üzerinden kapsanan sınıf yaratılır. 
-Bu iki sınıf ta sadece kendi elemanlarına ulaşır.
+* Sınıf içerisinde sınıflar tanımlayabiliriz. Bu tarz sınıflara Nested/Inner(iç içe/yuvalanmış/Dahili) Class denir.
+* İç içe sınıflar, sınıfların mantıksal olarak gruplanmasını sağlar. Ortak iş yapan sınıfların bir arada bulunmasını sağlayabiliriz.
+* Kapsanan sınıfların erişim belirleyicileri public olmalıdır.
+* Main fonksiyonda kapsayan sınıf üzerinden kapsanan sınıf yaratılır. 
+* Bu sınıflar sadece kendi elemanlarına ulaşır.
 
 ```cs
 namespace EducationWorkspace
