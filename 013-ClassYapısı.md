@@ -220,6 +220,77 @@ class Program
 }
 ```
 
+## Constructor Method (Yapıcı Metotlar)
+* Constructor metod, bir sınıftan her nesne üretildiğinde ilk ve otomatik tetiklenen metoddur. Bir sınıfta constructor metod tanımlanmadıysa,
+default constructor metod çalışır.
+* Bir sınıfta farklı imzalarda birden fazla constructor metod olabilir.
+* Constructor metodun ismi sınıfın ismi ile aynı olmalıdır.
+* Constructor metod public olmalıdır.
+* Constructor metodun geri dönüş değeri olmaz.
+
+```cs
+namespace EducationWorkspace
+{
+    class Example1
+    {
+        private int userId;
+        public string userName;
+
+        public Example1()
+        {
+            Console.WriteLine("Yapıcı metod çalıştı...");
+        }
+
+        public Example1(int id)
+        {
+            userId = id;
+            Console.WriteLine("Parametreli yapıcı metod çalıştı...");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Example1 o1 = new Example1();
+            Example1 o2 = new Example1();
+            Example1 o3 = new Example1();
+            Example1 o4 = new Example1(100);
+            Console.ReadLine();
+        }
+    }
+}
+
+// Çıktı:
+// Yapıcı metod çalıstı...
+// Yapıcı metod çalıstı...
+// Yapıcı metod çalıstı...
+// Parametreli yapıcı metod çalıstı...
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## This Anahtar Kelimesi
 This anahtar kelimesinin kullanım amaçları:
 1. Sınıfın nesnesini temsil eder. İlgili sınıf yapılanmasının o anki nesnesine karşılık gelir.
