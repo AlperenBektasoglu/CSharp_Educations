@@ -482,7 +482,43 @@ namespace EducationWorkspace
 }
 ```
 
+## Nested Class (İç İçe Sınıflar)
+Sınıf içerisinde sınıflar tanımlayabiliriz. Bu tarz sınıflara Nested/Inner(iç içe/yuvalanmış/Dahili) Class denir.
+İç içe sınıflar, sınıfların mantıksal olarak gruplanmasını sağlar. Ortak iş yapan sınıfların bir arada bulunmasını sağlayabiliriz.
+kapsanan sınıfların erişim belirleyicileri public olmalıdır.
+Main fonksiyonda kapsayan sınıf üzerinden kapsanan sınıf yaratılır. 
+Bu iki sınıf ta sadece kendi elemanlarına ulaşır.
 
+```cs
+namespace EducationWorkspace
+{
+    class Example1
+    {
+        public int var1_1;
+        public class Example2
+        {
+            public int var2_1;
+            public class Example3
+            {
+                public int var3_1;
+            }
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Example1 example1 = new Example1();
+            example1.var1_1 = 100;
+            Example1.Example2 example2 = new Example1.Example2();
+            example2.var2_1 = 200;
+            Example1.Example2.Example3 example3 = new Example1.Example2.Example3();
+            example3.var3_1 = 300;
+        }
+    }
+}
+```
 
 
 
