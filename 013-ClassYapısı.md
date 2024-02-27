@@ -404,7 +404,9 @@ namespace EducationWorkspace
 // Constructor metod çalıstı...)
 ```
 
-
+**Not:** Static constructor'ın tetiklenebilmesi için illa nesne üretimi yapılmasına gerek yoktur.
+İlgili sınıf içerisinde herhangi bir static yapılanmanında tetiklenmesi static constructor'ın
+tetiklenmesini sağlayacaktır.
 
 
 
