@@ -363,7 +363,46 @@ namespace EducationWorkspace
 // 26
 ```
 
+## Static Constructor Metod
+* Static constructor metod, normal constructor metod dan önce çalışır.
+* İlgili sınıftan yapılan nesne taleplerinden ilkinde çalışır, daha sonraki taleplerde çalışmaz.
+* Static constructor metotda; erişim belirleyicisi ve geri dönüş tipi yoktur. "static" kelimesi ile işaretlenirler.
+* Bir sınıfta en fazla 1 tane static constructor metod tanımlanabilir.
 
+```cs
+namespace EducationWorkspace
+{
+    class Example1
+    {
+        public Example1() // Constructor Metod
+        {
+            Console.WriteLine("Constructor metod çalıştı...)");
+        }
+
+        static Example1() // Static Constructor Method
+        {
+            Console.WriteLine("Static constructor çalıştı...");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Example1 o1 = new Example1();
+            Example1 o2 = new Example1();
+            Example1 o3 = new Example1();
+            Console.ReadLine();
+        }
+    }
+}
+
+// Çıktı:
+// Static constructor çalıstı...
+// Constructor metod çalıstı...)
+// Constructor metod çalıstı...)
+// Constructor metod çalıstı...)
+```
 
 
 
