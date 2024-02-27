@@ -408,23 +408,6 @@ namespace EducationWorkspace
 İlgili sınıf içerisinde herhangi bir static yapılanmanında tetiklenmesi static constructor'ın
 tetiklenmesini sağlayacaktır.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## This Anahtar Kelimesi
 This anahtar kelimesinin kullanım amaçları:
 1. Sınıfın nesnesini temsil eder. İlgili sınıf yapılanmasının o anki nesnesine karşılık gelir.
@@ -466,6 +449,41 @@ namespace WorkArea{
 
 }
 ```
+
+## Positional Record
+* Bir record üzerinde constructor ve deconstructor yapılanmasını hızlı bir şekilde oluşturmamızı sağlayan record'lardır.
+* Positional record kullanırken parametrelerin karşılıkları olan propertyleri manuel oluşturmak zorunda değiliz.
+* Parametrelerin karşılığı olarak compiler seviyesinde propertyler otomatik oluşturulacaktır.
+* Positional record tanımlanmışsa eğer nesne üretiminde tetiklenmesi/kullanılması zorunludur.
+
+```cs
+namespace EducationWorkspace
+{
+    record Example1(string Name, string Surname)
+    {
+        public Example1() : this("Alperen", "Bektaşoğlu")
+        {
+            
+        }
+
+        public string Name => name; // Tanımlanması zorunlu değil
+        public string Surname => surname; // Tanımlanması zorunlu değil
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Example1 o1 = new Example1();
+            var (param1, param2) = o1; 
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+
+
 
 
 
