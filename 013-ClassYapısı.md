@@ -268,6 +268,7 @@ namespace EducationWorkspace
 // Parametreli yapıcı metod çalıstı...
 ```
 
+**Not:** Bir yapıcı metodun erişim belirleyicisi private yapılırsa, o sınıftan new komutu ile nesne üretilemez. 
 
 
 
