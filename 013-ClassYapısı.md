@@ -268,7 +268,59 @@ namespace EducationWorkspace
 // Parametreli yapıcı metod çalıstı...
 ```
 
-**Not:** Bir yapıcı metodun erişim belirleyicisi private yapılırsa, o sınıftan new komutu ile nesne üretilemez. 
+**Not:** Bir yapıcı metodun erişim belirleyicisi private yapılırsa, o sınıftan new komutu ile nesne üretilemez.
+
+**Not:** Record'larda da yapıcı metodlar tanımlanabilir.
+
+## Deconstructor Method (Yıkıcı Metotlar)
+* Deconstructor metod, classtan üretilen nesne yıkılmadan önce tetiklenir.
+* Erişim belirleyicisi yoktur ve geriye değer döndürmez. 
+* ~ işareti ile başlar ve class'ın ismi ile aynı isimdedir.
+* Bir sınıfta sadece tek bir tane yıkıcı metod tanımlanabilir.
+
+### Peki Bir Nesne Hangi Şartlarda Kim Tarafından İmha Edilir?
+Bir nesnenin imha edilmesi için; ilgili nesne herhangi bir referans tarafından işaretlenmemelidir yahut nesnenin oluşturulduğu 
+ve kullanıldığı scope sona ermiş olmalıdır. Özetle ilgili nesneye bir daha erişilemez hale gelinmelidir.
+işte o zaman nesne garbage collector tarafıdnan imha edilir. Garbage Collector otomatik çalışır ama istersek kod üzerinden 
+bizlerde tetikleyebilmekteyiz.
+
+```cs
+namespace EducationWorkspace
+{
+    class Example1
+    {
+        private int id;
+
+        public Example1(int sayac) // Yapıcı Metod
+        {
+            id = sayac;
+            Console.WriteLine($"Yapıcı metod çalıştı... ({id})");
+        }
+
+        ~Example1() // Yıkıcı Metod
+        {
+            Console.WriteLine($"Yıkıcı metod çalıştı... ({id})");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("************ Yapilis Sureci ****************");
+
+            for (int i = 0; i < 10; i++)
+                new Example1(i);
+
+            Console.WriteLine("************ Yikilis Sureci ****************");
+            GC.Collect();    
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+
 
 
 
