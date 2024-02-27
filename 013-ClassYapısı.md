@@ -272,8 +272,8 @@ namespace EducationWorkspace
 
 **Not:** Record'larda da yapıcı metodlar tanımlanabilir.
 
-## Deconstructor Method (Yıkıcı Metotlar)
-* Deconstructor metod, classtan üretilen nesne yıkılmadan önce tetiklenir.
+## Destructor Method (Yıkıcı Metotlar)
+* Destructor metod, classtan üretilen nesne yıkılmadan önce tetiklenir.
 * Erişim belirleyicisi yoktur ve geriye değer döndürmez. 
 * ~ işareti ile başlar ve class'ın ismi ile aynı isimdedir.
 * Bir sınıfta sadece tek bir tane yıkıcı metod tanımlanabilir.
@@ -320,8 +320,48 @@ namespace EducationWorkspace
 }
 ```
 
+## Deconstruct Metotlar
+Bir sınıf içerisinde "Deconstruct" ismiyle tanımlanan metot, compiler tarafından özel olarak algılanmakta ve sınıfın
+nesnesi üzerinden geriye hızlıca Tuple bir değer döndürmemizi sağlamaktadır. Deconstruct metod yapısını aşağıdaki
+örnek üzerinden inceleyebilirsiniz.
 
+```cs
+namespace EducationWorkspace
+{
+    class Example1
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
 
+        public void Deconstruct(out string isim, out int yas)
+        {
+            isim = Name;
+            yas = Age;
+        } 
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Example1 o1 = new Example1
+            {
+                Name = "Alperen",
+                Age = 26
+            };
+
+            var (param1, param2) = o1;
+            Console.WriteLine(param1);
+            Console.WriteLine(param2); 
+            Console.ReadLine();
+        }
+    }
+}
+
+// Çıktı:
+// Alperen
+// 26
+```
 
 
 
