@@ -105,4 +105,8 @@ olarak nitelendirilmektedir.
 Polimorfizm, OOP'de bir nesnenin kalıtımsal açıdan ataları olan referanslar tarafından işaretlenebilmesidir. Haliyle
 ilgili nesne, bu ataları olan referans türlerine göre dönüştürülebilmektedir.
 
+![Alternatif Metin](Assets/Screenshot4.png)
+![Alternatif Metin](Assets/Screenshot5.png)
+![Alternatif Metin](Assets/Screenshot6.png)
+
 
