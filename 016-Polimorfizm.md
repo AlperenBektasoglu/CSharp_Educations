@@ -57,6 +57,10 @@ namespace EducationWorkspace
             Console.WriteLine(o3.bProp);
             Console.WriteLine("----------------------------------");
 
+            A o4 = new B();
+            o4.method1(); // o4 A nesnesi gibi davranıyor ancak burada B sınıfının içindeki method1 çalışıyor. Çünkü B sınıfında metod1 override edilmiştir.
+            Console.WriteLine("----------------------------------");
+
             Console.ReadLine();
         }
     }
@@ -71,6 +75,10 @@ namespace EducationWorkspace
 // ----------------------------------
 // 20
 // 0
+// ----------------------------------
+// A const. çalıstı.
+// B const. çalıstı.
+// Derived Class - method1 çalıstı
 // ----------------------------------
 ```
 
