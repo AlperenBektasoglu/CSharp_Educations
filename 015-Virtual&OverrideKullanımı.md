@@ -33,7 +33,7 @@ tekrardan aynı member oluşturulur.
 * Override: Override keyword'ü, virtual olan memberın değiştirileceğini belirtir.
 
 ```cs
-namespace _19_Virtual_Override_Kullanımı 
+namespace WorkArea 
 {
     class A
     {
