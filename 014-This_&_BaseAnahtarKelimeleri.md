@@ -54,7 +54,67 @@ aynı şekilde base'de base class'da ki memberlara erişebilmemizi sağlamaktad�
 base sınıfın default constructor'u çalışacaktı.
 
 ```cs
+namespace EducationWorkspace
+{
 
+    class A
+    {
+        public int x;
+        public A()
+        {
+            Console.WriteLine("parametresiz A const. çalıştı.");
+        }
+
+        public A(int x) : this()
+        {                          
+            this.x = x;
+            Console.WriteLine("A const. çalıştı. x degeri: " + x);
+        }
+    }
+    class B : A
+    {
+        public B() : base(100)                        
+        {                       
+            Console.WriteLine("parametresiz B const. çalıştı.");
+        }
+
+        public B(int z) : base(150)
+        {
+            Console.WriteLine("B const. çalıştı. z degeri: " + z);
+        }
+    }
+    class C : B
+    {
+        public C()
+        {
+            base.x = 150;
+            Console.WriteLine("parametresiz C const. çalıştı.");
+        }
+
+        public C(int k) : base(k)
+        {
+            Console.WriteLine("c const. çalıştı.");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            C c = new C(50);
+            Console.WriteLine(c.x);
+            Console.ReadLine();
+        }
+    }
+
+}
+
+// Çıktı:
+// parametresiz A const. çalıstı.
+// A const. çalıstı. x degeri: 150
+// B const. çalıstı. z degeri: 50
+// c const. çalıstı.
+// 150
 ```
 
 
