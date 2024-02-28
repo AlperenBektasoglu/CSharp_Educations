@@ -57,8 +57,8 @@ metot tanımlanabilir. C# ın bir versiyonundan sonra artık interfacelerde de m
 2. Bir sınıfa sadece bir tane Abstract sınıf inherit edilebilir ancak aynı sınıfa birden fazla arayüz(interface) 
 implement edilebilir.
 
-**Not:** Türetilecek sınıf‘a abstract sınıflardan sadece bir tanesini inherit edebiliriz. Yani türetilmiş sınıf‘a 
-iki tane abstract class inherit edemeyiz. Ancak bir Abstract sınıfa, başka bir Abstract sınıfı inherit ederek bu kısıtı kaldırmak mümkün.
+**Not:** Türetilecek sınıf‘a abstract sınıflardan sadece bir tanesini implement edebiliriz. Yani türetilmiş sınıf‘a 
+iki tane abstract class implement edemeyiz. Ancak bir Abstract sınıfa, başka bir Abstract sınıfı inherit ederek bu kısıtı kaldırmak mümkün.
 
 ```cs
 public abstract class AbstractSinif_1
