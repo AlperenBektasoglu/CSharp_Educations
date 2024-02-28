@@ -28,4 +28,40 @@ tekrardan aynı member oluşturulur.
 
 **Not:** Yukarıdaki örnekte D nesnesi, C sınıfında override edilmiş elemanı kullanır.
 
+Özetle:
+* Virtual: Bu keyword'ü kullanan member, bu memberın bulunduğu sınıfı miras alan başka bir sınıfta isteğe bağlı değiştirilebilir.
+* Override: Override keyword'ü, virtual olan memberın değiştirileceğini belirtir.
+
+```cs
+namespace _19_Virtual_Override_Kullanımı 
+{
+    class A
+    {
+        public virtual void metod()
+        {
+            Console.WriteLine("A sınıfındaki metot çalıştı.");
+        }
+    }
+    class B : A
+    {
+        public override void metod()  
+        {
+            Console.WriteLine("A sınıfındaki metod ezildi ve B sınıfındaki metot çalıştı.");
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            A a = new A();
+            a.metod();
+            Console.WriteLine("-----------------------------");
+            B b = new B();
+            b.metod();
+            Console.WriteLine("-----------------------------");
+            Console.ReadLine();
+        }       
+    }
+}
+```
 
