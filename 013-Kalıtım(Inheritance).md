@@ -10,11 +10,11 @@ Lakin bir sınıf bir sınıftan, bir record ise bir recordan kalıtım alabilir
 **Not:** Mevcutta olan yada senin yeni oluşturduğun bütün sınıflar Object sınıfından miras almaktadır.
 
 ## Base Class ve Derived Class Nedir?
-* Kalıtım veren sınıfa Base / Parent Class denir.
-* Kalıtım alan sınıfa Derived / Child Class denir.
-* Peki, atalar bütün torunlarının Base Class'ı mıdır? Hayır değildir.
+* Kalıtım veren sınıfa base / parent class denir.
+* Kalıtım alan sınıfa derived / child class denir.
+* Peki, atalar bütün torunlarının base class'ı mıdır? Hayır değildir.
 A class -> B class -> C class kalıtım versin. Bu durumda C nin base classı B classıdır. B classının da base classı A classıdır.
-* Bir class'ın sade ve sadece bir Base Class'ı olur.
+* Bir class'ın sade ve sadece bir base class'ı olur.
 
 ## Kalıtımda Nesne Üretim Sırası
 Bir sınıftan nesne üretimi yapılırken kalıtım aldığı üst sınıflar varsa eğer
