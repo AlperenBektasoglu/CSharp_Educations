@@ -74,9 +74,32 @@ namespace EducationWorkspace
 // ----------------------------------
 ```
 
+## Polimorfizm Türleri
+### Statik Polimorfizm
+* Static, ileride göreceğimiz bir kavramdır.
+* Şimdilik sadece Polimorfizm çerçevesinde Static Polimorfizm'i
+değerlendireceğiz.
+* Static polimorfizm; derleme zamanında sergilenen polimorfizm'dir.
+Hangi fonksiyonun çağrılacağına derleme zamanında karar verilir.
+* C#'da static polimorfizm deyince aklımıza Metot Overloading terimi
+gelmelidir.
+* Metot Overloading; aynı isimde birbirinden farklı imzalara sahip
+olan metotların tanımlanmasıdır. Ya da başka deyişle bir isme birden
+fazla farklı türde metot yüklemektir. Haliyle burada bir metodun
+birden fazla formunun olması polimorfizm'ken, bunlardan
+kullanılacak olanın derleme zamanında bilinmesi statik polimorfizm
+olarak nitelendirilmektedir.
 
-
-
+### Dinamik Polimorfizm
+* Dinamik polimorfizm; çalışma zamanında sergilenen polimorfizm'dir.
+Yani hangi fonksiyonun çalışacağına run time'da karar verilir.
+* C#'da dinamik polimorfizm deyince akla Metot Override gelmektedir.
+* Metot Override; base class'ta virtual olarak işaretlenmiş metotların
+derived class'ta override edilerek ezilmesi/yeniden yazılması
+işlemidir. Haliyle burada aynı isimde birden fazla forma sahip
+fonksiyonun olması polimorfizm'ken, bunlardan hangisinin
+kullanılacağının çalışma zamanında bilinmesi dinamik polimorfizm
+olarak nitelendirilmektedir.
 
 
 
