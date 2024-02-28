@@ -26,7 +26,17 @@ oluşturulmak zorundadır.
 yapılır yani uygulanır. Bir abstract class bir abstract class'a kalıtım verir çünkü abstract classlar içlerinde abstract olarak işaretlenmiş olan
 yapıları zoraki olarak sadece kendilerini uygulayan sınıflara uygulatırlar, Abstract classlara değil.
 
+### Abstract Sınıfların Normal Sınıflardan Farkı Nedir?
+1. Normal sınıflar içerisinde metot bildirimi yapılamazken, Abstract sınıflar içerisinde tıpkı arayüzler de olduğu
+gibi metot bildirimi yapılabilir. Bildirimi yapılan metotlar, Abstract sınıftan türeyen sınıflar içerisinde tanımlanmak zorundadır.
+2. Normal sınıflardan “new()” anahtar sözcüğü ile nesneler oluşturulabilir ancak Abstract sınıflar tamamen kalıtım amaçlı 
+geliştirildiğinden Abstract sınıflardan nesne oluşturulamaz.
 
+### Abstract Sınıfların Arayüzlerden Farkı Nedir?
+1. Arayüzlerde sadece metot bildirimi yapılabilirken Abstract sınıflarda hem metot bildirimi yapılabilir hem de 
+metot tanımlanabilir. C# ın bir versiyonundan sonra artık interfacelerde de metod gövdesi oluşturulabilmektedir.
+2. Bir sınıfa sadece bir tane Abstract sınıf inherit edilebilir ancak aynı sınıfa birden fazla arayüz(interface) 
+implement edilebilir.
 
 
 
