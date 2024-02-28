@@ -2,7 +2,7 @@
 This anahtar kelimesinin kullanım amaçları:
 1. Sınıfın nesnesini temsil eder. İlgili sınıf yapılanmasının o anki nesnesine karşılık gelir.
 2. Birinci maddedeki çalışma prensibi üzerinden, aynı isimde ki field ve metod parametrelerini ayırmak için kullanılır.
-3. Bir yapıcı metoddan aynı sının içerisindeki başka bir yapıcı metodu çağırmak için kullanılır.
+3. Bir yapıcı metoddan aynı sınıfın içerisindeki başka bir yapıcı metodu tetiklemek için kullanılır.
 
 ```cs
 namespace WorkArea{
