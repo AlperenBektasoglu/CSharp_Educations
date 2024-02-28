@@ -22,6 +22,25 @@ oluşturulmak zorundadır.
 *  Abstact classlar içinde tanımlanan abstact metodlar yada propertyler public olmak zorundadır.
 *  Abstract classların nesnesi oluşturulmaz ama referans noktası alınabilir.
 
+```cs
+public abstract class TemelSinif
+{
+    public void Metot_1()
+    {
+        Console.WriteLine("Abstract sınıf içerisinde tanımlanmış metot.");
+    }
+    public abstract void Metot_2();
+}
+
+public class TuretilmisSinif : TemelSinif
+{
+    public override void Metot_2()
+    {
+        Console.WriteLine("Türetilmiş sınıf içerisinde tanımlanmış metot.");
+    }
+}
+```
+
 **Not:** Bir sınıf, bir sınıfa miras verdiği zaman kalıtım denir. Bir Abstract class yada interface, bir sınıfa kalıtım vermez. İmplementasyonu
 yapılır yani uygulanır. Bir abstract class bir abstract class'a kalıtım verir çünkü abstract classlar içlerinde abstract olarak işaretlenmiş olan
 yapıları zoraki olarak sadece kendilerini uygulayan sınıflara uygulatırlar, Abstract classlara değil.
@@ -38,7 +57,32 @@ metot tanımlanabilir. C# ın bir versiyonundan sonra artık interfacelerde de m
 2. Bir sınıfa sadece bir tane Abstract sınıf inherit edilebilir ancak aynı sınıfa birden fazla arayüz(interface) 
 implement edilebilir.
 
+**Not:** Türetilecek sınıf‘a abstract sınıflardan sadece bir tanesini inherit edebiliriz. Yani türetilmiş sınıf‘a 
+iki tane abstract class inherit edemeyiz. Ancak bir Abstract sınıfa, başka bir Abstract sınıfı inherit ederek bu kısıtı kaldırmak mümkün.
 
+```cs
+public abstract class AbstractSinif_1
+{
+    public abstract void Metot_1();
+}
+
+public abstract class AbstractSinif_2 : AbstractSinif_1
+{
+    public abstract void Metot_2();
+}
+
+public class TuretilecekSinif : AbstractSinif_2
+{
+    public override void Metot_1()
+    {
+        Console.WriteLine("Metot_1() tanımlandı.");
+    }
+    public override void Metot_2()
+    {
+        Console.WriteLine("Metot_2() tanımlandı.");
+    }
+}
+```
 
 
 
