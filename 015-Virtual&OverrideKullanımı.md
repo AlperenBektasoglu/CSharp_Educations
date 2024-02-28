@@ -24,6 +24,6 @@ torunlarında ezilmek/yeniden yazılmak isteniyorsa eğer ilgili
 class'ta imzası override keywordü işaretlenmiş bir vaziyette
 tekrardan aynı member oluşturulur.
 
-
+![Alternatif Metin](Assets/Screenshot3.png)
 
 
