@@ -101,5 +101,9 @@ x adında değişken tanımlayabilirim, çakışma olmaz. Eğerki A sınıfını
 ben A sınıfı miras alan C sınıfında da x adında değişken tanımladığım taktirde çakışma olur ve alt sınıf(C), üst sınıfın(A) 
 değişkenini geçersiz kılar.
 
+## Record'lar da Kalıtım?
+• Record'lar sade ve sadece Record'lar dan kalıtım alabilmektedirler.
+• Class'lar dan kalıtım alamazlar yahut veremezler!
+• Kalıtımın tüm temel kuralları record'lar için geçerlidir.
 
 
