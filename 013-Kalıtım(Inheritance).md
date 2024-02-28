@@ -24,9 +24,81 @@ açıdan birden fazla nesne üretimi gerçekleşecektir. A class -> B class -> C
 C sınıfından nesne üretilmek istendiği zaman; sırasıyla heap bellekte A nesnesi, B nesnesi ve son olarak C nesnesi üretilir.
 
 ```cs
+namespace EducationWorkspace
+{
+    class A
+    {
+        protected int aField;
+        public A()
+        {
+            Console.WriteLine("A sınıfı const. çalıştı...");
+        }
+    }
 
+    class B : A
+    {
+        public int bField;
+        public B()
+        {
+            bField = aField;
+            Console.WriteLine("B sınıfı const. çalıştı...");
+        }
+    }
+
+    class C : B
+    {
+        public int cField;
+        public C()
+        {
+            cField = aField;
+            Console.WriteLine("C sınıfı const. çalıştı...");
+        }
+        public int metod1()
+        {
+            aField = 20;
+            return aField;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            A a = new A();
+            Console.WriteLine("----------------------------");
+
+            B b = new B();
+            // b.bField
+            Console.WriteLine("----------------------------");
+
+            C c = new C();
+            // c.bField
+            // c.cField
+            Console.WriteLine("----------------------------");
+
+            Console.WriteLine(c.metod1());
+
+            Console.ReadLine();
+        }
+    }
+}
+
+// Çıktı:
+// A sınıfı const. çalıstı...
+// ----------------------------
+// A sınıfı const. çalıstı...
+// B sınıfı const. çalıstı...
+// ----------------------------
+// A sınıfı const. çalıstı...
+// B sınıfı const. çalıstı...
+// C sınıfı const. çalıstı...
+// ----------------------------
+// 20
 ```
 
+**Not:** A sınıfının içinde x adında değişken tanımlayalım. Eğerki bu değişken private olur ise ben A sınıfı miras alan C sınıfında da
+x adında değişken tanımlayabilirim, çakışma olmaz. Eğerki A sınıfının içinde ki x değişkeninin erişim tipi private olmaz ise
+ben A sınıfı miras alan C sınıfında da x adında değişken tanımladığım taktirde çakışma olur ve alt sınıf(C), üst sınıfın(A) 
+değişkenini geçersiz kılar.
 
 
 
