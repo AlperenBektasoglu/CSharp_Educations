@@ -117,7 +117,12 @@ namespace EducationWorkspace
 // 150
 ```
 
-
+## ReadOnly Anahtar Kelimesi
+* Bir sınıf içerisinde tanımlanmış olan değişkenin yahut referansın sadece okunabilir olmasını sağlayan anahtar kelimedir.
+* Readonly ile işaretlenmiş olan referansların değerleri ya tanımlama noktasında ya da constructor'da verilebilir.
+* Const yapılar, readonly ile karıştırılabilir. Aralarındaki fark şöyledir; const bir değişkene tanımlandığı yerde
+değeri verilmelidir ve constructor içerisinde bile değer ataması gerçekleştirilemez. Lakin readonly bir değişkene
+ister tanımlama noktasında isterseniz de constructor içerisinde değer ataması gerçekleştirilebilir.
 
 
 
