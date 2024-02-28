@@ -39,7 +39,7 @@ namespace EducationWorkspace
     }
     class D : C
     {
-        //  Aşağıdaki kod hata verecektir. Çünkü C sınıfında metod1 sealed ile işaretlenerek. Artık override edilmesinin önüne geçilmiştir.
+        //  Aşağıdaki kod hata verecektir. Çünkü C sınıfında metod1 sealed ile işaretlenerek artık override edilmesinin önüne geçilmiştir.
         //  D sınıfından nesne üretilip, metod1 tetiklendiğinde en son override edilen metod tetiklenmiş olacaktır.
 
         //  public override void method1()
