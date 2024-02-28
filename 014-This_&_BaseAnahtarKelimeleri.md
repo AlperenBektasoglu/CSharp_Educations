@@ -30,14 +30,15 @@ namespace WorkArea{
   {
       static void Main(string[] args){
           Example1 e1 = new Example1();
-          // Output:
-          // 2 Parametreli Yapıcı Metod
-          // 1 Parametreli Yapıcı Metod
-          // Parametresiz Yapıcı Metod
       }
   }
 
 }
+
+// Çıktı:
+// 2 Parametreli Yapıcı Metod
+// 1 Parametreli Yapıcı Metod
+// Parametresiz Yapıcı Metod
 ```
 
 ## Base Anahtar Kelimesi
