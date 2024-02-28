@@ -1,5 +1,5 @@
 
-## Sanal Yapılar | virtual - override
+## Sanal Yapılar | Virtual - Override
 
 * Bir nesne üzerinde var olan tüm memberların tamamı derleme zamanında belirgindir. Yani, derleme aşamasında hangi nesne üzerinden hangi metotların çağrılabileceği
 bilinmektedir. Sanal yapılar ile derleme zamanında kesin bilinen bu bilgi run time(çalışma zamanı)da belirlenebilmektedir. Yani ilgili nesnenin hangi metodu
