@@ -39,3 +39,41 @@ namespace WorkArea{
 
 }
 ```
+
+## Base Anahtar Kelimesi
+* Madem ki, herhangi bir sınıftan nesne üretimi gerçekleştirilirken öncelikle base
+class'ından nesne üretiliyor, bu demektir ki önce base class'ın constructor'ı tetikleniyor.
+Haliyle bizler nesne üretimi esnasında base class'ta üretilecek olan nesnenin istediğimiz
+constructor'larını tetikleyebilmeli yahut varsa parametre bu değerleri verebilmeliyiz.
+İşte bunun için base Keyword'ü nü kullanmaktayız.
+* Ayrıca nasıl ki this, ilgili sınıfta o anki nesnenin memberlarına erişebilmemizi sağlıyor,
+aynı şekilde base'de base class'da ki memberlara erişebilmemizi sağlamaktadır.
+
+**Not:** Eğer ki base ifadesi yok ise, base sınıfın parametresiz constructor'ı o da yok ise 
+base sınıfın default constructor'u çalışacaktı.
+
+```cs
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
