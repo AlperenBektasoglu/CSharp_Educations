@@ -26,4 +26,6 @@ tekrardan aynı member oluşturulur.
 
 ![Alternatif Metin](Assets/Screenshot3.png)
 
+**Not:** Yukarıdaki örnekte D nesnesi, C sınıfında override edilmiş elemanı kullanır.
+
 
