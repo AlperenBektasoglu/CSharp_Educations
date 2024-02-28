@@ -101,5 +101,8 @@ fonksiyonun olması polimorfizm'ken, bunlardan hangisinin
 kullanılacağının çalışma zamanında bilinmesi dinamik polimorfizm
 olarak nitelendirilmektedir.
 
+## Polimorfizm Durumlarında Tür Dönüşümleri
+Polimorfizm, OOP'de bir nesnenin kalıtımsal açıdan ataları olan referanslar tarafından işaretlenebilmesidir. Haliyle
+ilgili nesne, bu ataları olan referans türlerine göre dönüştürülebilmektedir.
 
 
