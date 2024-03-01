@@ -18,3 +18,68 @@ class A : B, IOrnek1, IOrnek2 {
 
 }
 ```
+
+**Not:** Son olarak bir interface başka bir interface'den kalıtım alabilir. Örnek üzerinden gitmek gerekir ise:
+* IB, IA arayüzünden kalıtım aldığını varsayalım.
+* C isimli sınıfın da IB arayüzünden kalıtım aldığını varsayarsak:
+* C sınıfı içerisinde her iki interface'in üyelerinin gövdeleri oluşturulmak zorundadır.
+* Bunula birlikte C sınıfı üzerinden C, IB ve IA referansları oluşturulabilir.
+
+```cs
+namespace EducationWorkspace
+{
+    interface IOrnek1
+    {
+        int X();
+        int MyProperty { get; set; }
+    }
+
+    interface IOrnek2
+    {
+        int X();
+        int Z();
+    }
+
+    class A
+    {
+
+    }
+
+    class B : A, IOrnek1, IOrnek2
+    {
+        public int MyProperty { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public int X()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int Z()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            IOrnek1 o1 = new B();
+            // o1.X();
+            // o1.MyProperty = 100;
+
+            IOrnek2 o2 = new B();
+            // o2.Z();
+            // o2.Z();
+
+            B o3 = new B();
+            // o3.MyProperty = 100;
+            // o3.X();
+            // o3.Z();
+            
+            Console.ReadLine();
+        }
+    }
+
+}
+```
