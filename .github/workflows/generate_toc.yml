@@ -1,9 +1,9 @@
-name: Generate Table of Contents
+name: Update Table of Contents
 
 on:
   push:
     branches:
-      - main  # Veya ana dal adınıza göre ayarlayın.
+      - main
 
 jobs:
   build:
@@ -11,18 +11,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      
-      - name: Install Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3'  # Python sürümünüzü belirtin.
-          
-      - name: Generate Table of Contents
-        run: |
-          pip install -U markdown-toc
-          markdown-toc -i README.md
 
-      - name: Commit changes
+      - name: Install Doctoc
+        run: npm install -g doctoc
+
+      - name: Generate Table of Contents
+        run: doctoc README.md
+
+      - name: Commit changes and push
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
