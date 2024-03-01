@@ -150,20 +150,120 @@ class Program
 }
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Generic Kısıtlar
+### Değer ve Referans Tip Kısıtı
 ```cs
-
+public class ExampleClass<T>
+{
+    public T example_1 { get; set; }
+    public T example_2(T parameter)
+    {
+        return parameter;
+    }
+}
 ```
+ExampleClass Generic sınıfına herhangi bir kısıt uygulanmadığı için T yerine int, double, float gibi değer tipleri gönderebileceği gibi; string, object, array gibi referans tipleri de gönderilebilir.
+
+* Değer Tipleri: “int”, “long”, “float”, “double”, “decimal”, “char”, “bool”, “byte”, “short”, “struct”, “enum”
+* Referans Tipleri: “string”, “object”, “class”, “interface”, “array”, “delegate”, “pointer”
+
+Oluşturduğumuz ExampleClass Generic sınıfına sadece referans tip veya sadece değer tip gönderilmesini isteyebiliriz. Böylesi bir durumda Generic sınıfımıza bir kısıt koymamız gerekmekte.
+Sadece referans tip gönderilmesi için;  
+```cs
+public class ExampleClass<T> where T:class
+{
+    public T example_1 { get; set; }
+    public T example_2(T parameter)
+    {
+        return parameter;
+    }
+}
+```
+Sadece değer tip gönderilmesi için; 
+```cs
+public class ExampleClass<T> where T : struct
+{
+    public T example_1 { get; set; }
+    public T example_2(T parameter)
+    {
+        return parameter;
+    }
+}
+```
+
+### new() Kısıtı
+Generic sınıfa gönderilen veri tipini, sınıf içerisinde new’liyorsak, yani o tipten yeni bir nesne oluşturuyorsak; Generic sınıfa “new()“ kısıtını 
+uygulamamız gerekmektedir. Eğer Visual Studio ile geliştirme yapıyorsanız zaten IDE sizi new() kısıtını uygulamaya zorlayacaktır.
+```cs
+public class ExampleClass<T> where T : new()
+{
+    public T createObject()
+    {
+        T obj = new T();
+        return obj;
+    }
+}
+```
+ExampleClass Generic sınıfında gönderilen veri tipi createObject metodunda new’lenerek yeni bir nesne oluşturulmak istendiğinden new() kısıtı uygulanmıştır. 
+Artık ExampleClass Generic sınıfına sadece nesne oluşturulabilen yani new() lenebilen türler gönderilebilir.
+
+### Arayüz kısıtı
+Generic sınıfa sadece belirttiğimiz arayüzleri implement alan türlerin gönderilmesini istiyorsak arayüz kısıtını uygularız.
+```cs
+public interface IExample1 { }
+public interface IExample2 { }
+public class ExampleClass1 : IExample1
+{
+    public string example_1 { get; set; }
+}
+public class ExampleClass2 : IExample1
+{
+    public string example_1 { get; set; }
+}
+public class ExampleClass3 : IExample2
+{
+    public string example_1 { get; set; }
+}
+```
+IExample1 ve IExample2 isminde iki arayüz oluşturduk. IExample1 arayüzünü ExampleClass1 ve ExampleClass2‘ye implement ettik. IExample2 arayüzünü de ExampleClass3 sınıfına implement ettik.
+```cs
+public class GenericClass<T> where T : IExample1
+{
+    public T example_1 { get; set; }
+    public T example_2(T parameter) { return parameter; }
+}
+```
+Generic sınıfımıza “where T : IExample1” kısıtını eklediğimiz takdirde; Generic sınıfımıza veri türü olarak sadece IExample1 arayüzünü implement alan ExampleClass1 ve ExampleClass2 gönderilebilecektir. 
+ExampleClass3 sınıfı IExample1 arayüzünü implement almadığı için GenericClass’a veri tipi olarak gönderilmek istendiğinde hata alınacaktır. Arayüz kısıtı sayesinde Generic 
+sınıflara sadece belli arayüzleri implement alan sınıfların gönderilmesini sağlayabiliriz.
+
+### Birden Fazla Kısıt Ekleme
+```cs
+public interface IExample1 { }
+public class ExampleClass<T> where T : class, IExample1 , new()
+{
+    public T createObject()
+    {
+        T obj = new T();
+        return obj;
+    }
+}
+```
+ExampleClass Generic sınıfına sadece referans tipli olan, IExample1 arayüzünü implement alan ve new’lenebilen veri türleri gönderilebilir.
+**Not:** new() kısıtı her zaman en son da yer almalıdır.
+
+Generic kısıtları tıpkı sınıflarda kullandığımız gibi generic metotlarda da kullanabiliriz.
+```cs
+public class ExampleClass
+{
+    public T createObject<T>() where T : class, IExample1, new()
+    {
+        T obj = new T();
+        return obj;
+    }
+}
+```
+createObject Generic metoduna sadece referans tipli olan, IExample1 arayüzünü implement alan ve new’lenebilen veri türleri gönderilebilir.
+
+
+
