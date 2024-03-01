@@ -8,7 +8,7 @@ Interfacelerin genel özelliklerini sıralayacak olursak;
 1. Nesne oluşturulmaz ama referans noktası alınabilir.
 2. Bir sınıf birden fazla interface implemente edebilir.
 3. Interface içerisine sadece üye imzaları tanımlanabilir ve erişim tipi belirtilmez. C# 8.0 ile gelen "default interface methods" özelliği ile
-arayüzler içerisinde metodların varsayılan gövdeleri oluşturulabilir.
+arayüzler içerisinde üyelerin varsayılan gövdeleri oluşturulabilir.
 4. Interface te name hiding problemi ile karşılaşılabilir. Name hiding'i anlamak için bu <a href="https://www.youtube.com/watch?v=863_jnRhqZ0">link</a>'ten videoyu açarak, 16:15 ten itibaren izleyebilirsiniz.
 
 **Not:** Bir sınıf öncelikli olarak bir sınıftan miras alıyor ise ilk o miras aldığı sınıf belirtilmelidir. Daha sonra implement edilecek arayüzler yazılır.
