@@ -2,7 +2,7 @@
 
 Aralarında mantıksal ilişkiler bulunan farklı veya ayni türden bilgileri bir arada tutarak gruplamak 
 ve daha kolay kullanmak için struct yapıları kullanılır. OOP'da class yapılarına benzerdir.
-
+ 
 Struct yapısının özellikleri:
 * Birbiri ile ilişkili verileri bir araya toplamak için kullanılır.
 * Değer tiplidir. ( Atama işleminde değerler kopyalanır.) 
