@@ -63,6 +63,8 @@ class Program
 }
 ```
 
+## Generic Arayüzler
+
 
 
 
