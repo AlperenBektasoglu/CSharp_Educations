@@ -1,0 +1,31 @@
+name: Generate Table of Contents
+
+on:
+  push:
+    branches:
+      - main  # Veya ana dal adınıza göre ayarlayın.
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Install Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'  # Python sürümünüzü belirtin.
+          
+      - name: Generate Table of Contents
+        run: |
+          pip install -U markdown-toc
+          markdown-toc -i README.md
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git commit -m "Update Table of Contents" || echo "No changes to commit"
+          git push
