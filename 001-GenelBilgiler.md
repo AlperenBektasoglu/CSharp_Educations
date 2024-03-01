@@ -1,5 +1,5 @@
 # Giriş
-## .Net Nedir?
+## .Net Nedir? 
 Microsoftun developerlar için geliştirdiği teknolojileri sunduğu bir çatıdır. 
 .NET ile web, telefon ve Windows için uygulamalar geliştirilebilir.
 .NET Framework bir omurgadır ve bu omurga içerisinde olabildiğince geniş bir kütüphane 
