@@ -64,12 +64,91 @@ class Program
 ```
 
 ## Generic Arayüzler
+Tıpkı sınıflarda olduğu gibi arayüzleri de Generic olarak tanımlayabiliriz.
+```cs
+public interface IExample<T>
+{
+    T example_1(T input);
+    void example_2(T input1, T input2);
+}
+```
+Tek fark; Generic sınıflarda veri tipini o sınıftan bir nesne oluştururken belirtmekteyiz, 
+Generic arayüzlerde ise veri tipini, o arayüzü bir sınıfa implement ederken belirtmekteyiz.
+```cs
+public class ExampleClass_1 : IExample<int>
+{
+    public int example_1(int input) { return input; }
+    public void example_2(int input1, int input2) { }
+}
+public class ExampleClass_2 : IExample<string>
+{
+    public string example_1(string input) { return input; }
+    public void example_2(string input1, string input2) { }
+}
+```
 
+## Arayüzlerde Generic Metot Bildirimi 
+Arayüz içerisindeki metotların tamamı Generic değilse; Arayüz yerine sadece ilgili metotları Generic yapmak daha mantıklı olacaktır, tıpkı Generic metotlarda anlattığımız gibi.
+```cs
+public interface IExample
+{
+    void example_1(int input);
+    T example_2<T>(T input);
+}
+public class ExampleClass_1 : IExample
+{
+    public void example_1(int input) { }
+    public T example_2<T>(T input) { return input; }
+}
+```
+IExample arayüzü Generic olmadığı için herhangi veri tipi belirtmeden ExampleClass_1 sınıfına implement edebildik. example_2 metodu Generic olduğu için veri tipi metot çağrılırken girilecektir.
+```cs
+class Program
+{
+    static void Main(string[] args)
+    {
+        ExampleClass_1 example = new ExampleClass_1();
+        example.example_1(18);
+        example.example_2<string>("Serdar YILMAZ");
+    }
+}
+```
 
+## Statik Generic Sınıflar
+Statik sınıflar ile statik olmayan sınıfların Generic yapılması noktasında arada herhangi bir fark bulunmuyor. Statik sınıfların metot ve değişkenlerine 
+nesne oluşturmadan erişebildiğimiz için, veri tipini sınıf adını yazdıktan hemen sonra belirtiyoruz.
+```cs
+public static class Example<T>
+{
+    public static T example_1(T input) { return input; }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Example<string>.example_1("Alperen Bektaşoğlu");
+    }
+}
+```
 
+## Generic’lerde Birden Fazla Veri Tipinin Kullanılması
 
-
-
+```cs
+public class Example<T, Y, C>
+{
+    public T example_1;
+    public void example_2(Y parameter1, C parameter2) { }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Example<int, string, bool> example = new Example<int, string, bool>();
+        example.example_1 = 18;
+        example.example_2("Serdar YILMAZ", true);
+    }
+}
+```
 
 
 
