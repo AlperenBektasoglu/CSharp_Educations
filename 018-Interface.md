@@ -87,3 +87,6 @@ namespace EducationWorkspace
 ![Alternatif Metin](Assets/Screenshot8.png)
 ![Alternatif Metin](Assets/Screenshot9.png)
 ![Alternatif Metin](Assets/Screenshot10.png)
+
+**Not:** Interfaceler, class yada abstract classlar gibi kalıtım süreçlerinde ekstradan nesne oluşturmazlar. Bu yüzden Abstraction ve 
+referasn alma operasyonlarında diğerlerine nazaran daha performanslı çalışırlar.
