@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:  # Bu olay, GitHub web arayüzünden iş akışını başlatmak için kullanılır.
 
 jobs:
   build:
@@ -18,10 +19,9 @@ jobs:
       - name: Generate Table of Contents
         run: doctoc README.md
 
-      - name: Commit changes and push
+      - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
-          git commit -m "Update Table of Contents" || echo "No changes to commit"
-          git push
+          git diff-index --quiet HEAD || git commit -m "Update Table of Contents"
