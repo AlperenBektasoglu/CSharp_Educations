@@ -2,7 +2,7 @@
 ## .Net Nedir? 
 Microsoftun developerlar için geliştirdiği teknolojileri sunduğu bir çatıdır. 
 .NET ile web, telefon ve Windows için uygulamalar geliştirilebilir.
-.NET Framework bir omurgadır ve bu omurga içerisinde olabildiğince geniş bir kütüphane   
+.NET Framework bir omurgadır ve bu omurga içerisinde olabildiğince geniş bir kütüphane    
 ve birbirleriyle birlikte çalışabilen bir grup programlama dili yer almaktadır. 
 .NET Framework 60'tan fazla programlama dilini destekler. Bununla birlikte .Net Framework, 
 bellek yönetimi, ağ oluşturma, güvenlik, bellek yönetimi ve tür güvenliği gibi çeşitli hizmetler sunar.
