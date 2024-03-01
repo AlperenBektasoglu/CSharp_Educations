@@ -22,8 +22,8 @@ jobs:
 
       - name: Değişiklikleri Taahhüt Et
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "alperenbektasoglu.info@gmail.com"
+          git config --local user.name "AlperenBektasoglu"
           git add 000-README.md
           git diff-index --quiet HEAD || git commit -m "Tablo İçeriği Güncellendi"
           git push
