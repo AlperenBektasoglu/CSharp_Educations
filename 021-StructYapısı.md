@@ -5,7 +5,7 @@ ve daha kolay kullanmak için struct yapıları kullanılır. OOP'da class yapı
 
 Struct yapısının özellikleri:
 * Birbiri ile ilişkili verileri bir araya toplamak için kullanılır.
-* Değer tiplidir. ( Atama işleminde değerler kopyalanır.)
+* Değer tiplidir. ( Atama işleminde değerler kopyalanır.) 
 * Stack'te saklanır.( Stack bellek hızlıdır ancak dardır ve çabuk şişer.)
 * Kalıtımı desteklemez.
 * "New" anahtar kelimesinin kulanılma zorunluluğu yoktur. 
