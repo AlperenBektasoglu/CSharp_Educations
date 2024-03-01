@@ -7,7 +7,7 @@ public class Example
     public int example_1;
     public void example_2(int parameter) { }
 }
-```
+``` 
 Example sınıfında example_1 değişkeninin veri tipini ve example_2 metodunun parametresinin veri tipini de int olarak belirttik. Artık example_1 değişkenine int haricinde bir değer 
 atamamız veya example_2 metoduna int’den farklı bir parametre göndermemiz mümkün değildir. Generic yapıyı kullandığımız takdirde sınıf içerisindeki değişkenlerin, parametrelerin ve 
 metotların geri dönüş tiplerini o sınıftan bir nesne oluştururken belirleyebilmekteyiz. Yani Generic’ler sayesinde bir sınıfın elemanlarının veri tiplerini ihtiyaç doğrultusunda yeni 
