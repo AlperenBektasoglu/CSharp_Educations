@@ -1,0 +1,29 @@
+name: Tablo İçeriğini Güncelle
+
+on:
+  push:
+    branches:
+      - main  # Buraya ana dal adınızı belirtin.
+  workflow_dispatch:  # Bu olay, iş akışının GitHub web arayüzünden manuel olarak tetiklenmesine izin verir.
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Depoyu klonla
+        uses: actions/checkout@v2
+
+      - name: Doctoc'u Yükle
+        run: npm install -g doctoc
+
+      - name: Tablo İçeriğini Oluştur
+        run: doctoc README.md
+
+      - name: Değişiklikleri Taahhüt Et
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git diff-index --quiet HEAD || git commit -m "Tablo İçeriği Güncellendi"
+          git push
