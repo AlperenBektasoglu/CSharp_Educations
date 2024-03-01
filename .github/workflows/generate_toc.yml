@@ -15,7 +15,7 @@ jobs:
       - name: Install Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'  # Python sürümünüzü belirtin.
+          python-version: '3.1'  # Python sürümünüzü belirtin.
           
       - name: Generate Table of Contents
         run: |
