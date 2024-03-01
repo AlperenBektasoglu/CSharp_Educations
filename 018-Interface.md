@@ -85,3 +85,5 @@ namespace EducationWorkspace
 ```
 ![Alternatif Metin](Assets/Screenshot7.png)
 ![Alternatif Metin](Assets/Screenshot8.png)
+![Alternatif Metin](Assets/Screenshot9.png)
+![Alternatif Metin](Assets/Screenshot10.png)
