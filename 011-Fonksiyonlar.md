@@ -1,21 +1,16 @@
 # Fonksiyonlar
-Fonksiyonlar programlamanın en küçük iş yapan parçacıklarıdır. C# da fonksiyon kullanmak, size oluşturduğunuz kod bloğunu 
-programın herhangi bir yerinde tekrar tekrar çalıştırma imkanı verir. Metodlar sınıf elemanlarıdır. Dolayısı ile sınıfların içerisinde
-tanımlanırlar. C# ın ileriki versiyonlarında metodlar başka yerlerde de(interface, fonksiyon içi vs.) tanımlanabilmektedir. Metodlar,
-imza ve gövdeden oluşur. Aşağıda metot İmzasınının yapısı mevcuttur.
+
+Fonksiyonlar programlamanın en küçük iş yapan parçacıklarıdır. C#'ta fonksiyon kullanmak, size oluşturduğunuz kod bloğunu programın herhangi bir yerinde tekrar tekrar çalıştırma imkanı verir. Metodlar sınıf elemanlarıdır. Dolayısı ile sınıfların içerisinde tanımlanırlar. C#'ın ileriki versiyonlarında metodlar başka yerlerde de (interface, fonksiyon içi vs.) tanımlanabilmektedir. Metodlar, imza ve gövdeden oluşur. Aşağıda metot İmzasınının yapısı mevcuttur.
 
 [Erişim Belirleyicisi] [Geri Dönüş Değeri] [Metod Adı] ([Parametreler])
 {
-  // Burası metod gövdesidir. Kodlar buraya yazılır.
+// Burası metod gövdesidir. Kodlar buraya yazılır.
 }
 
 **Not:** Main de bir fonksiyondur ve her programda en az ve en fazla 1 tane olmak zorundadır.
-**Not:** Return komutu ile değer döndürülebilir. Değer döndürmeyen fonksiyonların geri dönüş değeri void tir.
-**Not:** Metotlarda static ifadesinin kullanılması ile sınıftan nesne üretmeden o metodun kullanımı sağlanmış olur. Static
-ifadesi konulmaz ise o metodu kullanabilmek için metodun bulunduğu sınıftan nesne üretilmek zorundadır.
-**Not:** Başka bir sınıftaki metodu kullanabilmek için o sınıftan nesne üretmek gerekir. Metotlarda static ifadesinin kullanılması ile 
-sınıftan nesne üretmeden o metodun kullanımı sağlanmış olur. Static ifadesi konulmaz ise o metodu kullanabilmek için metodun 
-bulunduğu sınıftan nesne üretilmek zorundadır.
+**Not:** Return komutu ile değer döndürülebilir. Değer döndürmeyen fonksiyonların geri dönüş değeri void'tir.
+**Not:** Metotlarda static ifadesinin kullanılması ile sınıftan nesne üretmeden o metodun kullanımı sağlanmış olur. Static ifadesi konulmaz ise o metodu kullanabilmek için metodun bulunduğu sınıftan nesne üretilmek zorundadır.
+**Not:** Başka bir sınıftaki metodu kullanabilmek için o sınıftan nesne üretmek gerekir. Metotlarda static ifadesinin kullanılması ile sınıftan nesne üretmeden o metodun kullanımı sağlanmış olur. Static ifadesi konulmaz ise o metodu kullanabilmek için metodun bulunduğu sınıftan nesne üretilmek zorundadır.
 
 ```cs
 class Program
@@ -23,31 +18,30 @@ class Program
     public int Topla(int x, int y) {
         return x + y;
     }
-    
+
     static void Main(string[] args)
     {
         Console.WriteLine(Topla(2,5));
     }
 }
 ```
-## Erişim Belirleyicileri (Access Modifiers)
-Erişimin sınırlarını belirlemek için kullanılır.         
-1. Private: Sadece tanımlandığı sınıf içerisinden erişilebilir.
-2. Public: Her yerden erişilebilir.
-3. Protected: Sadece tanımlandığı sınıfta ya da o sınıfı miras alan sınıflardan erişilebilir. Dikkat edilmesi gereken nokta
-   sadece türetilmiş sınıflar erişebilir, torun sınıflar erişemez.
-4. Internal: Sadece bulunduğu projede erişilebilir.(Aynı assembly içerisinden erişilebilir.)
-5. Protected-Internal: Bir nesne protected internal olarak tanımlandığında aynı protected gibi kendi bulunduğu 
-   sınıf üzerinde ve bu sınıfı miras alan sınıflar üzerinden çağrılabilir. Artı olarak 
-   aynı proje (assembly/dll) üzerinden de çağırılabilir.
 
-**Not:** Bir sınıfın erişim belirleyicisi yazılmaz ise default erişim belirleyicisi Internal dır.
-**Not:** Sınıfın içindeki bir değişkenin yada metodun erişim belirleyicisi yazılmaz ise default erişim belirleyicisi Private dır.
+## Erişim Belirleyicileri (Access Modifiers)
+
+Erişimin sınırlarını belirlemek için kullanılır.
+
+1. Private: Sadece tanımlandığı sınıf içerisinden erişilebilir.
+1. Public: Her yerden erişilebilir.
+1. Protected: Sadece tanımlandığı sınıfta ya da o sınıfı miras alan sınıflardan erişilebilir. Dikkat edilmesi gereken nokta sadece türetilmiş sınıflar erişebilir, torun sınıflar erişemez.
+1. Internal: Sadece bulunduğu projede erişilebilir.(Aynı assembly içerisinden erişilebilir.)
+1. Protected-Internal: Bir nesne protected internal olarak tanımlandığında aynı protected gibi kendi bulunduğu sınıf üzerinde ve bu sınıfı miras alan sınıflar üzerinden çağrılabilir. Artı olarak aynı proje (assembly/dll) üzerinden de çağırılabilir.
+
+**Not:** Bir sınıfın erişim belirleyicisi yazılmaz ise default erişim belirleyicisi Internal'dır.
+**Not:** Sınıfın içindeki bir değişkenin yada metodun erişim belirleyicisi yazılmaz ise default erişim belirleyicisi Private'dır.
 
 ## Metotlarda Optional Parameters(İsteğe Bağlı Parametreler)
-Metod parametrelerine = operatörü ile bir dğer atanır ise o parametre varsayılan değeri atanmış olur.
-Haliyle opsiyonel parametre olarak kullanılabilir. Opsiyonel parametreler parametre sırasında en sağ tarafa
-yazılırlar.
+
+Metod parametrelerine = operatörü ile bir dğer atanır ise o parametre varsayılan değeri atanmış olur. Haliyle opsiyonel parametre olarak kullanılabilir. Opsiyonel parametreler parametre sırasında en sağ tarafa yazılırlar.
 
 ```cs
 class Program
@@ -55,7 +49,7 @@ class Program
     public int Topla(int x, int y = 10) {
         return x + y;
     }
-    
+
     static void Main(string[] args)
     {
         Console.WriteLine(Topla(2);
@@ -64,6 +58,7 @@ class Program
 ```
 
 ## Metotlarda Non Trailing Named Arguments Özelliği
+
 Bu özellik ile metoda geçilen parametreler sırayla verilme zorunluluğu ortadan kaldırılmıştır.
 
 ```cs
@@ -72,7 +67,7 @@ class Program
   public int Topla(int x, int y,  int z = 10) {
       return x + y;
   }
-  
+
   static void Main(string[] args)
   {
       Console.WriteLine(Topla( z: 20, x: 10, y:200 ));
@@ -81,31 +76,31 @@ class Program
 ```
 
 ## Değişken Sayıda Parametre Alan Metotlar (Params Anahtar Kelimesi)
-C#'ta params anahtar kelimesi, değişken sayıda argüman(parametre) alan bir parametreyi belirtmek için kullanılan anahtar kelimedir.
-Yalnızca bir params anahtar sözcüğüne izin verilir ve bir fonksiyon bildiriminde params anahtar sözcüğünden sonra hiçbir ek parametreye 
-izin verilmez.
 
-Link: https://www.srdrylmz.com/c-degisken-sayida-parametre-alan-metotlar/
- 
+C#'ta params anahtar kelimesi, değişken sayıda argüman(parametre) alan bir parametreyi belirtmek için kullanılan anahtar kelimedir.
+Yalnızca bir params anahtar sözcüğüne izin verilir ve bir fonksiyon bildiriminde params anahtar sözcüğünden sonra hiçbir ek parametreye izin verilmez.
+
+Link: <https://www.srdrylmz.com/c-degisken-sayida-parametre-alan-metotlar/>
+
 ```cs
 class Program
 {
-   public void ShowForInt(params int[] val) // Params Paramater  
+   public void ShowForInt(params int[] val) // Params Paramater
    {
         for (int i = 0; i < val.Length; i++)
         {
             Console.WriteLine(val[i]);
         }
     }
-    
-    public void ShowForObject(params object[] items) // Params Paramater  
+
+    public void ShowForObject(params object[] items) // Params Paramater
     {
         for (int i = 0; i < items.Length; i++)
         {
             Console.WriteLine(items[i]);
         }
     }
-    
+
     static void Main(string[] args)
     {
         ShowForInt(2, 4, 6, 8, 10, 12, 14); // Değişken uzunluktaki argümanları iletme
@@ -115,10 +110,9 @@ class Program
 }
 ```
 
-##  Local Functions (Lokal Fonksiyonlar)
-Metodlar struct, abstract class, interface, record ve class içerisinde tanımlanamabilir. C# 7.0 ile gelen bu özellik ile metod içerisinde
-metod tanımlanabilir. Bu tanımlanan metoda lokal fonksiyon denir. Lokal fonksiyonlar sadece tanımlandığı metod içerisinde erişilebilir.
-Lokal fonksiyonlarda erişim belirleyicisi yazılmaz. lokal fonksiyon tanımlandığı fonksiyonun adından farklı bir isimde olmak zorundadır.
+## Local Functions (Lokal Fonksiyonlar)
+
+Metodlar struct, abstract class, interface, record ve class içerisinde tanımlanamabilir. C# 7.0 ile gelen bu özellik ile metod içerisinde metod tanımlanabilir. Bu tanımlanan metoda lokal fonksiyon denir. Lokal fonksiyonlar sadece tanımlandığı metod içerisinde erişilebilir. Lokal fonksiyonlarda erişim belirleyicisi yazılmaz. lokal fonksiyon tanımlandığı fonksiyonun adından farklı bir isimde olmak zorundadır.
 
 ```cs
 public static int X(){
@@ -128,24 +122,28 @@ public static int X(){
   return 0;
 }
 ```
-**Not:"" Ana fonksiyonun içerisindeki değişkenlere lokal fonksiyondan erişilmesini istemiyorsan lokal fonksiyonu static ile işaretleyebilirsin ve
-ihtiyacın olan parametreleri lokal fonksiyona parametre olarak geçebilirsin.
+
+**Not:** Ana fonksiyonun içerisindeki değişkenlere lokal fonksiyondan erişilmesini istemiyorsan lokal fonksiyonu static ile işaretleyebilirsin ve ihtiyacın olan parametreleri lokal fonksiyona parametre olarak geçebilirsin.
 
 ## Recursive Fonksiyonlar
-Kendi içerisinde kendini çağıran fonksiyonlardır. Öngörülemeyen, derinliği tahmin edilemeyen durumlarda tercih edilmektedir.
+
+Kendi içerisinde kendini çağıran fonksiyonlardır.Öngörülemeyen, derinliği tahmin edilemeyen durumlarda tercih edilmektedir.
+
 ```cs
 public void X(int a=1){
     Console.WriteLine("Merhaba");
     if( a < 3)
       X(++a);
     Console.WriteLine("Dünya");
-  
+
     // Output: Merhaba Merhaba Merhaba Dünya Dünya Dünya
 }
 ```
 
 ## "In" Anahtar Kelimesi
-"in"   anahtar kelimesi, bir parametrenin metot içerisinde değiştirilemez olduğunu tanımlar.
+
+"in" anahtar kelimesi, bir parametrenin metot içerisinde değiştirilemez olduğunu tanımlar.
+
 ```cs
 public static int Add(in int number1, in int number2)
 {
@@ -155,8 +153,9 @@ public static int Add(in int number1, in int number2)
 ```
 
 ## "ref" Anahtar Kelimesi
-ref anahtar kelimesi referanstan gelmektedir. Referanslar = operatörüyle iletişime geçebilmektedir. 
-Ref anahtar kelimesi, değer türlü değişkenlerde referans operasyonları yapabilmemizi sağlar.
+
+ref anahtar kelimesi referanstan gelmektedir. Referanslar = operatörüyle iletişime geçebilmektedir. Ref anahtar kelimesi, değer türlü değişkenlerde referans operasyonları yapabilmemizi sağlar.
+
 ```cs
 int x = 10;
 ref int y = ref x;
@@ -176,7 +175,9 @@ Y(ref x); // Parametre olarak x in referansını vermiş olduk.
 ```
 
 ### Ref Returns Özelliği
+
 Ref returns özelliği ile metodlardan referans döndürülebilir.
+
 ```cs
 ref int Y(ref int a){
   a = 200;
@@ -193,9 +194,9 @@ Console.WriteLine(y); // Çıktı: 200
 ```
 
 ## Out Anahtar Kelimesi
-Out anahtar kelimesi metodların parametreleri üzerinden dışarıya değer göndermemizi sağlar.
-Out parametre barındıran metod kullanılırken, out parametrelerden gelecek değerleri karşılayacak değişkenler tanımlanmalıdır.
-Bir metod out parametreler barındırıyorsa o parametrelere metod içerisinde değer atanması gerekmektedir. Aksi taktirde derleyici hata verir.
+
+Out anahtar kelimesi metodların parametreleri üzerinden dışarıya değer göndermemizi sağlar. Out parametre barındıran metod kullanılırken, out parametrelerden gelecek değerleri karşılayacak değişkenler tanımlanmalıdır. Bir metod out parametreler barındırıyorsa o parametrelere metod içerisinde değer atanması gerekmektedir. Aksi taktirde derleyici hata verir.
+
 ```cs
 int x = 0 , y = 0;
 string z;
@@ -208,7 +209,9 @@ int Metod(out int a, int b, out string c){
   return 0;
 }
 ```
+
 Farklı kullanım olarak:
+
 ```cs
 int Metod(out int a, int b, out string c){
   a = 20;
@@ -223,7 +226,9 @@ Console.WriteLine(z); // Çıktı: "Alperen"
 ```
 
 ## C# Hazır Sınıflar Ve Fonksiyonlar
+
 1. Math sınıfı, bir çok matamatiksel işlemleri rahatlıkla yapabilmemizi sağlar. İçerisinde matematiksel bir çok özellik ve metod barındırır.
+
 ```cs
 int val1 = Math.Abs(-5); // Mutlak değer işlemini yapar.
 int val2 = Math.Ceiling(3.14); // Yukarı yuvarlama işlemini yapar. (val2: 4)
@@ -235,6 +240,7 @@ int val7 = Math.Truncate(3.14) // Ondalıklı sayının tam kısmını getirir. 
 ```
 
 2. DateTime sınıfı, tarihsel işlemlerle iligili birçok hazır özellik ve metod barındırır.
+
 ```cs
 DateTime tarih1 = new DateTime(2021, 01, 01);
 DateTime tarih2 = new DateTime(2022, 01, 01);
@@ -247,10 +253,11 @@ var val3 = DateTime.Compare(tarih1, tarih 2); // İki tarihi kıyaslar. Sonuç o
 // tarih1>tarih2 => 1
 var val4 = tarih1.AddYears(100); // ilgili tarihe parametre olarak verilen yıl verisini ekleme işlemini yapar.
 ```
+
 Bunlar dışında add metodlarıda(AddHours(), AddYears() vs.) vardır. Bunlarda ilgili tarihe belirtilen değeri ekler.
 
-3. TimeSpan sınıfı, C#’ta DateTime yapısından farklı olarak, elimizdeki bir tarih değerine göre süre tutmamızı sağlar.
-TimeSpan, DateTime gibi struct(yapı) olarak tasarlanmış bir süre temsil eden değişkendir.
+3. TimeSpan sınıfı, C#’ta DateTime yapısından farklı olarak, elimizdeki bir tarih değerine göre süre tutmamızı sağlar. TimeSpan, DateTime gibi struct(yapı) olarak tasarlanmış bir süre temsil eden değişkendir.
+
 ```cs
 TimeSpan time1 = new TimeSpan(3, 2, 17, 1, 12); // time1 değişkeni 3 gün, 2 saat, 17 dakika, 1 saniye ve 12 milisaniye olarak bir süre tutar.
 
@@ -258,10 +265,12 @@ DateTime tarih1 = new DateTime(2021, 01, 01);
 DateTime tarih2 = new DateTime(2022, 01, 01);
 TimeSpan time2 = tarih1 - tarih2; // İki DateTime tipindeki veriyi birbirinden çıkarınca TimeSpan tipinde değer döner.
 ```
+
 TimeSpan ile ilgili daha detaylı bilgi için aşağıdaki linki inceleyebilirsiniz.
-Link: https://www.gencayyildiz.com/blog/c-timespan-ile-sure-formatlama/
+Link: <https://www.gencayyildiz.com/blog/c-timespan-ile-sure-formatlama/>
 
 4. Random sınıfı, rastegele sayılar üretmek için kullanılır.
+
 ```cs
 Random random = new Random();
 var val1 = random.(); // 0 - int[Max] arasında rastgele sayı üretir.
@@ -269,5 +278,3 @@ var val2 = random.(100); // 0 - 100 arasında rastgele sayı üretir. 100 dahil 
 var val3 = random.(50, 100); // 50 - 100 arasında rastgele sayı üretir. 100 dahil değil.
 var val4 = random.NextDouble(); // 0-1 arasında rastgele ondalıklı sayı üretir.
 ```
-
-

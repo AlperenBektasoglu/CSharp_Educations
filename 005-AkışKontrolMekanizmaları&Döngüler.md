@@ -1,10 +1,14 @@
 # Akış Kontrol Mekanizmaları
+
 Akış kontrol mekanizmaları 2 tanedir.
+
 1. if - if else - else if Yapısı
-2. Switch-Case Yapısı
+1. Switch-Case Yapısı
 
 ## if - if else - else if Yapısı
+
 Koşul doğruysa if bloğu çalıştırılır. Değil ise else bloğu çalıştırılır.
+
 ```cs
 int sayi;
 Console.Write("Lütfen bir sayı girin:");
@@ -17,20 +21,20 @@ else
     Console.WriteLine("Girilen sayı 0'a eşittir.");
 ```
 
-**Not:** Tek satırlık if yapılarında scope kullanmaya gerek yoktur. Birden fazla satır
-için scpoe kullanılması gerekir.
+**Not:** Tek satırlık if yapılarında scope kullanmaya gerek yoktur. Birden fazla satır için scpoe kullanılması gerekir.
 
 ## Switch-Case Yapısı
-Switch-Case yapılanmasında bir değişkenin değeri için sadece eşitlik durumlarını kontrol etmek için kullanılır.
-Switch-Case yapılanmasında default yapısı zorunlu değildir.
+
+Switch-Case yapılanmasında bir değişkenin değeri için sadece eşitlik durumlarını kontrol etmek için kullanılır. Switch-Case yapılanmasında default yapısı zorunlu değildir.
+
 ```cs
 string job = "CE";
 switch (job)
 {
-    case "Police": 
+    case "Police":
         // ...
         break;
-    case "Lawyer":   
+    case "Lawyer":
         // ...
         break;
      default:
@@ -40,26 +44,29 @@ switch (job)
 ```
 
 **Not:** When anahtar kelimesi ile Switch-Case yapısı zenginleştirilebilir.
+
 ```cs
 int salary = 50_000;
 switch (job)
 {
-    case int x when x > 10_000 || x < 20_000: 
+    case int x when x > 10_000 || x < 20_000:
         // ...
         break;
 }
 ```
 
-**Video:** <a href="https://www.youtube.com/watch?v=bbaKxvFELB4&list=PLQVXoXFVVtp3e_urGZcMNAHx2Eo4Rm5Xk&index=134"> Switch Expressions </a>
+**Video:** [Switch Expressions](https://www.youtube.com/watch?v=bbaKxvFELB4&list=PLQVXoXFVVtp3e_urGZcMNAHx2Eo4Rm5Xk&index=134)
 
-# Döngüler
+## Döngüler
+
 for, while ve do-while olmak üzere üç çeşit döngü yapısı vardır.
 
 **Not:** Döngülerde tek satırlık kodlar için scope kullanılmasına gerek yoktur.
 
 **Not:** foreach yapısı bir döngü değil iterasyondur.
 
-## For Döngüsü
+### For Döngüsü
+
 ```cs
 Console.Write("Bir sayı giriniz:");
 int v_sayi = Convert.ToInt32(Console.ReadLine());
@@ -74,12 +81,14 @@ Console.ReadKey();
 ```
 
 Aşağıdaki şekilde sonsuz döngü yapılabilir:
+
 ```cs
 for (;;)
     Console.WriteLine("Sonsuz Döngü");
 ```
 
-## While Döngüsü
+### While Döngüsü
+
 ```cs
 int counter = 0;
 while (counter <= 10)
@@ -90,13 +99,16 @@ while (counter <= 10)
 ```
 
 Aşağıdaki şekilde sonsuz döngü yapılabilir:
+
 ```cs
 while (true)
   Console.WriteLine("Sonsuz Döngü");
 ```
 
-## Do-While Döngüsü
+### Do-While Döngüsü
+
 Do-while döngüsü, döngünün koşuldan bağımsız en az bir kere çalışması istendiği zaman kullanılır.
+
 ```cs
 int counter1 = 1;
 do
@@ -105,8 +117,9 @@ do
     counter1++;
 } while (counter1 <= 10);
 ```
-            
+
 Aşağıdaki şekilde sonsuz döngü yapılabilir:
+
 ```cs
 do
 {
@@ -114,12 +127,12 @@ do
 } while (true);
 ```
 
-## Break Ve Continue Komutları     
-Break komutu: Break komutu döngüyü sonlandırır. Switch-Case yapısında ise, switch koşulunun 
-scope’u({}) dışına çıkmamızı sağlar.
+### Break Ve Continue Komutları
 
-Continue komutu: Döngü içinde bu komutun bulunduğu satırdan sonrası işlenmeden döngünün sonraki değerini işlemek 
-üzere başa dönmesini (sonraki tekrarı yapmasını) sağlar.
+Break komutu: Break komutu döngüyü sonlandırır. Switch-Case yapısında ise, switch koşulunun scope'u({}) dışına çıkmamızı sağlar.
+
+Continue komutu: Döngü içinde bu komutun bulunduğu satırdan sonrası işlenmeden döngünün sonraki değerini işlemek üzere başa dönmesini (sonraki tekrarı yapmasını) sağlar.
+
 ```cs
 for (int i = 0; i < 20; i++)
 {
@@ -139,12 +152,11 @@ for (int i = 0; i < 20; i++)
 
 **Not:** Return anahtar kelimesi metod içerisinde kullanılır. ve metodu sonlandırmaya yarar. Geriye değer döndürme özelliğide vardır. Returnler döngüyü değil metodu sonlandırır.
 
-## Foreach Iterasyon Yapısı
-Foreach yapısı döngü değildir. listeler, koleksiyonlar ya da diziler üzerinde işlem yapmak için kullanılır.
-Özellikle eleman sayısının bilinmediği durumlarda büyük kolaylık sağlamaktadır.
+### Foreach Iterasyon Yapısı
 
-**Not:** Foreach yapısı sadece dizi elemanlarını okumak için kullanılır. Dizi elemanları üzerinde 
-              düzenleme işlemlerine izin verilmez. Bu tür engelleme ReadOnly (Sadece okunabilir) olarak bilir.
+Foreach yapısı döngü değildir. Listeler, koleksiyonlar ya da diziler üzerinde işlem yapmak için kullanılır. Özellikle eleman sayısının bilinmediği durumlarda büyük olaylık sağlamaktadır.
+
+**Not:** Foreach yapısı sadece dizi elemanlarını okumak için kullanılır. Dizi elemanları üzerinde düzenleme işlemlerine izin verilmez. Bu tür engelleme ReadOnly (Sadece okunabilir) olarak bilir.
 
 ```cs
 string[] isimler = { "Alperen", "Ahmet", "Elif", "Hakan", "Sema" };
@@ -152,9 +164,10 @@ foreach (string eleman in isimler)
     Console.WriteLine(eleman);
 Console.ReadKey();
 ```
+
 ## Goto Komutu
-C# goto deyimi koşulsuz olarak belirtilen etikete atlar. Etiket tanımlaması
-goto kullanımından önce veya sonra yapılabilir. Performassızdır ve tavsiye edilmez.
+
+C# goto deyimi koşulsuz olarak belirtilen etikete atlar. Etiket tanımlaması goto kullanımından önce veya sonra yapılabilir. Performassızdır ve tavsiye edilmez.
 
 ```cs
 int sayı;
@@ -183,11 +196,5 @@ if ((sayı < 0 || sayı > 100))
     goto baslangıc;
 }
 Console.ReadKey();
-Console.WriteLine("--------------------------------------"); 
+Console.WriteLine("--------------------------------------");
 ```
-                
-
-
-
-
-

@@ -1,12 +1,13 @@
+# Polimorfizm (Çok Biçimlilik)
 
-## Polimorfizm(Çok Biçimlilik) Nedir?
-Bir nesnenin birden fazla farklı türdeki referans tarafından işaretlenebilmesi polimorfizm'dir. Polimorfizm, OOP tasarımlarında geliştirilen koda daha manevrasal bir şekilde nitelik kazandıran
-ve yaklaşım sergilememizi sağlayan bir özelliktir. Bir nesnenin, birden fazla referansla işaretlenmesi; o nesnenin, birden fazla türün davranışlarını gösterebilmesini sağlar.
-Nesne Tabanlı Programlama'da Polimorfizm uygulamak istiyorsanız türler arasında kalıtım uygulanmış olmalıdır.
+## Polimorfizm (Çok Biçimlilik) Nedir?
+
+Bir nesnenin birden fazla farklı türdeki referans tarafından işaretlenebilmesi polimorfizm'dir. Polimorfizm, OOP tasarımlarında geliştirilen koda daha manevrasal bir şekilde nitelik kazandıran ve yaklaşım sergilememizi sağlayan bir özelliktir. Bir nesnenin, birden fazla referansla işaretlenmesi; o nesnenin, birden fazla türün davranışlarını gösterebilmesini sağlar. Nesne Tabanlı Programlama'da Polimorfizm uygulamak istiyorsanız türler arasında kalıtım uygulanmış olmalıdır.
 
 Programlama da polimorfizm esasında taa en temelden beri kullanılmaktadır. Misal olarak;
-* Elimizdeki herhangi bir byte türündeki veriyi ister byte istersekte byte'tan büyük olan herhangi bir türde tutmak çok biçimliliktir.
-* Ya da object türünün herhangi bir türdeki değeri alabilmesi yahut bir başka deyişle object türüne herhangi bir türdeki veriyi atayabilmek polimorfizm'dir.
+
+- Elimizdeki herhangi bir byte türündeki veriyi ister byte istersekte byte'tan büyük olan herhangi bir türde tutmak çok biçimliliktir.
+- Ya da object türünün herhangi bir türdeki değeri alabilmesi yahut bir başka deyişle object türüne herhangi bir türdeki veriyi atayabilmek polimorfizm'dir.
 
 ```cs
 namespace EducationWorkspace
@@ -25,7 +26,7 @@ namespace EducationWorkspace
             Console.WriteLine("Base Class - method1 çalıştı");
         }
     }
-    class B : A 
+    class B : A
     {
         public int bProp { get; set; }
         public B()
@@ -83,38 +84,27 @@ namespace EducationWorkspace
 ```
 
 ## Polimorfizm Türleri
+
 ### Statik Polimorfizm
-* Static, ileride göreceğimiz bir kavramdır.
-* Şimdilik sadece Polimorfizm çerçevesinde Static Polimorfizm'i
-değerlendireceğiz.
-* Static polimorfizm; derleme zamanında sergilenen polimorfizm'dir.
-Hangi fonksiyonun çağrılacağına derleme zamanında karar verilir.
-* C#'da static polimorfizm deyince aklımıza Metot Overloading terimi
-gelmelidir.
-* Metot Overloading; aynı isimde birbirinden farklı imzalara sahip
-olan metotların tanımlanmasıdır. Ya da başka deyişle bir isme birden
-fazla farklı türde metot yüklemektir. Haliyle burada bir metodun
-birden fazla formunun olması polimorfizm'ken, bunlardan
-kullanılacak olanın derleme zamanında bilinmesi statik polimorfizm
-olarak nitelendirilmektedir.
+
+- Static, ileride göreceğimiz bir kavramdır.
+- Şimdilik sadece Polimorfizm çerçevesinde Static Polimorfizm'i
+  değerlendireceğiz.
+- Static polimorfizm; derleme zamanında sergilenen polimorfizm'dir. Hangi fonksiyonun çağrılacağına derleme zamanında karar verilir.
+- C#'da static polimorfizm deyince aklımıza Metot Overloading terimi gelmelidir.
+- Metot Overloading; aynı isimde birbirinden farklı imzalara sahip olan metotların tanımlanmasıdır. Ya da başka deyişle bir isme birden fazla farklı türde metot yüklemektir. Haliyle burada bir metodun birden fazla formunun olması polimorfizm'ken, bunlardan kullanılacak olanın derleme zamanında bilinmesi statik polimorfizm olarak nitelendirilmektedir.
 
 ### Dinamik Polimorfizm
-* Dinamik polimorfizm; çalışma zamanında sergilenen polimorfizm'dir.
-Yani hangi fonksiyonun çalışacağına run time'da karar verilir.
-* C#'da dinamik polimorfizm deyince akla Metot Override gelmektedir.
-* Metot Override; base class'ta virtual olarak işaretlenmiş metotların
-derived class'ta override edilerek ezilmesi/yeniden yazılması
-işlemidir. Haliyle burada aynı isimde birden fazla forma sahip
-fonksiyonun olması polimorfizm'ken, bunlardan hangisinin
-kullanılacağının çalışma zamanında bilinmesi dinamik polimorfizm
-olarak nitelendirilmektedir.
+
+- Dinamik polimorfizm; çalışma zamanında sergilenen polimorfizm'dir. Yani hangi fonksiyonun çalışacağına run time'da karar verilir.
+- C#'da dinamik polimorfizm deyince akla Metot Override gelmektedir.
+- Metot Override; base class'ta virtual olarak işaretlenmiş metotların derived class'ta override edilerek ezilmesi/yeniden yazılması işlemidir. Haliyle burada aynı isimde birden fazla forma sahip fonksiyonun olması polimorfizm'ken, bunlardan hangisinin kullanılacağının çalışma zamanında bilinmesi dinamik polimorfizm olarak nitelendirilmektedir.
 
 ## Polimorfizm Durumlarında Tür Dönüşümleri
+
 Polimorfizm, OOP'de bir nesnenin kalıtımsal açıdan ataları olan referanslar tarafından işaretlenebilmesidir. Haliyle
 ilgili nesne, bu ataları olan referans türlerine göre dönüştürülebilmektedir.
 
 ![Alternatif Metin](Assets/Screenshot4.png)
 ![Alternatif Metin](Assets/Screenshot5.png)
 ![Alternatif Metin](Assets/Screenshot6.png)
-
-

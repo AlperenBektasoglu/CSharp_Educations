@@ -3,15 +3,15 @@
                         Detaylı bilgi için: https://www.gencayyildiz.com/blog/cta-ienumerable-ve-ienumerator-interfaceleri-nedir-ve-nasil-kullanilir/
                                             https://www.srdrylmz.com/c-numaralandirici/
                                             https://www.srdrylmz.com/icomparable-ve-icomparer-arayuzleri/
-                        
+
                         IEnumerable; ICollection ve IList'i kapsar. ICollection'da IList'i kapsar.
                         IEnumerable > ICollection > IList
 
             */
-            
+
             #region Anonim Metodlar (Anonymous Methods) -- delegeler konusundan sonra anlat
             /*
-                Delegenin temsil ettiği bir metodun tanımlanmadan, örneklenme (instantiation) sırasında isimsiz bir şekilde delegeye bağlanması 
+                Delegenin temsil ettiği bir metodun tanımlanmadan, örneklenme (instantiation) sırasında isimsiz bir şekilde delegeye bağlanması
                 şeklinde açıklanabilir.
 
                 http://kodyazilari.blogspot.com/2011/04/c-anonim-metotlar-anonymous-methods.html
