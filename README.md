@@ -198,9 +198,3 @@
    - [Static Sınıflar](020-StaticKonusu.md#static-snflar)
 1. [Struct Yapısı](021-StructYapısı.md#struct-yaps)
    - [C#'ta Class ve Struct Arasındaki En Önemli Farklılıklar Nelerdir?](021-StructYapısı.md#cta-class-ve-struct-arasndaki-en-önemli-farkllklar-nelerdir)
-
-## Yapılacaklar
-
-- [x] README dosyası oluşturulacak.
-- [ ] Dökümandaki genel yazım hataları giderilecek. ![Yüzde 70](https://geps.dev/progress/70)
-- [x] İçindekiler hazırlanacak. ![Yüzde 100](https://geps.dev/progress/100)
