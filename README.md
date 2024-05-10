@@ -219,7 +219,7 @@
 - [Struct Yapısı](021-StructYapısı.md#struct-yapısı)
 	- [C#'ta Class ve Struct Arasındaki En Önemli Farklılıklar Nelerdir?](021-StructYapısı.md#c#'ta-class-ve-struct-arasındaki-en-önemli-farklılıklar-nelerdir)
 
-
+## Diğer Konular
 
 - [C# Sql Transaction Nedir?](000-Transactionİşlemleri.md#c#-sql-transaction-nedir)
 	- [Sql Transaction Kullanımı](000-Transactionİşlemleri.md#sql-transaction-kullanımı)
