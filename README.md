@@ -4,7 +4,7 @@
 
 ![United Kingdom](https://raw.githubusercontent.com/stevenrskelton/flag-icon/master/png/16/country-4x3/gb.png 'United Kingdom') EN: This is a repository of C# tutorials. These documents are in Turkish.
 
-## İçindekiler
+## Table of Contents
 
 1. [Genel Bilgiler](001-GenelBilgiler.md)
    - [.NET Nedir?](001-GenelBilgiler.md#net-nedir)
